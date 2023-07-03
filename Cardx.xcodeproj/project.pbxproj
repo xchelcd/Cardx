@@ -9,23 +9,65 @@
 /* Begin PBXBuildFile section */
 		F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */; };
 		F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */; };
-		F9BDD3E42A53671E0077C92C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E32A53671E0077C92C /* ViewController.swift */; };
-		F9BDD3E72A53671E0077C92C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3E52A53671E0077C92C /* Main.storyboard */; };
 		F9BDD3EA2A53671E0077C92C /* Cardx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */; };
 		F9BDD3EC2A53671E0077C92C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3EB2A53671E0077C92C /* Assets.xcassets */; };
 		F9BDD3EF2A53671E0077C92C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3ED2A53671E0077C92C /* LaunchScreen.storyboard */; };
+		F9BDD4022A53679B0077C92C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4012A53679B0077C92C /* Card.swift */; };
+		F9BDD4052A5367AC0077C92C /* CoreDataManaager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */; };
+		F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40A2A5368DD0077C92C /* Language.swift */; };
+		F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40C2A5368EF0077C92C /* Difficulty.swift */; };
+		F9BDD40F2A5369020077C92C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40E2A5369020077C92C /* Category.swift */; };
+		F9BDD4112A5369920077C92C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4102A5369920077C92C /* CardView.swift */; };
+		F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4122A5369C20077C92C /* NameDescribable.swift */; };
+		F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4192A536C720077C92C /* AppCoordinator.swift */; };
+		F9BDD41C2A536C850077C92C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD41B2A536C850077C92C /* Coordinator.swift */; };
+		F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD41E2A536CB90077C92C /* HomeCoordinator.swift */; };
+		F9BDD4222A536CCC0077C92C /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */; };
+		F9BDD4242A536CDD0077C92C /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4232A536CDD0077C92C /* AppFactory.swift */; };
+		F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4252A536CEE0077C92C /* HomeFactory.swift */; };
+		F9BDD4292A536D1A0077C92C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4272A536D1A0077C92C /* HomeScreen.swift */; };
+		F9BDD42A2A536D1A0077C92C /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4282A536D1A0077C92C /* HomeScreen.xib */; };
+		F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD42B2A536DB00077C92C /* TestFactory.swift */; };
+		F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD42D2A536E320077C92C /* CardItem.swift */; };
+		F9BDD4302A536FB80077C92C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD42F2A536FB80077C92C /* Font.swift */; };
+		F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */; };
+		F9BDD4352A5373980077C92C /* AddCardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4332A5373980077C92C /* AddCardScreen.swift */; };
+		F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4342A5373980077C92C /* AddCardScreen.xib */; };
+		F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4372A5375070077C92C /* TestScreen.swift */; };
+		F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4382A5375070077C92C /* TestScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9BDD3DC2A53671E0077C92C /* Cardx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9BDD3E32A53671E0077C92C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9BDD3E62A53671E0077C92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9BDD3E92A53671E0077C92C /* Cardx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cardx.xcdatamodel; sourceTree = "<group>"; };
 		F9BDD3EB2A53671E0077C92C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9BDD3EE2A53671E0077C92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9BDD3F02A53671E0077C92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BDD4012A53679B0077C92C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManaager.swift; sourceTree = "<group>"; };
+		F9BDD40A2A5368DD0077C92C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F9BDD40C2A5368EF0077C92C /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		F9BDD40E2A5369020077C92C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F9BDD4102A5369920077C92C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F9BDD4122A5369C20077C92C /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
+		F9BDD4192A536C720077C92C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F9BDD41B2A536C850077C92C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F9BDD41E2A536CB90077C92C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
+		F9BDD4232A536CDD0077C92C /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		F9BDD4252A536CEE0077C92C /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		F9BDD4272A536D1A0077C92C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		F9BDD4282A536D1A0077C92C /* HomeScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen.xib; sourceTree = "<group>"; };
+		F9BDD42B2A536DB00077C92C /* TestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactory.swift; sourceTree = "<group>"; };
+		F9BDD42D2A536E320077C92C /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		F9BDD42F2A536FB80077C92C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toolbar+UIViewController.swift"; sourceTree = "<group>"; };
+		F9BDD4332A5373980077C92C /* AddCardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardScreen.swift; sourceTree = "<group>"; };
+		F9BDD4342A5373980077C92C /* AddCardScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardScreen.xib; sourceTree = "<group>"; };
+		F9BDD4372A5375070077C92C /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		F9BDD4382A5375070077C92C /* TestScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +100,205 @@
 		F9BDD3DE2A53671E0077C92C /* Cardx */ = {
 			isa = PBXGroup;
 			children = (
-				F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */,
-				F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */,
-				F9BDD3E32A53671E0077C92C /* ViewController.swift */,
-				F9BDD3E52A53671E0077C92C /* Main.storyboard */,
+				F9BDD4062A5367BE0077C92C /* Util */,
+				F9BDD3FF2A5367860077C92C /* Data */,
+				F9BDD3FE2A5367820077C92C /* Domain */,
+				F9BDD3FB2A5367680077C92C /* Screen */,
+				F9BDD3F62A5367330077C92C /* CompositionRoot */,
 				F9BDD3EB2A53671E0077C92C /* Assets.xcassets */,
-				F9BDD3ED2A53671E0077C92C /* LaunchScreen.storyboard */,
 				F9BDD3F02A53671E0077C92C /* Info.plist */,
-				F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */,
 			);
 			path = Cardx;
+			sourceTree = "<group>";
+		};
+		F9BDD3F62A5367330077C92C /* CompositionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD3F72A53673A0077C92C /* Screen */,
+				F9BDD3F92A5367460077C92C /* Factory */,
+				F9BDD3F82A5367420077C92C /* AppCoordinator */,
+				F9BDD3FA2A53674F0077C92C /* System */,
+			);
+			path = CompositionRoot;
+			sourceTree = "<group>";
+		};
+		F9BDD3F72A53673A0077C92C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD41E2A536CB90077C92C /* HomeCoordinator.swift */,
+				F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		F9BDD3F82A5367420077C92C /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4192A536C720077C92C /* AppCoordinator.swift */,
+				F9BDD41B2A536C850077C92C /* Coordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		F9BDD3F92A5367460077C92C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4232A536CDD0077C92C /* AppFactory.swift */,
+				F9BDD4252A536CEE0077C92C /* HomeFactory.swift */,
+				F9BDD42B2A536DB00077C92C /* TestFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		F9BDD3FA2A53674F0077C92C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */,
+				F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		F9BDD3FB2A5367680077C92C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4202A536CC10077C92C /* Test */,
+				F9BDD4152A536B270077C92C /* Game */,
+				F9BDD4072A5367E30077C92C /* Settings */,
+				F9BDD3FD2A5367740077C92C /* Home */,
+				F9BDD3FC2A53676B0077C92C /* Launch */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		F9BDD3FC2A53676B0077C92C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD3ED2A53671E0077C92C /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		F9BDD3FD2A5367740077C92C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4272A536D1A0077C92C /* HomeScreen.swift */,
+				F9BDD4282A536D1A0077C92C /* HomeScreen.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F9BDD3FE2A5367820077C92C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4002A53678E0077C92C /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F9BDD3FF2A5367860077C92C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4032A5367A00077C92C /* Database */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F9BDD4002A53678E0077C92C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4012A53679B0077C92C /* Card.swift */,
+				F9BDD40A2A5368DD0077C92C /* Language.swift */,
+				F9BDD40C2A5368EF0077C92C /* Difficulty.swift */,
+				F9BDD40E2A5369020077C92C /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9BDD4032A5367A00077C92C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */,
+				F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F9BDD4062A5367BE0077C92C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4092A53680F0077C92C /* Extension */,
+				F9BDD4082A5367F50077C92C /* Widget */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F9BDD4072A5367E30077C92C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4142A536AFA0077C92C /* Add */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F9BDD4082A5367F50077C92C /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4102A5369920077C92C /* CardView.swift */,
+				F9BDD42D2A536E320077C92C /* CardItem.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		F9BDD4092A53680F0077C92C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4122A5369C20077C92C /* NameDescribable.swift */,
+				F9BDD42F2A536FB80077C92C /* Font.swift */,
+				F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F9BDD4142A536AFA0077C92C /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4332A5373980077C92C /* AddCardScreen.swift */,
+				F9BDD4342A5373980077C92C /* AddCardScreen.xib */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		F9BDD4152A536B270077C92C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4172A536B7A0077C92C /* GameScreen */,
+				F9BDD4162A536B5B0077C92C /* GameOptions */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		F9BDD4162A536B5B0077C92C /* GameOptions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameOptions;
+			sourceTree = "<group>";
+		};
+		F9BDD4172A536B7A0077C92C /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		F9BDD4202A536CC10077C92C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F9BDD4372A5375070077C92C /* TestScreen.swift */,
+				F9BDD4382A5375070077C92C /* TestScreen.xib */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BDD42A2A536D1A0077C92C /* HomeScreen.xib in Resources */,
+				F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */,
+				F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */,
 				F9BDD3EF2A53671E0077C92C /* LaunchScreen.storyboard in Resources */,
 				F9BDD3EC2A53671E0077C92C /* Assets.xcassets in Resources */,
-				F9BDD3E72A53671E0077C92C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +374,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */,
+				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9BDD3EA2A53671E0077C92C /* Cardx.xcdatamodeld in Sources */,
-				F9BDD3E42A53671E0077C92C /* ViewController.swift in Sources */,
+				F9BDD4112A5369920077C92C /* CardView.swift in Sources */,
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
+				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
+				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
 				F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */,
+				F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */,
+				F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */,
+				F9BDD41C2A536C850077C92C /* Coordinator.swift in Sources */,
+				F9BDD4222A536CCC0077C92C /* TestCoordinator.swift in Sources */,
+				F9BDD4242A536CDD0077C92C /* AppFactory.swift in Sources */,
+				F9BDD4352A5373980077C92C /* AddCardScreen.swift in Sources */,
+				F9BDD4302A536FB80077C92C /* Font.swift in Sources */,
+				F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */,
+				F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */,
+				F9BDD4052A5367AC0077C92C /* CoreDataManaager.swift in Sources */,
+				F9BDD4292A536D1A0077C92C /* HomeScreen.swift in Sources */,
+				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
+				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
+				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,
+				F9BDD40F2A5369020077C92C /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F9BDD3E52A53671E0077C92C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9BDD3E62A53671E0077C92C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9BDD3ED2A53671E0077C92C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,14 +535,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T628CFUBY9;
+				DEVELOPMENT_TEAM = 763R98S2FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cardx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cardx;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,14 +563,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T628CFUBY9;
+				DEVELOPMENT_TEAM = 763R98S2FV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cardx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Cardx;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
