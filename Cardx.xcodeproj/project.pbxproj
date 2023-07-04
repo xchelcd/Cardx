@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */; };
 		F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */; };
-		F9BDD3EA2A53671E0077C92C /* Cardx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */; };
 		F9BDD3EC2A53671E0077C92C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3EB2A53671E0077C92C /* Assets.xcassets */; };
 		F9BDD3EF2A53671E0077C92C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3ED2A53671E0077C92C /* LaunchScreen.storyboard */; };
 		F9BDD4022A53679B0077C92C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4012A53679B0077C92C /* Card.swift */; };
-		F9BDD4052A5367AC0077C92C /* CoreDataManaager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */; };
+		F9BDD4052A5367AC0077C92C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4042A5367AC0077C92C /* CoreDataManager.swift */; };
 		F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40A2A5368DD0077C92C /* Language.swift */; };
 		F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40C2A5368EF0077C92C /* Difficulty.swift */; };
 		F9BDD40F2A5369020077C92C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD40E2A5369020077C92C /* Category.swift */; };
@@ -35,28 +34,35 @@
 		F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4342A5373980077C92C /* AddCardScreen.xib */; };
 		F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4372A5375070077C92C /* TestScreen.swift */; };
 		F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4382A5375070077C92C /* TestScreen.xib */; };
+		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
+		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
+		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
+		F9D2CAE22A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADC2A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift */; };
+		F9D2CAE32A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADD2A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift */; };
+		F9D2CAE42A5487B5008BC83F /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADE2A5487B5008BC83F /* CardEntity+CoreDataClass.swift */; };
+		F9D2CAE52A5487B5008BC83F /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADF2A5487B5008BC83F /* CardEntity+CoreDataProperties.swift */; };
+		F9D2CAE72A5488F4008BC83F /* CardTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAE62A5488F4008BC83F /* CardTestCell.swift */; };
+		F9D2CAE92A549176008BC83F /* ClearDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAE82A549176008BC83F /* ClearDatabase.swift */; };
+		F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */; };
+		F9D2CAEF2A549ED8008BC83F /* AddCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */; };
+		F9D2CAF12A54A0AA008BC83F /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAF02A54A0AA008BC83F /* CardViewModel.swift */; };
+		F9D2CAF32A54A0F4008BC83F /* UpdateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAF22A54A0F4008BC83F /* UpdateCard.swift */; };
+		F9D2CAF52A54A11B008BC83F /* RemoveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAF42A54A11B008BC83F /* RemoveCard.swift */; };
 		F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9732A53B1D000131841 /* TestViewModel.swift */; };
-		F9E2D9762A53B24C00131841 /* SaveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9752A53B24C00131841 /* SaveCard.swift */; };
+		F9E2D9762A53B24C00131841 /* InsertCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9752A53B24C00131841 /* InsertCard.swift */; };
 		F9E2D9862A53B5E500131841 /* GetAllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9852A53B5E500131841 /* GetAllCards.swift */; };
 		F9E2D9882A53B66300131841 /* GetAllCardsByLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */; };
-		F9E2D98F2A53B71600131841 /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */; };
-		F9E2D9902A53B71600131841 /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */; };
-		F9E2D9912A53B71600131841 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */; };
-		F9E2D9922A53B71600131841 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */; };
-		F9E2D9932A53B71600131841 /* CategoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */; };
-		F9E2D9942A53B71600131841 /* CategoryEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9BDD3DC2A53671E0077C92C /* Cardx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9BDD3E92A53671E0077C92C /* Cardx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cardx.xcdatamodel; sourceTree = "<group>"; };
 		F9BDD3EB2A53671E0077C92C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9BDD3EE2A53671E0077C92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9BDD3F02A53671E0077C92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BDD4012A53679B0077C92C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManaager.swift; sourceTree = "<group>"; };
+		F9BDD4042A5367AC0077C92C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F9BDD40A2A5368DD0077C92C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F9BDD40C2A5368EF0077C92C /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		F9BDD40E2A5369020077C92C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -78,16 +84,24 @@
 		F9BDD4342A5373980077C92C /* AddCardScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardScreen.xib; sourceTree = "<group>"; };
 		F9BDD4372A5375070077C92C /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		F9BDD4382A5375070077C92C /* TestScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestScreen.xib; sourceTree = "<group>"; };
+		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
+		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9D2CADC2A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9D2CADD2A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9D2CADE2A5487B5008BC83F /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9D2CADF2A5487B5008BC83F /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9D2CAE62A5488F4008BC83F /* CardTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTestCell.swift; sourceTree = "<group>"; };
+		F9D2CAE82A549176008BC83F /* ClearDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearDatabase.swift; sourceTree = "<group>"; };
+		F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardFactory.swift; sourceTree = "<group>"; };
+		F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardCoordinator.swift; sourceTree = "<group>"; };
+		F9D2CAF02A54A0AA008BC83F /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		F9D2CAF22A54A0F4008BC83F /* UpdateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCard.swift; sourceTree = "<group>"; };
+		F9D2CAF42A54A11B008BC83F /* RemoveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCard.swift; sourceTree = "<group>"; };
 		F9E2D9732A53B1D000131841 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
-		F9E2D9752A53B24C00131841 /* SaveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCard.swift; sourceTree = "<group>"; };
+		F9E2D9752A53B24C00131841 /* InsertCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertCard.swift; sourceTree = "<group>"; };
 		F9E2D9852A53B5E500131841 /* GetAllCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCards.swift; sourceTree = "<group>"; };
 		F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCardsByLanguage.swift; sourceTree = "<group>"; };
-		F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +118,12 @@
 		F9BDD3D32A53671E0077C92C = {
 			isa = PBXGroup;
 			children = (
-				F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */,
-				F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */,
-				F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */,
-				F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */,
-				F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */,
-				F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */,
+				F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */,
+				F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */,
+				F9D2CADC2A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift */,
+				F9D2CADD2A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift */,
+				F9D2CADE2A5487B5008BC83F /* CardEntity+CoreDataClass.swift */,
+				F9D2CADF2A5487B5008BC83F /* CardEntity+CoreDataProperties.swift */,
 				F9BDD3DE2A53671E0077C92C /* Cardx */,
 				F9BDD3DD2A53671E0077C92C /* Products */,
 			);
@@ -153,6 +167,7 @@
 			children = (
 				F9BDD41E2A536CB90077C92C /* HomeCoordinator.swift */,
 				F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */,
+				F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 				F9BDD4232A536CDD0077C92C /* AppFactory.swift */,
 				F9BDD4252A536CEE0077C92C /* HomeFactory.swift */,
 				F9BDD42B2A536DB00077C92C /* TestFactory.swift */,
+				F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -193,6 +209,7 @@
 				F9BDD4072A5367E30077C92C /* Settings */,
 				F9BDD3FD2A5367740077C92C /* Home */,
 				F9BDD3FC2A53676B0077C92C /* Launch */,
+				F9D2CAF02A54A0AA008BC83F /* CardViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -245,8 +262,9 @@
 		F9BDD4032A5367A00077C92C /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */,
-				F9BDD4042A5367AC0077C92C /* CoreDataManaager.swift */,
+				F9BDD4042A5367AC0077C92C /* CoreDataManager.swift */,
+				F9D2CAD22A548506008BC83F /* CoreData */,
+				F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -325,16 +343,27 @@
 				F9BDD4372A5375070077C92C /* TestScreen.swift */,
 				F9BDD4382A5375070077C92C /* TestScreen.xib */,
 				F9E2D9732A53B1D000131841 /* TestViewModel.swift */,
+				F9D2CAE62A5488F4008BC83F /* CardTestCell.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		F9D2CAD22A548506008BC83F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		F9E2D9722A53B1B600131841 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				F9E2D9752A53B24C00131841 /* SaveCard.swift */,
+				F9E2D9752A53B24C00131841 /* InsertCard.swift */,
 				F9E2D9852A53B5E500131841 /* GetAllCards.swift */,
 				F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */,
+				F9D2CAE82A549176008BC83F /* ClearDatabase.swift */,
+				F9D2CAF22A54A0F4008BC83F /* UpdateCard.swift */,
+				F9D2CAF42A54A11B008BC83F /* RemoveCard.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -412,19 +441,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E2D9912A53B71600131841 /* CardEntity+CoreDataClass.swift in Sources */,
-				F9E2D9762A53B24C00131841 /* SaveCard.swift in Sources */,
+				F9E2D9762A53B24C00131841 /* InsertCard.swift in Sources */,
 				F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */,
-				F9E2D98F2A53B71600131841 /* LanguageEntity+CoreDataClass.swift in Sources */,
+				F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */,
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
-				F9BDD3EA2A53671E0077C92C /* Cardx.xcdatamodeld in Sources */,
+				F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */,
 				F9BDD4112A5369920077C92C /* CardView.swift in Sources */,
-				F9E2D9922A53B71600131841 /* CardEntity+CoreDataProperties.swift in Sources */,
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
+				F9D2CAE32A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
+				F9D2CAEF2A549ED8008BC83F /* AddCardCoordinator.swift in Sources */,
 				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
+				F9D2CAE52A5487B5008BC83F /* CardEntity+CoreDataProperties.swift in Sources */,
 				F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */,
-				F9E2D9932A53B71600131841 /* CategoryEntity+CoreDataClass.swift in Sources */,
 				F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */,
 				F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */,
 				F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */,
@@ -432,19 +461,26 @@
 				F9BDD4222A536CCC0077C92C /* TestCoordinator.swift in Sources */,
 				F9BDD4242A536CDD0077C92C /* AppFactory.swift in Sources */,
 				F9E2D9862A53B5E500131841 /* GetAllCards.swift in Sources */,
+				F9D2CAE92A549176008BC83F /* ClearDatabase.swift in Sources */,
+				F9D2CAF32A54A0F4008BC83F /* UpdateCard.swift in Sources */,
 				F9BDD4352A5373980077C92C /* AddCardScreen.swift in Sources */,
-				F9E2D9942A53B71600131841 /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4302A536FB80077C92C /* Font.swift in Sources */,
+				F9D2CAF52A54A11B008BC83F /* RemoveCard.swift in Sources */,
 				F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */,
+				F9D2CAE42A5487B5008BC83F /* CardEntity+CoreDataClass.swift in Sources */,
 				F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */,
-				F9BDD4052A5367AC0077C92C /* CoreDataManaager.swift in Sources */,
+				F9BDD4052A5367AC0077C92C /* CoreDataManager.swift in Sources */,
 				F9E2D9882A53B66300131841 /* GetAllCardsByLanguage.swift in Sources */,
+				F9D2CAF12A54A0AA008BC83F /* CardViewModel.swift in Sources */,
+				F9D2CAE22A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift in Sources */,
+				F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */,
 				F9BDD4292A536D1A0077C92C /* HomeScreen.swift in Sources */,
-				F9E2D9902A53B71600131841 /* LanguageEntity+CoreDataProperties.swift in Sources */,
+				F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
 				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,
 				F9BDD40F2A5369020077C92C /* Category.swift in Sources */,
+				F9D2CAE72A5488F4008BC83F /* CardTestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,13 +692,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F9BDD3E82A53671E0077C92C /* Cardx.xcdatamodeld */ = {
+		F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F9BDD3E92A53671E0077C92C /* Cardx.xcdatamodel */,
+				F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */,
 			);
-			currentVersion = F9BDD3E92A53671E0077C92C /* Cardx.xcdatamodel */;
-			path = Cardx.xcdatamodeld;
+			currentVersion = F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */;
+			path = CardxModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

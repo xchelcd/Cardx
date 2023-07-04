@@ -13,13 +13,15 @@ protocol TestScreenCoordinator {
 
 class TestScreen: UIViewController {
     
+    private var cardItem: CardItem? = nil
+    
     private let viewModel: TestViewModel
     //private let coordinator: TestScreenCoordinator
     
     init(viewModel: TestViewModel/*, coordinator: TestScreenCoordinator*/) {
         self.viewModel = viewModel
         //self.coordinator = coordinator
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -54,19 +56,58 @@ class TestScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if true {
+        
+        // viewModel.clearDatabase()
+        if false {
             // MARK: - to add
             setupCardItem()
         } else {
             // MARK: to display cards
             setupTableView()
+            fetchCards()
         }
     }
 
 }
 
-// MARK: - TableView start
+// MARK: - AddCard start
+extension TestScreen {
+    
+    
+    @objc private func add(sender: UIButton) {
+        print(_tag, "Add")
+        
+        
+        let toTranslate = "Hallo"
+        let translation = "Hola"
+        let languageName = "German"
+        let difficultyName = CardDifficulty.EASY
+        let difficultySelectedName = CardDifficulty.NULL
+        let categoryName = "Saludos"
+        
+        let card: Card = Card(id: UUID(), toTranslate: toTranslate, translation: translation, language: Language(id: UUID(), name: languageName), difficulty: Difficulty(id: CardDifficultyId.EASY, name: difficultyName), difficultySelected: Difficulty(id: CardDifficultyId.NULL, name: difficultySelectedName), category: Category(id: UUID(), name: categoryName))
+        
+        viewModel.saveCard(card: card)
+    }
+    
+    private func setupCardItem() {
+        let cardItem = CardItem(card: nil)
+        self.cardItem = cardItem
+        self.view.addSubview(cardItem)
+        self.view.addSubview(addButton)
+        NSLayoutConstraint.activate([
+            cardItem.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            cardItem.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            cardItem.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            
+            addButton.topAnchor.constraint(equalTo: cardItem.bottomAnchor, constant: CGFloat(15)),
+            addButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: CGFloat(-15))
+        ])
+    }
+}
+// MARK: - AddCard end
+
+// MARK: - display cards start
 extension TestScreen: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cardList.count
@@ -119,52 +160,10 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
             tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
     }
-}
-
-class TestCell: UITableViewCell {
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    func bind(card: Card) {
-        let cardItem = CardItem(card: card)
-        self.addSubview(cardItem)
-        NSLayoutConstraint.activate([
-            cardItem.topAnchor.constraint(equalTo: topAnchor),
-            cardItem.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cardItem.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+    private func fetchCards() {
+        cardList = viewModel.fetchAllCards()
+        tableView.reloadData()
     }
 }
-// MARK: - TableView end
-
-
-
-// MARK: - AddCard start
-extension TestScreen {
-    
-    
-    @objc private func add(sender: UIButton) {
-        print(_tag, "add")
-    }
-    
-    private func setupCardItem() {
-        let cardItem = CardItem(card: nil)
-        self.view.addSubview(cardItem)
-        self.view.addSubview(addButton)
-        NSLayoutConstraint.activate([
-            cardItem.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            cardItem.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            cardItem.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            
-            addButton.topAnchor.constraint(equalTo: cardItem.bottomAnchor, constant: CGFloat(15)),
-            addButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: CGFloat(-15))
-        ])
-    }
-}
-// MARK: - AddCard end
+// MARK: - display cards end

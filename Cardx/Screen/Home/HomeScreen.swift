@@ -9,6 +9,8 @@ import UIKit
 
 protocol HomeScreenCoordinator {
     func navigateToTestScreen()
+    func navigateToAddCards()
+    //func navigateToDisplayCards()
 }
 
 class HomeScreen: UIViewController {
@@ -33,6 +35,7 @@ class HomeScreen: UIViewController {
     }
     
     @IBAction func addNewCard(_ sender: UIButton) {
+        coordinator.navigateToAddCards()
     }
     
     @IBAction func displayCards(_ sender: UIButton) {

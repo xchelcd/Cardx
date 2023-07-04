@@ -7,6 +7,17 @@
 
 import UIKit
 
+protocol CardItemOptionsDelegate {
+    func languageSelected()
+    func categorySelected()
+    func difficultySelected()
+}
+
+protocol CardItemDifficultyDelegate {
+    func flip()
+    func difficultySelected(difficultyIndex: Int)
+}
+
 class CardItem: UIView {
     
     var isOpen: Bool = false
@@ -159,8 +170,16 @@ class CardItem: UIView {
     }()
     
     private var card: Card? = nil
-    init(card: Card?) {
+    private var optionsDelegate: CardItemOptionsDelegate? = nil
+    private var difficultyDelegate: CardItemDifficultyDelegate? = nil
+    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil) {
         super.init(frame: .zero)
+        
+        self.optionsDelegate = optionsDelegate
+        self.difficultyDelegate = difficultyDelegate
+        
+        setupCardViewWithDelegates(optionsDelegate: optionsDelegate, difficultyDelegate: difficultyDelegate)
+        
         self.translatesAutoresizingMaskIntoConstraints = false
         
         setupView()
@@ -189,37 +208,44 @@ extension CardItem {
     
     @objc
     private func selectLanguage() {
-        print(_tag, "selectLanguage")
+        //print(_tag, "selectLanguage")
+        optionsDelegate?.languageSelected()
     }
     @objc
     private func selectCategory() {
-        print(_tag, "selectCategory")
+        //print(_tag, "selectCategory")
+        optionsDelegate?.categorySelected()
     }
     @objc
     private func selectDifficulty() {
-        print(_tag, "selectDifficulty")
+        //print(_tag, "selectDifficulty")
+        optionsDelegate?.difficultySelected()
     }
     @objc
     private func flip(sender: UIButton) {
-        print(_tag, "flip")
+        //print(_tag, "flip")
         isOpen.toggle()
         toFlip(isOpen: isOpen)
     }
     @objc
     private func selectTryAgain() {
-        print(_tag, "selectTryAgain")
+        //print(_tag, "selectTryAgain")
+        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.TRY_AGAING.rawValue)
     }
     @objc
     private func selectHard() {
-        print(_tag, "selectHard")
+        //print(_tag, "selectHard")
+        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.HARD.rawValue)
     }
     @objc
     private func selectMedium(sender: UIButton) {
         print(_tag, "selectMedium")
+        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.MEDIUM.rawValue)
     }
     @objc
     private func selectEasy() {
-        print(_tag, "selectEasy")
+        //print(_tag, "selectEasy")
+        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.EASY.rawValue)
     }
 }
 
@@ -232,8 +258,8 @@ extension CardItem {
     private func toFlip(isOpen: Bool) {
         let animation: UIView.AnimationOptions = isOpen ? .transitionFlipFromLeft : .transitionFlipFromRight
         UIView.transition(with: cardView, duration: 0.3, options: animation, animations: nil, completion: nil)
-        
-        //setVisibility(isOpen: isOpen)
+
+        setVisibility(isOpen: isOpen)
     }
     
     private func setupCard() {
@@ -245,6 +271,11 @@ extension CardItem {
         categoryButton.setTitle(card.category.name, for: .normal)
         textToTranslate.text = card.toTranslate
         translation.text = card.translation
+    }
+    
+    private func setVisibility(isOpen: Bool) {
+        translation.isHidden = isOpen
+        textToTranslate.isHidden = !isOpen
     }
 }
 
@@ -354,5 +385,28 @@ extension CardItem {
             //easyButton.trailingAnchor.constraint(equalTo: difficultyLayout.leadingAnchor),
             
         ])
+    }
+}
+
+extension CardItem {
+    
+    private func setupCardViewWithDelegates(optionsDelegate: CardItemOptionsDelegate?, difficultyDelegate: CardItemDifficultyDelegate?) {
+        
+        if let _ = optionsDelegate {
+            difficultyLayout.isHidden = true
+            flipButton.isHidden = true
+        
+        }
+        
+        if let _ = difficultyDelegate {
+            translation.isHidden = isOpen
+            textToTranslate.isHidden = !isOpen
+            languageButton.isEnabled = false
+            categoryButton.isEnabled = false
+            difficultyButton.isEnabled = false
+            
+            difficultyLayout.isHidden = isOpen
+            flipButton.isHidden = isOpen
+        }
     }
 }

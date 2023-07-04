@@ -24,6 +24,17 @@ final class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeScreenCoordinator {
+    
+    func navigateToAddCards() {
+        let coordinator = homeFactory.makeAddCardModule(navController: navController)
+        coordinator.start()
+    }
+    
+    //func navigateToDisplayCards() {
+    //    let coordinator = homeFactory.makeDisplayCardModule(navController: navController)
+    //    coordinator.start()
+    //}
+    
     //func navigateToSettings() {
     //    let coordinator = homeFactory.makeSettingsmodule(navController: navController)
     //    coordinator.start

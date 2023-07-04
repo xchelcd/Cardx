@@ -10,6 +10,18 @@ import Foundation
 struct Difficulty {
     let id: CardDifficultyId
     let name: CardDifficulty
+    
+    static func getDifficulty(index: Int) -> Difficulty {
+        let cardDifficultyId = CardDifficultyId(rawValue: index)
+        let cardDifficulty = CardDifficulty.allCases[index]
+        return .init(id: cardDifficultyId!, name: cardDifficulty)
+    }
+    
+    static let difficulties: [Difficulty] = [
+        .init(id: CardDifficultyId.EASY, name: CardDifficulty.EASY),
+        .init(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM),
+        .init(id: CardDifficultyId.HARD, name: CardDifficulty.HARD),
+    ]
 }
 
 enum CardDifficulty: String, CaseIterable {
@@ -21,9 +33,9 @@ enum CardDifficulty: String, CaseIterable {
 }
 
 enum CardDifficultyId: Int {
-    case NULL = -1
-    case TRY_AGAING = 0
-    case EASY = 1
-    case MEDIUM = 2
-    case HARD = 3
+    case NULL = 0
+    case TRY_AGAING = 1
+    case EASY = 2
+    case MEDIUM = 3
+    case HARD = 4
 }

@@ -1,5 +1,5 @@
 //
-//  SaveCard.swift
+//  InsertCard.swift
 //  Cardx
 //
 //  Created by Xchel Carranza on 03/07/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SaveCard {
+class InsertCard {
     private let coreDataManager: CoreDataManager
     
     init(coreDataManager: CoreDataManager) {
@@ -24,7 +24,7 @@ class SaveCard {
         cardEntity.categoryId = card.category.id
         cardEntity.difficulty = Int16(card.difficulty.id.rawValue)
         cardEntity.difficultySelected = Int16(card.difficultySelected.id.rawValue)
-        
-        coreDataManager.saveData()
+        // MARK: - to check coreDataManager.saveData() or coreDataManager.insertData(card: Card)
+        coreDataManager.insertCard(card: card)
     }
 }
