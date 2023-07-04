@@ -317,7 +317,7 @@
 		F9BDD4152A536B270077C92C /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				F9BDD4172A536B7A0077C92C /* GameScreen */,
+				F9BDD4172A536B7A0077C92C /* Game */,
 				F9BDD4162A536B5B0077C92C /* GameOptions */,
 			);
 			path = Game;
@@ -330,11 +330,13 @@
 			path = GameOptions;
 			sourceTree = "<group>";
 		};
-		F9BDD4172A536B7A0077C92C /* GameScreen */ = {
+		F9BDD4172A536B7A0077C92C /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				F9D2CAF72A54CA59008BC83F /* DisplayCards */,
+				F9D2CAF62A54CA54008BC83F /* GameScreen */,
 			);
-			path = GameScreen;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		F9BDD4202A536CC10077C92C /* Test */ = {
@@ -353,6 +355,20 @@
 			children = (
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F9D2CAF62A54CA54008BC83F /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		F9D2CAF72A54CA59008BC83F /* DisplayCards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DisplayCards;
 			sourceTree = "<group>";
 		};
 		F9E2D9722A53B1B600131841 /* UseCase */ = {

@@ -37,6 +37,7 @@ class TestScreen: UIViewController {
     }()
     
     private let identifier = "testCell"
+    /*
     private var cardList: [Card] = [
         .init(id: UUID(), toTranslate: "Die Frau", translation: "La mujer", language: .init(id: UUID(), name: "German"), difficulty: .init(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "Extra")),
         .init(id: UUID(), toTranslate: "Hallo", translation: "Hola", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
@@ -46,6 +47,9 @@ class TestScreen: UIViewController {
         .init(id: UUID(), toTranslate: "das Wasser", translation: "Agua", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
         
     ]
+    */
+    private var cardList: [Card] = []
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false

@@ -395,7 +395,6 @@ extension CardItem {
         if let _ = optionsDelegate {
             difficultyLayout.isHidden = true
             flipButton.isHidden = true
-        
         }
         
         if let _ = difficultyDelegate {
@@ -407,6 +406,11 @@ extension CardItem {
             
             difficultyLayout.isHidden = isOpen
             flipButton.isHidden = isOpen
+        }
+        
+        if optionsDelegate == nil && difficultyDelegate == nil {
+            textToTranslate.isEnabled = false
+            translation.isEnabled = false
         }
     }
 }
