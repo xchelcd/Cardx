@@ -13,7 +13,7 @@ struct Card {
     let translation: String
     let language: Language
     let difficulty: Difficulty
-    let difficultySelected: Difficulty? // by customer
+    let difficultySelected: Difficulty // by customer
     let category: Category
     
     func toString()  -> String {

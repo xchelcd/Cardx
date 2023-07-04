@@ -7,7 +7,24 @@
 
 import UIKit
 
+protocol TestScreenCoordinator {
+    
+}
+
 class TestScreen: UIViewController {
+    
+    private let viewModel: TestViewModel
+    //private let coordinator: TestScreenCoordinator
+    
+    init(viewModel: TestViewModel/*, coordinator: TestScreenCoordinator*/) {
+        self.viewModel = viewModel
+        //self.coordinator = coordinator
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private let addButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
@@ -19,11 +36,13 @@ class TestScreen: UIViewController {
     
     private let identifier = "testCell"
     private var cardList: [Card] = [
-        .init(id: UUID(), toTranslate: "Hallo", translation: "Hola", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: UUID(), name: CardDifficulty.EASY), difficultySelected: nil, category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Wie geht ist dir", translation: "Cómo estás?", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: UUID(), name: CardDifficulty.EASY), difficultySelected: nil, category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Auf Wiedersehen", translation: "Adiós", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: UUID(), name: CardDifficulty.EASY), difficultySelected: nil, category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Wollen", translation: "Querer", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: UUID(), name: CardDifficulty.EASY), difficultySelected: nil, category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "das Wasser", translation: "Agua", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: UUID(), name: CardDifficulty.EASY), difficultySelected: nil, category: .init(id: UUID(), name: "All")),
+        .init(id: UUID(), toTranslate: "Die Frau", translation: "La mujer", language: .init(id: UUID(), name: "German"), difficulty: .init(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "Extra")),
+        .init(id: UUID(), toTranslate: "Hallo", translation: "Hola", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+        .init(id: UUID(), toTranslate: "Wie geht ist dir", translation: "Cómo estás?", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+        .init(id: UUID(), toTranslate: "Auf Wiedersehen", translation: "Adiós", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+        .init(id: UUID(), toTranslate: "Wollen", translation: "Querer", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+        .init(id: UUID(), toTranslate: "das Wasser", translation: "Agua", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+        
     ]
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -36,7 +55,7 @@ class TestScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if false {
+        if true {
             // MARK: - to add
             setupCardItem()
         } else {

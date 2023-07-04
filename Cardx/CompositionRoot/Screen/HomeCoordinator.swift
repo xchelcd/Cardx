@@ -17,6 +17,7 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
+        
         let viewController = homeFactory.makeModule(coordinator: self)
         navController.pushViewController(viewController, animated: true)
     }

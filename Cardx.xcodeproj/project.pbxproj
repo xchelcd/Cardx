@@ -35,6 +35,16 @@
 		F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4342A5373980077C92C /* AddCardScreen.xib */; };
 		F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4372A5375070077C92C /* TestScreen.swift */; };
 		F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4382A5375070077C92C /* TestScreen.xib */; };
+		F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9732A53B1D000131841 /* TestViewModel.swift */; };
+		F9E2D9762A53B24C00131841 /* SaveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9752A53B24C00131841 /* SaveCard.swift */; };
+		F9E2D9862A53B5E500131841 /* GetAllCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9852A53B5E500131841 /* GetAllCards.swift */; };
+		F9E2D9882A53B66300131841 /* GetAllCardsByLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */; };
+		F9E2D98F2A53B71600131841 /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */; };
+		F9E2D9902A53B71600131841 /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */; };
+		F9E2D9912A53B71600131841 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */; };
+		F9E2D9922A53B71600131841 /* CardEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */; };
+		F9E2D9932A53B71600131841 /* CategoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */; };
+		F9E2D9942A53B71600131841 /* CategoryEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +78,16 @@
 		F9BDD4342A5373980077C92C /* AddCardScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardScreen.xib; sourceTree = "<group>"; };
 		F9BDD4372A5375070077C92C /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		F9BDD4382A5375070077C92C /* TestScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestScreen.xib; sourceTree = "<group>"; };
+		F9E2D9732A53B1D000131841 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		F9E2D9752A53B24C00131841 /* SaveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCard.swift; sourceTree = "<group>"; };
+		F9E2D9852A53B5E500131841 /* GetAllCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCards.swift; sourceTree = "<group>"; };
+		F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCardsByLanguage.swift; sourceTree = "<group>"; };
+		F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CardEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CategoryEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/CategoryEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +104,12 @@
 		F9BDD3D32A53671E0077C92C = {
 			isa = PBXGroup;
 			children = (
+				F9E2D9892A53B71600131841 /* LanguageEntity+CoreDataClass.swift */,
+				F9E2D98A2A53B71600131841 /* LanguageEntity+CoreDataProperties.swift */,
+				F9E2D98B2A53B71600131841 /* CardEntity+CoreDataClass.swift */,
+				F9E2D98C2A53B71600131841 /* CardEntity+CoreDataProperties.swift */,
+				F9E2D98D2A53B71600131841 /* CategoryEntity+CoreDataClass.swift */,
+				F9E2D98E2A53B71600131841 /* CategoryEntity+CoreDataProperties.swift */,
 				F9BDD3DE2A53671E0077C92C /* Cardx */,
 				F9BDD3DD2A53671E0077C92C /* Products */,
 			);
@@ -191,6 +217,7 @@
 		F9BDD3FE2A5367820077C92C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F9E2D9722A53B1B600131841 /* UseCase */,
 				F9BDD4002A53678E0077C92C /* Model */,
 			);
 			path = Domain;
@@ -297,8 +324,19 @@
 			children = (
 				F9BDD4372A5375070077C92C /* TestScreen.swift */,
 				F9BDD4382A5375070077C92C /* TestScreen.xib */,
+				F9E2D9732A53B1D000131841 /* TestViewModel.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		F9E2D9722A53B1B600131841 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D9752A53B24C00131841 /* SaveCard.swift */,
+				F9E2D9852A53B5E500131841 /* GetAllCards.swift */,
+				F9E2D9872A53B66300131841 /* GetAllCardsByLanguage.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,25 +412,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E2D9912A53B71600131841 /* CardEntity+CoreDataClass.swift in Sources */,
+				F9E2D9762A53B24C00131841 /* SaveCard.swift in Sources */,
 				F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */,
+				F9E2D98F2A53B71600131841 /* LanguageEntity+CoreDataClass.swift in Sources */,
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9BDD3EA2A53671E0077C92C /* Cardx.xcdatamodeld in Sources */,
 				F9BDD4112A5369920077C92C /* CardView.swift in Sources */,
+				F9E2D9922A53B71600131841 /* CardEntity+CoreDataProperties.swift in Sources */,
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
 				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
 				F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */,
+				F9E2D9932A53B71600131841 /* CategoryEntity+CoreDataClass.swift in Sources */,
 				F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */,
+				F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */,
 				F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */,
 				F9BDD41C2A536C850077C92C /* Coordinator.swift in Sources */,
 				F9BDD4222A536CCC0077C92C /* TestCoordinator.swift in Sources */,
 				F9BDD4242A536CDD0077C92C /* AppFactory.swift in Sources */,
+				F9E2D9862A53B5E500131841 /* GetAllCards.swift in Sources */,
 				F9BDD4352A5373980077C92C /* AddCardScreen.swift in Sources */,
+				F9E2D9942A53B71600131841 /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4302A536FB80077C92C /* Font.swift in Sources */,
 				F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */,
 				F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */,
 				F9BDD4052A5367AC0077C92C /* CoreDataManaager.swift in Sources */,
+				F9E2D9882A53B66300131841 /* GetAllCardsByLanguage.swift in Sources */,
 				F9BDD4292A536D1A0077C92C /* HomeScreen.swift in Sources */,
+				F9E2D9902A53B71600131841 /* LanguageEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
 				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,

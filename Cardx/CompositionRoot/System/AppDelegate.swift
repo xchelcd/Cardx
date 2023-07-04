@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //AppDelegate.getSqliteTo(destinationPath: "/Users/Xchel/X/ios/anki/Cardx/sqlite", persistentContainer: appDelegate.persistentContainer)
         return true
     }
 
@@ -79,3 +81,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    public static func getSqliteTo(destinationPath: String, persistentContainer: NSPersistentContainer) {
+        let storeUrl = persistentContainer.persistentStoreCoordinator.persistentStores.first?.url
+        let sqliteFileName = storeUrl!.lastPathComponent
+        let walFileName = sqliteFileName + "-wal"
+        let shmFileName = sqliteFileName + "-shm"
+        
+        let fileArray = [sqliteFileName, walFileName, shmFileName]
+        
+        let storeDir = storeUrl!.deletingLastPathComponent()
+        let destDir = URL(fileURLWithPath: destinationPath, isDirectory: true)
+        
+        do {
+            for fileName in fileArray {
+                let sourceUrl = storeDir.appendingPathComponent(fileName, isDirectory: false)
+                let destUrl = destDir.appendingPathComponent(fileName, isDirectory: false)
+                
+                try FileManager.default.copyItem(at: sourceUrl, to: destDir)
+                print(_tag, "File \(fileName) copied to path: \(destUrl.path)")
+            }
+        } catch {
+            print(_tag, "\(error)")
+        }
+    }
+}

@@ -14,7 +14,20 @@ protocol TestFactory {
 
 struct TestFactoryImp: TestFactory {
     func makeModule(coordinator: TestCoordinator) -> UIViewController {
-        let controller = TestScreen()
+        
+        let coreDataManager = CoreDataManager.shared
+        
+        let saveCard = SaveCard(coreDataManager: coreDataManager)
+        let getAllCards = GetAllCards(coreDataManager: coreDataManager)
+        let getAllCardsByLanguage = GetAllCardsByLanguage(coreDataManager: coreDataManager)
+        
+        let viewModel = TestViewModel(
+            saveCard: saveCard,
+            getAllCards: getAllCards,
+            getAllCardsByLanguage: getAllCardsByLanguage
+        )
+        
+        let controller = TestScreen(viewModel: viewModel)
         return controller
     }
 }

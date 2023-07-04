@@ -38,7 +38,9 @@ class CoreDataManager {
 }
 
 extension CoreDataManager {
+    
     func insertCard(card: Card) {
+        
         saveData()
     }
     
@@ -73,5 +75,9 @@ extension CoreDataManager {
     func getCard() -> Card? {
         saveData()
         return nil
+    }
+    
+    func clearDatabase() {
+        
     }
 }
