@@ -33,4 +33,13 @@ extension UIViewController {
         
         self.present(popUp, animated: true)
     }
+    
+    func showDefaultBottomSheetWithTableView<T>(title: String, message: String, data: [T]) {
+        let bottomSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        let closeAction = UIAlertAction(title: "Close", style: .cancel)
+        bottomSheet.addAction(closeAction)
+        
+        present(bottomSheet, animated: true)
+    }
 }

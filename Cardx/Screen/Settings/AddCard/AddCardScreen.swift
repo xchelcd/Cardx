@@ -166,7 +166,8 @@ extension AddCardScreen: UIPickerViewDataSource, UIPickerViewDelegate {
         languagePicker.delegate = self
         languagePicker.dataSource = self
         
-        toolbarPicker.items = [UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(onPickerDone))]
+        let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(onPickerDone))
+        toolbarPicker.items = [closeButton]
         
         languages = cardViewModel.fetchAlllanguages()
         categories = cardViewModel.fetchAllCategories()

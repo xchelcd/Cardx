@@ -55,10 +55,13 @@ class SettingsScreen: UIViewController {
     @IBAction func showAllLanguages(_ sender: UIButton) {
         let languageList = settingViewmodel.fetchAllLanguages()
         print(_tag, "Languages (\(languageList.count)): \(languageList.map{$0.name})")
+        // showDefaultBottomSheetWithTableView(title: "Languages", message: "Here you can see all languages storaged and you can delete it", data: languageList)
     }
+    
     @IBAction func showAllCategories(_ sender: UIButton) {
         let categoryList = settingViewmodel.fetchAllCategories()
         print(_tag, "Categories (\(categoryList.count)): \(categoryList.map{$0.name})")
+        // showDefaultBottomSheetWithTableView(title: "Categories", message: "Here you can see all categories storaged and you can delete it", data: categoryList)
     }
     
 }
