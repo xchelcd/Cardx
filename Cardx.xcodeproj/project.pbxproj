@@ -34,6 +34,19 @@
 		F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4342A5373980077C92C /* AddCardScreen.xib */; };
 		F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD4372A5375070077C92C /* TestScreen.swift */; };
 		F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD4382A5375070077C92C /* TestScreen.xib */; };
+		F9C247432A55F7820031AA21 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247412A55F7820031AA21 /* SettingsScreen.swift */; };
+		F9C247442A55F7820031AA21 /* SettingsScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C247422A55F7820031AA21 /* SettingsScreen.xib */; };
+		F9C247472A55F8800031AA21 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247462A55F8800031AA21 /* SettingViewModel.swift */; };
+		F9C247492A55F8A40031AA21 /* PopUp+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247482A55F8A40031AA21 /* PopUp+UIViewController.swift */; };
+		F9C2474B2A55F9300031AA21 /* SettingCoordiantor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2474A2A55F9300031AA21 /* SettingCoordiantor.swift */; };
+		F9C2474D2A55F9430031AA21 /* SettingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2474C2A55F9430031AA21 /* SettingFactory.swift */; };
+		F9C247532A5603C80031AA21 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247522A5603C80031AA21 /* ViewModel.swift */; };
+		F9C247552A5604050031AA21 /* InsertLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247542A5604050031AA21 /* InsertLanguage.swift */; };
+		F9C247572A56040E0031AA21 /* InsertCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247562A56040E0031AA21 /* InsertCategory.swift */; };
+		F9C247592A5614D60031AA21 /* GetAllLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C247582A5614D60031AA21 /* GetAllLanguages.swift */; };
+		F9C2475B2A5614DE0031AA21 /* GetAllCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475A2A5614DE0031AA21 /* GetAllCategories.swift */; };
+		F9C2475D2A5614E60031AA21 /* GetLanguageById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */; };
+		F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */; };
 		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
 		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
 		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
@@ -84,6 +97,19 @@
 		F9BDD4342A5373980077C92C /* AddCardScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardScreen.xib; sourceTree = "<group>"; };
 		F9BDD4372A5375070077C92C /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
 		F9BDD4382A5375070077C92C /* TestScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestScreen.xib; sourceTree = "<group>"; };
+		F9C247412A55F7820031AA21 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		F9C247422A55F7820031AA21 /* SettingsScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsScreen.xib; sourceTree = "<group>"; };
+		F9C247462A55F8800031AA21 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		F9C247482A55F8A40031AA21 /* PopUp+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopUp+UIViewController.swift"; sourceTree = "<group>"; };
+		F9C2474A2A55F9300031AA21 /* SettingCoordiantor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordiantor.swift; sourceTree = "<group>"; };
+		F9C2474C2A55F9430031AA21 /* SettingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFactory.swift; sourceTree = "<group>"; };
+		F9C247522A5603C80031AA21 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F9C247542A5604050031AA21 /* InsertLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLanguage.swift; sourceTree = "<group>"; };
+		F9C247562A56040E0031AA21 /* InsertCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertCategory.swift; sourceTree = "<group>"; };
+		F9C247582A5614D60031AA21 /* GetAllLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllLanguages.swift; sourceTree = "<group>"; };
+		F9C2475A2A5614DE0031AA21 /* GetAllCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategories.swift; sourceTree = "<group>"; };
+		F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLanguageById.swift; sourceTree = "<group>"; };
+		F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryById.swift; sourceTree = "<group>"; };
 		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
 		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -168,6 +194,7 @@
 				F9BDD41E2A536CB90077C92C /* HomeCoordinator.swift */,
 				F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */,
 				F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */,
+				F9C2474A2A55F9300031AA21 /* SettingCoordiantor.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -188,6 +215,7 @@
 				F9BDD4252A536CEE0077C92C /* HomeFactory.swift */,
 				F9BDD42B2A536DB00077C92C /* TestFactory.swift */,
 				F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */,
+				F9C2474C2A55F9430031AA21 /* SettingFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -204,12 +232,12 @@
 		F9BDD3FB2A5367680077C92C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F9C247452A55F8700031AA21 /* Common */,
 				F9BDD4202A536CC10077C92C /* Test */,
 				F9BDD4152A536B270077C92C /* Game */,
 				F9BDD4072A5367E30077C92C /* Settings */,
 				F9BDD3FD2A5367740077C92C /* Home */,
 				F9BDD3FC2A53676B0077C92C /* Launch */,
-				F9D2CAF02A54A0AA008BC83F /* CardViewModel.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -281,7 +309,8 @@
 		F9BDD4072A5367E30077C92C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F9BDD4142A536AFA0077C92C /* Add */,
+				F9C247402A55F75A0031AA21 /* Options */,
+				F9BDD4142A536AFA0077C92C /* AddCard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -301,17 +330,18 @@
 				F9BDD4122A5369C20077C92C /* NameDescribable.swift */,
 				F9BDD42F2A536FB80077C92C /* Font.swift */,
 				F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */,
+				F9C247482A55F8A40031AA21 /* PopUp+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		F9BDD4142A536AFA0077C92C /* Add */ = {
+		F9BDD4142A536AFA0077C92C /* AddCard */ = {
 			isa = PBXGroup;
 			children = (
 				F9BDD4332A5373980077C92C /* AddCardScreen.swift */,
 				F9BDD4342A5373980077C92C /* AddCardScreen.xib */,
 			);
-			path = Add;
+			path = AddCard;
 			sourceTree = "<group>";
 		};
 		F9BDD4152A536B270077C92C /* Game */ = {
@@ -350,6 +380,25 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		F9C247402A55F75A0031AA21 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				F9C247412A55F7820031AA21 /* SettingsScreen.swift */,
+				F9C247422A55F7820031AA21 /* SettingsScreen.xib */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		F9C247452A55F8700031AA21 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F9D2CAF02A54A0AA008BC83F /* CardViewModel.swift */,
+				F9C247462A55F8800031AA21 /* SettingViewModel.swift */,
+				F9C247522A5603C80031AA21 /* ViewModel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F9D2CAD22A548506008BC83F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +429,12 @@
 				F9D2CAE82A549176008BC83F /* ClearDatabase.swift */,
 				F9D2CAF22A54A0F4008BC83F /* UpdateCard.swift */,
 				F9D2CAF42A54A11B008BC83F /* RemoveCard.swift */,
+				F9C247542A5604050031AA21 /* InsertLanguage.swift */,
+				F9C247562A56040E0031AA21 /* InsertCategory.swift */,
+				F9C247582A5614D60031AA21 /* GetAllLanguages.swift */,
+				F9C2475A2A5614DE0031AA21 /* GetAllCategories.swift */,
+				F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */,
+				F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -442,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C247442A55F7820031AA21 /* SettingsScreen.xib in Resources */,
 				F9BDD42A2A536D1A0077C92C /* HomeScreen.xib in Resources */,
 				F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */,
 				F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */,
@@ -457,8 +513,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C2475B2A5614DE0031AA21 /* GetAllCategories.swift in Sources */,
 				F9E2D9762A53B24C00131841 /* InsertCard.swift in Sources */,
+				F9C247472A55F8800031AA21 /* SettingViewModel.swift in Sources */,
 				F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */,
+				F9C247592A5614D60031AA21 /* GetAllLanguages.swift in Sources */,
+				F9C2475D2A5614E60031AA21 /* GetLanguageById.swift in Sources */,
 				F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */,
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */,
@@ -467,12 +527,15 @@
 				F9D2CAE32A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
 				F9D2CAEF2A549ED8008BC83F /* AddCardCoordinator.swift in Sources */,
+				F9C2474D2A55F9430031AA21 /* SettingFactory.swift in Sources */,
 				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
 				F9D2CAE52A5487B5008BC83F /* CardEntity+CoreDataProperties.swift in Sources */,
 				F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */,
 				F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */,
 				F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */,
 				F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */,
+				F9C247572A56040E0031AA21 /* InsertCategory.swift in Sources */,
+				F9C2474B2A55F9300031AA21 /* SettingCoordiantor.swift in Sources */,
 				F9BDD41C2A536C850077C92C /* Coordinator.swift in Sources */,
 				F9BDD4222A536CCC0077C92C /* TestCoordinator.swift in Sources */,
 				F9BDD4242A536CDD0077C92C /* AppFactory.swift in Sources */,
@@ -482,11 +545,13 @@
 				F9BDD4352A5373980077C92C /* AddCardScreen.swift in Sources */,
 				F9BDD4302A536FB80077C92C /* Font.swift in Sources */,
 				F9D2CAF52A54A11B008BC83F /* RemoveCard.swift in Sources */,
+				F9C247532A5603C80031AA21 /* ViewModel.swift in Sources */,
 				F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */,
 				F9D2CAE42A5487B5008BC83F /* CardEntity+CoreDataClass.swift in Sources */,
 				F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */,
 				F9BDD4052A5367AC0077C92C /* CoreDataManager.swift in Sources */,
 				F9E2D9882A53B66300131841 /* GetAllCardsByLanguage.swift in Sources */,
+				F9C247432A55F7820031AA21 /* SettingsScreen.swift in Sources */,
 				F9D2CAF12A54A0AA008BC83F /* CardViewModel.swift in Sources */,
 				F9D2CAE22A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift in Sources */,
 				F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */,
@@ -494,9 +559,12 @@
 				F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
+				F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */,
 				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,
 				F9BDD40F2A5369020077C92C /* Category.swift in Sources */,
+				F9C247552A5604050031AA21 /* InsertLanguage.swift in Sources */,
 				F9D2CAE72A5488F4008BC83F /* CardTestCell.swift in Sources */,
+				F9C247492A55F8A40031AA21 /* PopUp+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

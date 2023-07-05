@@ -38,6 +38,7 @@ class CoreDataManager {
     }
 }
 
+// MARK: - Card
 extension CoreDataManager {
     
     func insertCard(card: Card) {
@@ -109,5 +110,68 @@ extension CoreDataManager {
         } catch let error {
             print("Detele all data in \(entity) error :", error)
         }
+    }
+}
+
+// MARK: - Category
+extension CoreDataManager {
+    func insertCategory(category: CategoryEntity) {
+        saveData()
+        print(_tag, "CategoryInserted: \(category.name)")
+    }
+    
+    func getCategoryById() -> Category? {
+        return nil
+    }
+    
+    func getAllCategories() -> [Category] {
+        let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
+        
+        var list = [CategoryEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            print(_tag, "items: \(list.count)")
+        } catch let error {
+            print(_tag, error)
+        }
+        
+        let categoryList: [Category] = list.map { entity in
+                .init(id: UUID(), name: entity.name ?? "")
+        }
+
+        print(_tag, "Fetched")
+        return categoryList
+    }
+}
+
+
+// MARK: - Language
+extension CoreDataManager {
+    func insertLanguage(language: LanguageEntity) {
+        saveData()
+        print(_tag, "LanguageInserted: \(language.name)")
+    }
+    
+    func getLanguageById() -> Language? {
+        return nil
+    }
+    
+    func getAllLanguages() -> [Language] {
+        let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
+        
+        var list = [LanguageEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            print(_tag, "items: \(list.count)")
+        } catch let error {
+            print(_tag, error)
+        }
+        
+        let categoryList: [Language] = list.map { entity in
+                .init(id: UUID(), name: entity.name ?? "-")
+        }
+
+        print(_tag, "Fetched")
+        return categoryList
     }
 }

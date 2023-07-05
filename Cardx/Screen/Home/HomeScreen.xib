@@ -20,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Eg5-ec-LrD">
-                    <rect key="frame" x="0.0" y="187" width="393" height="198"/>
+                    <rect key="frame" x="0.0" y="187" width="393" height="245"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7d-u9-996">
-                            <rect key="frame" x="12" y="0.0" width="369" height="56"/>
+                            <rect key="frame" x="12" y="0.0" width="369" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nf9-eV-3qv">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Test"/>
                                     <connections>
@@ -43,10 +43,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FM-Nr-bC0">
-                            <rect key="frame" x="12" y="71" width="369" height="56"/>
+                            <rect key="frame" x="12" y="65" width="369" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaI-p7-PZy">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Add"/>
                                     <connections>
@@ -64,10 +64,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtN-76-P9e">
-                            <rect key="frame" x="12" y="142" width="369" height="56"/>
+                            <rect key="frame" x="12" y="130" width="369" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foA-aM-6A1">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Display"/>
                                     <connections>
@@ -83,13 +83,35 @@
                                 <constraint firstItem="foA-aM-6A1" firstAttribute="top" secondItem="rtN-76-P9e" secondAttribute="top" id="UKI-uO-GRN"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-Cs-xG8">
+                            <rect key="frame" x="12" y="195" width="369" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGa-M9-cvh">
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="50"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="tinted" title="Settings"/>
+                                    <connections>
+                                        <action selector="openSettings:" destination="-1" eventType="touchUpInside" id="Cdi-Em-5xR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="LGa-M9-cvh" secondAttribute="bottom" id="33R-sk-zG4"/>
+                                <constraint firstItem="LGa-M9-cvh" firstAttribute="top" secondItem="DMa-Cs-xG8" secondAttribute="top" id="DSq-h8-0ck"/>
+                                <constraint firstAttribute="trailing" secondItem="LGa-M9-cvh" secondAttribute="trailing" id="WVT-vI-vyT"/>
+                                <constraint firstItem="LGa-M9-cvh" firstAttribute="leading" secondItem="DMa-Cs-xG8" secondAttribute="leading" id="Z4v-md-bhL"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="0FM-Nr-bC0" firstAttribute="width" secondItem="X7d-u9-996" secondAttribute="width" id="4kl-xt-ADW"/>
                         <constraint firstItem="0FM-Nr-bC0" firstAttribute="height" secondItem="X7d-u9-996" secondAttribute="height" id="An2-7b-ZjL"/>
                         <constraint firstItem="rtN-76-P9e" firstAttribute="width" secondItem="0FM-Nr-bC0" secondAttribute="width" id="HCs-RA-6uc"/>
+                        <constraint firstItem="DMa-Cs-xG8" firstAttribute="width" secondItem="0FM-Nr-bC0" secondAttribute="width" id="Hez-sV-g8A"/>
                         <constraint firstItem="rtN-76-P9e" firstAttribute="height" secondItem="0FM-Nr-bC0" secondAttribute="height" id="NBX-hP-gzh"/>
                         <constraint firstItem="0FM-Nr-bC0" firstAttribute="leading" secondItem="Eg5-ec-LrD" secondAttribute="leading" constant="12" id="OBE-2C-IxQ"/>
+                        <constraint firstItem="DMa-Cs-xG8" firstAttribute="height" secondItem="0FM-Nr-bC0" secondAttribute="height" id="XeB-6b-ALO"/>
                         <constraint firstAttribute="trailing" secondItem="0FM-Nr-bC0" secondAttribute="trailing" constant="12" id="cBG-5x-L64"/>
                     </constraints>
                 </stackView>

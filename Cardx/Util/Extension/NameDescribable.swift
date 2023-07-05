@@ -26,3 +26,4 @@ extension UIViewController: NameDescribable {}
 extension UIView: NameDescribable {}
 extension CoreDataManager: NameDescribable {}
 extension AppDelegate: NameDescribable {}
+extension ViewModel: NameDescribable {}

@@ -35,10 +35,10 @@ extension HomeCoordinator: HomeScreenCoordinator {
     //    coordinator.start()
     //}
     
-    //func navigateToSettings() {
-    //    let coordinator = homeFactory.makeSettingsmodule(navController: navController)
-    //    coordinator.start
-    //}
+    func navigateToSettingScreen() {
+        let coordinator = homeFactory.makeSettingModule(navController: navController)
+        coordinator.start()
+    }
     
     func navigateToTestScreen() {
         let coordinator = homeFactory.makeTestModule(navController: navController)

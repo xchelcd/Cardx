@@ -9,7 +9,7 @@ import UIKit
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeCoordinator) -> UIViewController
-    //func makeSettingsModule(navController: UINavigationController) -> UIViewController
+    func makeSettingModule(navController: UINavigationController) -> Coordinator
     func makeTestModule(navController: UINavigationController) -> Coordinator
     
     
@@ -35,6 +35,12 @@ struct HomeFactoryImp: HomeFactory {
         let addCardFactory = AddCardFactoryImp()
         let addCardCoordiantor = AddCardCoordinator(navController: navController, factory: addCardFactory)
         return addCardCoordiantor
+    }
+    
+    func makeSettingModule(navController: UINavigationController) -> Coordinator {
+        let factory = SettingFactoryImp()
+        let coordinator = SettingCoordinator(navController: navController, factory: factory)
+        return coordinator
     }
     
     //func makeDisplayCardModule(navController: UINavigationController) -> Coordinator {

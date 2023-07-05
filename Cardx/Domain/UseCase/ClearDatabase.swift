@@ -19,6 +19,30 @@ class ClearDatabase {
     }
 }
 
+class ClearCategoryDatabase {
+    private let coreDataManager: CoreDataManager
+    
+    init(coreDataManager: CoreDataManager) {
+        self.coreDataManager = coreDataManager
+    }
+    
+    func invoke() {
+        coreDataManager.clearDatabase(entity: EntityName.CATEGORY_ENTITY.rawValue)
+    }
+}
+
+class ClearLanguageDatabase {
+    private let coreDataManager: CoreDataManager
+    
+    init(coreDataManager: CoreDataManager) {
+        self.coreDataManager = coreDataManager
+    }
+    
+    func invoke() {
+        coreDataManager.clearDatabase(entity: EntityName.LANGUAGE_ENTITY.rawValue)
+    }
+}
+
 enum EntityName: String {
     case CARD_ENTITY = "CardEntity"
     case CATEGORY_ENTITY = "CategoryEntity"

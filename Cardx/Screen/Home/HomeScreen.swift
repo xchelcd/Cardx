@@ -11,6 +11,7 @@ protocol HomeScreenCoordinator {
     func navigateToTestScreen()
     func navigateToAddCards()
     //func navigateToDisplayCards()
+    func navigateToSettingScreen()
 }
 
 class HomeScreen: UIViewController {
@@ -40,4 +41,9 @@ class HomeScreen: UIViewController {
     
     @IBAction func displayCards(_ sender: UIButton) {
     }
+    
+    @IBAction func openSettings(_ sender: UIButton) {
+        coordinator.navigateToSettingScreen()
+    }
+    
 }

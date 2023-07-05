@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CardViewModel {
+class CardViewModel: ViewModel {
     
     private let insertCard: InsertCard
     private let getAllCards: GetAllCards
