@@ -25,7 +25,7 @@ struct AddCardFactoryImp: AddCardFactory {
         let updateCard = UpdateCard(coreDataManager: coreDataManager)
         let removeCard = RemoveCard(coreDataManager: coreDataManager)
         
-        let viewModel = CardViewModel(
+        let cardViewModel = CardViewModel(
             insertCard: insertCard,
             getAllCards: getAllCards,
             //getAllCardsByParam: getAllCardsByParam,
@@ -34,7 +34,22 @@ struct AddCardFactoryImp: AddCardFactory {
             removeCard: removeCard
         )
         
-        let controller = AddCardScreen(coordinator: coordinator, cardViewModel: viewModel)
+        let clearCategoryDatabase = ClearCategoryDatabase(coreDataManager: coreDataManager)
+        let clearLanguageDatabase = ClearLanguageDatabase(coreDataManager: coreDataManager)
+        let getAllLanguages = GetAllLanguages(coreDataManager: coreDataManager)
+        let getAllCategories = GetAllCatgories(coreDataManager: coreDataManager)
+        
+        
+        let settingViewModel = SettingViewModel(
+            clearCategoryDatabase: clearCategoryDatabase,
+            clearLangaugeDatabase: clearLanguageDatabase,
+            getAllLanguages: getAllLanguages,
+            getAllCategories: getAllCategories,
+            insertLanguage: nil,
+            insertCategory: nil
+        )
+        
+        let controller = AddCardScreen(coordinator: coordinator, cardViewModel: cardViewModel, settingViewModel: settingViewModel)
         
         return controller
     }

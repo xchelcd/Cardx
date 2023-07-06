@@ -17,6 +17,7 @@ class AddCardScreen: UIViewController {
     
     private let coordinator: AddCardScreenCoordinator
     private let cardViewModel: CardViewModel
+    private let settingViewModel: SettingViewModel
     
     
     private let toolbarPicker = UIToolbar(frame: CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 30))
@@ -46,9 +47,10 @@ class AddCardScreen: UIViewController {
     }()
     
     
-    init(coordinator: AddCardScreenCoordinator, cardViewModel: CardViewModel) {
+    init(coordinator: AddCardScreenCoordinator, cardViewModel: CardViewModel, settingViewModel: SettingViewModel) {
         self.coordinator = coordinator
         self.cardViewModel = cardViewModel
+        self.settingViewModel = settingViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -169,8 +171,8 @@ extension AddCardScreen: UIPickerViewDataSource, UIPickerViewDelegate {
         let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(onPickerDone))
         toolbarPicker.items = [closeButton]
         
-        languages = cardViewModel.fetchAlllanguages()
-        categories = cardViewModel.fetchAllCategories()
+        languages = settingViewModel.fetchAllLanguages()
+        categories = settingViewModel.fetchAllCategories()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

@@ -51,17 +51,4 @@ class CardViewModel: ViewModel {
     func deleteCard(card: Card) {
         removeCard.invoke(card: card)
     }
-    
-    func fetchAllCategories() -> [Category] {
-        return [
-            .init(id: UUID(), name: "Mix")
-        ]
-    }
-    
-    func fetchAlllanguages() -> [Language] {
-        return [
-            .init(id: UUID(), name: "English"),
-            .init(id: UUID(), name: "Deutsch"),
-        ]
-    }
 }

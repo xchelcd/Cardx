@@ -15,10 +15,10 @@ class SettingViewModel: ViewModel {
     private let getAllLanguages: GetAllLanguages
     private let getAllCategories: GetAllCatgories
     
-    private let insertLanguage: InsertLanguage
-    private let insertCategory: InsertCategory
+    private let insertLanguage: InsertLanguage?
+    private let insertCategory: InsertCategory?
     
-    init(clearCategoryDatabase: ClearCategoryDatabase, clearLangaugeDatabase: ClearLanguageDatabase, getAllLanguages: GetAllLanguages, getAllCategories: GetAllCatgories, insertLanguage: InsertLanguage, insertCategory: InsertCategory) {
+    init(clearCategoryDatabase: ClearCategoryDatabase, clearLangaugeDatabase: ClearLanguageDatabase, getAllLanguages: GetAllLanguages, getAllCategories: GetAllCatgories, insertLanguage: InsertLanguage?, insertCategory: InsertCategory?) {
         self.clearCategoryDatabase = clearCategoryDatabase
         self.clearLangaugeDatabase = clearLangaugeDatabase
         self.getAllLanguages = getAllLanguages
@@ -28,11 +28,17 @@ class SettingViewModel: ViewModel {
     }
     
     func addNewLanguage(language: Language) {
-        insertLanguage.invoke(language: language)
+        guard let _ = insertLanguage else {
+            fatalError("Instance [insertLanguage] is null")
+        }
+        insertLanguage?.invoke(language: language)
     }
     
     func addNewCategory(category: Category) {
-        insertCategory.invoke(category: category)
+        guard let _ = insertCategory else {
+            fatalError("Instance [insertCategory] is null")
+        }
+        insertCategory?.invoke(category: category)
     }
     
     func fetchAllCategories() -> [Category] {
