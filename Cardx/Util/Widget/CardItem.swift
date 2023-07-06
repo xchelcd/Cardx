@@ -223,7 +223,6 @@ extension CardItem {
     }
     @objc
     private func flip(sender: UIButton) {
-        //print(_tag, "flip")
         isOpen.toggle()
         toFlip(isOpen: isOpen)
     }
@@ -274,8 +273,8 @@ extension CardItem {
     }
     
     private func setVisibility(isOpen: Bool) {
-        translation.isHidden = isOpen
-        textToTranslate.isHidden = !isOpen
+        translation.isHidden = !isOpen
+        textToTranslate.isHidden = isOpen
     }
 }
 
@@ -411,6 +410,8 @@ extension CardItem {
         if optionsDelegate == nil && difficultyDelegate == nil {
             textToTranslate.isEnabled = false
             translation.isEnabled = false
+            textToTranslate.isHidden = isOpen
+            translation.isHidden = !isOpen
         }
     }
 }
