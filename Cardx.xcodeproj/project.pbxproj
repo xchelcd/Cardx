@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F99EA1892A56301D000862AE /* DataBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA1872A56301D000862AE /* DataBottomSheet.swift */; };
+		F99EA18A2A56301D000862AE /* DataBottomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99EA1882A56301D000862AE /* DataBottomSheet.xib */; };
+		F99EA18C2A563ABC000862AE /* CornedRadius+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */; };
+		F99EA18E2A563C28000862AE /* Blur+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA18D2A563C28000862AE /* Blur+UIViewController.swift */; };
+		F99EA1942A564006000862AE /* BottomSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA1932A564006000862AE /* BottomSheetCell.swift */; };
 		F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */; };
 		F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */; };
 		F9BDD3EC2A53671E0077C92C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BDD3EB2A53671E0077C92C /* Assets.xcassets */; };
@@ -68,6 +73,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F99EA1872A56301D000862AE /* DataBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBottomSheet.swift; sourceTree = "<group>"; };
+		F99EA1882A56301D000862AE /* DataBottomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataBottomSheet.xib; sourceTree = "<group>"; };
+		F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornedRadius+UIView.swift"; sourceTree = "<group>"; };
+		F99EA18D2A563C28000862AE /* Blur+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Blur+UIViewController.swift"; sourceTree = "<group>"; };
+		F99EA1932A564006000862AE /* BottomSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCell.swift; sourceTree = "<group>"; };
 		F9BDD3DC2A53671E0077C92C /* Cardx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BDD3DF2A53671E0077C92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BDD3E12A53671E0077C92C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +151,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F99EA1862A563001000862AE /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F99EA1872A56301D000862AE /* DataBottomSheet.swift */,
+				F99EA1882A56301D000862AE /* DataBottomSheet.xib */,
+				F99EA1932A564006000862AE /* BottomSheetCell.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		F9BDD3D32A53671E0077C92C = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +351,8 @@
 				F9BDD42F2A536FB80077C92C /* Font.swift */,
 				F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */,
 				F9C247482A55F8A40031AA21 /* PopUp+UIViewController.swift */,
+				F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */,
+				F99EA18D2A563C28000862AE /* Blur+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -383,6 +405,7 @@
 		F9C247402A55F75A0031AA21 /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				F99EA1862A563001000862AE /* BottomSheet */,
 				F9C247412A55F7820031AA21 /* SettingsScreen.swift */,
 				F9C247422A55F7820031AA21 /* SettingsScreen.xib */,
 			);
@@ -502,6 +525,7 @@
 				F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */,
 				F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */,
 				F9BDD3EF2A53671E0077C92C /* LaunchScreen.storyboard in Resources */,
+				F99EA18A2A56301D000862AE /* DataBottomSheet.xib in Resources */,
 				F9BDD3EC2A53671E0077C92C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +547,7 @@
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */,
 				F9BDD4112A5369920077C92C /* CardView.swift in Sources */,
+				F99EA18E2A563C28000862AE /* Blur+UIViewController.swift in Sources */,
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
 				F9D2CAE32A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
@@ -558,6 +583,8 @@
 				F9BDD4292A536D1A0077C92C /* HomeScreen.swift in Sources */,
 				F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */,
 				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
+				F99EA1942A564006000862AE /* BottomSheetCell.swift in Sources */,
+				F99EA1892A56301D000862AE /* DataBottomSheet.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
 				F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */,
 				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,
@@ -565,6 +592,7 @@
 				F9C247552A5604050031AA21 /* InsertLanguage.swift in Sources */,
 				F9D2CAE72A5488F4008BC83F /* CardTestCell.swift in Sources */,
 				F9C247492A55F8A40031AA21 /* PopUp+UIViewController.swift in Sources */,
+				F99EA18C2A563ABC000862AE /* CornedRadius+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

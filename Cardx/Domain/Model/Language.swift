@@ -8,6 +8,7 @@
 import Foundation
 
 struct Language {
+    
     let id: UUID
     let name: String
 }
