@@ -53,6 +53,8 @@
 		F9C2475D2A5614E60031AA21 /* GetLanguageById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */; };
 		F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */; };
 		F9C5CBF72A578AA1006A177C /* PhrasalVerbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */; };
+		F9C5CBF92A579945006A177C /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBF82A579945006A177C /* Verbs.swift */; };
+		F9C5CBFB2A579A23006A177C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFA2A579A23006A177C /* Todo.swift */; };
 		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
 		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
 		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
@@ -122,6 +124,8 @@
 		F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLanguageById.swift; sourceTree = "<group>"; };
 		F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryById.swift; sourceTree = "<group>"; };
 		F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasalVerbs.swift; sourceTree = "<group>"; };
+		F9C5CBF82A579945006A177C /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
+		F9C5CBFA2A579A23006A177C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
 		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				F9C5CBF52A578A91006A177C /* French */,
 				F9C5CBF42A578A8E006A177C /* English */,
 				F9C5CBF32A578A8A006A177C /* German */,
+				F9C5CBFA2A579A23006A177C /* Todo.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */,
+				F9C5CBF82A579945006A177C /* Verbs.swift */,
 			);
 			path = English;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				F9BDD41A2A536C720077C92C /* AppCoordinator.swift in Sources */,
 				F9C247592A5614D60031AA21 /* GetAllLanguages.swift in Sources */,
 				F9C2475D2A5614E60031AA21 /* GetLanguageById.swift in Sources */,
+				F9C5CBFB2A579A23006A177C /* Todo.swift in Sources */,
 				F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */,
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */,
@@ -622,6 +629,7 @@
 				F99EA1942A564006000862AE /* BottomSheetCell.swift in Sources */,
 				F99EA1892A56301D000862AE /* DataBottomSheet.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
+				F9C5CBF92A579945006A177C /* Verbs.swift in Sources */,
 				F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */,
 				F9BDD4022A53679B0077C92C /* Card.swift in Sources */,
 				F9BDD40F2A5369020077C92C /* Category.swift in Sources */,
