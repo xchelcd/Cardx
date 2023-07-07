@@ -8,6 +8,7 @@
 import UIKit
 
 protocol SettingScreenCoordinator {
+    func openBottomSheet<T>(list: [T])
     func navigateToDefaultsCards()
 }
 
@@ -54,26 +55,21 @@ class SettingsScreen: UIViewController {
     
     @IBAction func showAllLanguages(_ sender: UIButton) {
         let languageList = settingViewmodel.fetchAllLanguages()
+        showBlurEffect()
+        coordinator.openBottomSheet(list: languageList)
         print(_tag, "Languages (\(languageList.count)): \(languageList.map{$0.name})")
-        presentBottomSheet(languageList: languageList)
     }
     
     @IBAction func showAllCategories(_ sender: UIButton) {
         let categoryList = settingViewmodel.fetchAllCategories()
+        showBlurEffect()
+        coordinator.openBottomSheet(list: categoryList)
         print(_tag, "Categories (\(categoryList.count)): \(categoryList.map{$0.name})")
-        presentBottomSheet(categoryList: categoryList)
+        
     }
     
     @IBAction func showDefaultCards(_ sender: UIButton) {
         coordinator.navigateToDefaultsCards()
-    }
-    
-    
-    private func presentBottomSheet(categoryList: [Category]? = nil, languageList: [Language]? = nil) {
-        showBlurEffect()
-        let controller = DataBottomSheet(categoryList: categoryList, languageList: languageList)
-        controller.modalPresentationStyle = .custom
-        present(controller, animated: true)
     }
     
 }

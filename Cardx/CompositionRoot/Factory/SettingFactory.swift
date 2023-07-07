@@ -9,6 +9,7 @@ import UIKit
 
 protocol SettingFactory {
     func makeModule(coordinator: SettingCoordinator) -> UIViewController
+    func makeBottomSheetModule(navController: UINavigationController, categoryList: [Category]?, langaugeList: [Language]?) -> Coordinator
 }
 
 struct SettingFactoryImp: SettingFactory {
@@ -38,5 +39,11 @@ struct SettingFactoryImp: SettingFactory {
         let controller = SettingsScreen(coordinator: coordinator, settingViewmodel: settingViewModel)
         controller.setupToolbar(title: "Settings")
         return controller
+    }
+    
+    func makeBottomSheetModule(navController: UINavigationController,categoryList: [Category]?, langaugeList: [Language]?) -> Coordinator {
+        let factoy = BottomSheetFactoryImp()
+        let coordiantor = BottomSheetCoordinator(navController: navController, factory: factoy, categoryList: categoryList, languageList: langaugeList)
+        return coordiantor
     }
 }

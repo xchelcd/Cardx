@@ -55,6 +55,8 @@
 		F9C5CBF72A578AA1006A177C /* PhrasalVerbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */; };
 		F9C5CBF92A579945006A177C /* Verbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBF82A579945006A177C /* Verbs.swift */; };
 		F9C5CBFB2A579A23006A177C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFA2A579A23006A177C /* Todo.swift */; };
+		F9C5CBFD2A57AA9D006A177C /* BottomSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */; };
+		F9C5CBFF2A57AAB8006A177C /* BottomSheetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */; };
 		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
 		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
 		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
@@ -126,6 +128,8 @@
 		F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasalVerbs.swift; sourceTree = "<group>"; };
 		F9C5CBF82A579945006A177C /* Verbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verbs.swift; sourceTree = "<group>"; };
 		F9C5CBFA2A579A23006A177C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCoordinator.swift; sourceTree = "<group>"; };
+		F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetFactory.swift; sourceTree = "<group>"; };
 		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
 		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				F9BDD4212A536CCC0077C92C /* TestCoordinator.swift */,
 				F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */,
 				F9C2474A2A55F9300031AA21 /* SettingCoordiantor.swift */,
+				F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				F9BDD42B2A536DB00077C92C /* TestFactory.swift */,
 				F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */,
 				F9C2474C2A55F9430031AA21 /* SettingFactory.swift */,
+				F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
 				F9D2CAE32A5487B5008BC83F /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
+				F9C5CBFF2A57AAB8006A177C /* BottomSheetFactory.swift in Sources */,
 				F9D2CAEF2A549ED8008BC83F /* AddCardCoordinator.swift in Sources */,
 				F9C2474D2A55F9430031AA21 /* SettingFactory.swift in Sources */,
 				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
@@ -635,6 +642,7 @@
 				F9BDD40F2A5369020077C92C /* Category.swift in Sources */,
 				F9C247552A5604050031AA21 /* InsertLanguage.swift in Sources */,
 				F9D2CAE72A5488F4008BC83F /* CardTestCell.swift in Sources */,
+				F9C5CBFD2A57AA9D006A177C /* BottomSheetCoordinator.swift in Sources */,
 				F9C247492A55F8A40031AA21 /* PopUp+UIViewController.swift in Sources */,
 				F99EA18C2A563ABC000862AE /* CornedRadius+UIView.swift in Sources */,
 			);

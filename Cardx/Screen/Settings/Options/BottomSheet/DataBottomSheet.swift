@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DataBottomSheetScreenCoordinator {
+    func dismiss(requireReload: Bool)
+}
+
 class DataBottomSheet: UIViewController {
     
     @IBOutlet weak var topView: UIView!
@@ -26,10 +30,12 @@ class DataBottomSheet: UIViewController {
     
     private let categoryList: [Category]?
     private let languageList: [Language]?
+    private let coordinator: DataBottomSheetScreenCoordinator
     
-    init(categoryList: [Category]? = nil, languageList: [Language]? = nil) {
+    init(coordinator: DataBottomSheetScreenCoordinator, categoryList: [Category]? = nil, languageList: [Language]? = nil) {
         self.categoryList = categoryList
         self.languageList = languageList
+        self.coordinator = coordinator
         
         super.init(nibName: nil, bundle: nil)
         
@@ -44,6 +50,7 @@ class DataBottomSheet: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private var requireReload: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +111,7 @@ extension DataBottomSheet: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func updateTitleToDeleteButton(title: String) {
+        requireReload = true
         deleteOutlet.setTitle("Delete \(title)", for: .normal)
     }
     
@@ -147,6 +155,7 @@ extension DataBottomSheet {
             let dragVelocity = sender.velocity(in: view)
             if dragVelocity.y >= 1300 {
                 self.dismiss(animated: true, completion: nil)
+                coordinator.dismiss(requireReload: requireReload)
                 // MARK: - call protocol to removeBlurEffect
             } else {
                 // Set back to original position of the view controller
