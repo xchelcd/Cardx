@@ -9,10 +9,10 @@ import Foundation
 
 class PhrasalVerbs {
     
-    let language = Language(id: UUID(), name: "English")
-    let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
-    let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
-    let category: Category = Category(id: UUID(), name: "Phrasal Verbs")
+    private let language = Language(id: UUID(), name: "English")
+    private let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
+    private let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
+    private let category: Category = Category(id: UUID(), name: "Phrasal Verbs")
     
     func getPhrasalVerbs() -> [Card] {
         return[

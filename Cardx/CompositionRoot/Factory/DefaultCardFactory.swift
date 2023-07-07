@@ -14,7 +14,9 @@ protocol DefaultCardsFactory {
 struct DefaultCardsFactoryImp: DefaultCardsFactory {
     func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController {
         
-        let controller = DefaultCardsScreen()
+        let cardList = PhrasalVerbs().getPhrasalVerbs()
+        
+        let controller = DefaultCardsScreen(cardList: cardList)
         
         return controller
     }

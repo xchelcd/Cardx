@@ -77,7 +77,7 @@ class TestScreen: UIViewController {
 // MARK: - AddCard start
 extension TestScreen {
     
-    
+    // MARK: - Deprecated
     @objc private func add(sender: UIButton) {
         print(_tag, "Add")
         
