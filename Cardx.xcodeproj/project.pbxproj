@@ -57,6 +57,10 @@
 		F9C5CBFB2A579A23006A177C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFA2A579A23006A177C /* Todo.swift */; };
 		F9C5CBFD2A57AA9D006A177C /* BottomSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */; };
 		F9C5CBFF2A57AAB8006A177C /* BottomSheetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */; };
+		F9C5CC032A57B28F006A177C /* DefaultCardsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CC012A57B28F006A177C /* DefaultCardsScreen.swift */; };
+		F9C5CC042A57B28F006A177C /* DefaultCardsScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C5CC022A57B28F006A177C /* DefaultCardsScreen.xib */; };
+		F9C5CC062A57B2B3006A177C /* DefaultCardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CC052A57B2B3006A177C /* DefaultCardsCoordinator.swift */; };
+		F9C5CC082A57B2BF006A177C /* DefaultCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CC072A57B2BF006A177C /* DefaultCardFactory.swift */; };
 		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
 		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
 		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
@@ -130,6 +134,10 @@
 		F9C5CBFA2A579A23006A177C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCoordinator.swift; sourceTree = "<group>"; };
 		F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetFactory.swift; sourceTree = "<group>"; };
+		F9C5CC012A57B28F006A177C /* DefaultCardsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardsScreen.swift; sourceTree = "<group>"; };
+		F9C5CC022A57B28F006A177C /* DefaultCardsScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultCardsScreen.xib; sourceTree = "<group>"; };
+		F9C5CC052A57B2B3006A177C /* DefaultCardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardsCoordinator.swift; sourceTree = "<group>"; };
+		F9C5CC072A57B2BF006A177C /* DefaultCardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardFactory.swift; sourceTree = "<group>"; };
 		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
 		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 				F9D2CAEE2A549ED8008BC83F /* AddCardCoordinator.swift */,
 				F9C2474A2A55F9300031AA21 /* SettingCoordiantor.swift */,
 				F9C5CBFC2A57AA9D006A177C /* BottomSheetCoordinator.swift */,
+				F9C5CC052A57B2B3006A177C /* DefaultCardsCoordinator.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 				F9D2CAEA2A549DAE008BC83F /* AddCardFactory.swift */,
 				F9C2474C2A55F9430031AA21 /* SettingFactory.swift */,
 				F9C5CBFE2A57AAB8006A177C /* BottomSheetFactory.swift */,
+				F9C5CC072A57B2BF006A177C /* DefaultCardFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -418,6 +428,7 @@
 		F9C247402A55F75A0031AA21 /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				F9C5CC002A57B26E006A177C /* DefaultCards */,
 				F99EA1862A563001000862AE /* BottomSheet */,
 				F9C247412A55F7820031AA21 /* SettingsScreen.swift */,
 				F9C247422A55F7820031AA21 /* SettingsScreen.xib */,
@@ -467,6 +478,15 @@
 			children = (
 			);
 			path = French;
+			sourceTree = "<group>";
+		};
+		F9C5CC002A57B26E006A177C /* DefaultCards */ = {
+			isa = PBXGroup;
+			children = (
+				F9C5CC012A57B28F006A177C /* DefaultCardsScreen.swift */,
+				F9C5CC022A57B28F006A177C /* DefaultCardsScreen.xib */,
+			);
+			path = DefaultCards;
 			sourceTree = "<group>";
 		};
 		F9D2CAD22A548506008BC83F /* CoreData */ = {
@@ -568,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C247442A55F7820031AA21 /* SettingsScreen.xib in Resources */,
+				F9C5CC042A57B28F006A177C /* DefaultCardsScreen.xib in Resources */,
 				F9BDD42A2A536D1A0077C92C /* HomeScreen.xib in Resources */,
 				F9BDD43A2A5375070077C92C /* TestScreen.xib in Resources */,
 				F9BDD4362A5373980077C92C /* AddCardScreen.xib in Resources */,
@@ -594,6 +615,7 @@
 				F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */,
 				F9BDD4322A5371800077C92C /* Toolbar+UIViewController.swift in Sources */,
 				F9D2CAEB2A549DAE008BC83F /* AddCardFactory.swift in Sources */,
+				F9C5CC082A57B2BF006A177C /* DefaultCardFactory.swift in Sources */,
 				F9BDD4112A5369920077C92C /* CardView.swift in Sources */,
 				F99EA18E2A563C28000862AE /* Blur+UIViewController.swift in Sources */,
 				F9BDD3E02A53671E0077C92C /* AppDelegate.swift in Sources */,
@@ -601,6 +623,7 @@
 				F9BDD40D2A5368EF0077C92C /* Difficulty.swift in Sources */,
 				F9C5CBFF2A57AAB8006A177C /* BottomSheetFactory.swift in Sources */,
 				F9D2CAEF2A549ED8008BC83F /* AddCardCoordinator.swift in Sources */,
+				F9C5CC032A57B28F006A177C /* DefaultCardsScreen.swift in Sources */,
 				F9C2474D2A55F9430031AA21 /* SettingFactory.swift in Sources */,
 				F9BDD42E2A536E320077C92C /* CardItem.swift in Sources */,
 				F9D2CAE52A5487B5008BC83F /* CardEntity+CoreDataProperties.swift in Sources */,
@@ -635,6 +658,7 @@
 				F9BDD4132A5369C20077C92C /* NameDescribable.swift in Sources */,
 				F99EA1942A564006000862AE /* BottomSheetCell.swift in Sources */,
 				F99EA1892A56301D000862AE /* DataBottomSheet.swift in Sources */,
+				F9C5CC062A57B2B3006A177C /* DefaultCardsCoordinator.swift in Sources */,
 				F9BDD4262A536CEE0077C92C /* HomeFactory.swift in Sources */,
 				F9C5CBF92A579945006A177C /* Verbs.swift in Sources */,
 				F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */,

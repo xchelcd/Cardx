@@ -10,6 +10,7 @@ import UIKit
 protocol SettingFactory {
     func makeModule(coordinator: SettingCoordinator) -> UIViewController
     func makeBottomSheetModule(navController: UINavigationController, categoryList: [Category]?, langaugeList: [Language]?) -> Coordinator
+    func makeDefaultCardsModule(navController: UINavigationController) -> Coordinator
 }
 
 struct SettingFactoryImp: SettingFactory {
@@ -45,5 +46,11 @@ struct SettingFactoryImp: SettingFactory {
         let factoy = BottomSheetFactoryImp()
         let coordiantor = BottomSheetCoordinator(navController: navController, factory: factoy, categoryList: categoryList, languageList: langaugeList)
         return coordiantor
+    }
+    
+    func makeDefaultCardsModule(navController: UINavigationController) -> Coordinator {
+        let factory = DefaultCardsFactoryImp()
+        let coordinator = DefaultCardsCoordinator(navController: navController, factory: factory)
+        return coordinator
     }
 }

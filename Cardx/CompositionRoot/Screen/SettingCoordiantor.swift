@@ -16,10 +16,10 @@ class SettingCoordinator: Coordinator {
         self.navController = navController
         self.factory = factory
     }
-    var controller: UIViewController? = nil
+
     func start() {
-        controller = factory.makeModule(coordinator: self)
-        navController.pushViewController(controller!, animated: true)
+        let controller = factory.makeModule(coordinator: self)
+        navController.pushViewController(controller, animated: true)
     }
     
 }
@@ -36,15 +36,7 @@ extension SettingCoordinator: SettingScreenCoordinator {
     }
     
     func navigateToDefaultsCards() {
-        
+        let coordinator = factory.makeDefaultCardsModule(navController: navController)
+        coordinator.start()
     }
-}
-
-extension SettingCoordinator {
-    //private func presentBottomSheet(categoryList: [Category]? = nil, languageList: [Language]? = nil) {
-    //    //currentController.showBlurEffect()
-    //    //let controller = DataBottomSheet(coordiantor: self, categoryList: categoryList, languageList: languageList)
-    //    //controller.modalPresentationStyle = .custom
-    //    //currentController.present(controller, animated: true)
-    //}
 }
