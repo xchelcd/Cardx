@@ -25,7 +25,7 @@ class CardItem: UIView {
     let cardView: CardView = {
         let cardView = CardView(frame: .zero)
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardView.backgroundColor = .white
+        cardView.backgroundColor = .systemBackground
         return cardView
     }()
     let languageButton: UIButton = {

@@ -35,7 +35,7 @@ class DefaultCardsScreen: UIViewController {
     }
 
     @IBAction func displayOptions(_ sender: UIButton) {
-        
+        print(_tag, "display options to filter the below cards")
     }
     
 }
