@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SettingScreenCoordinator {
-    
+    func navigateToDefaultsCards()
 }
 
 class SettingsScreen: UIViewController {
@@ -63,6 +63,11 @@ class SettingsScreen: UIViewController {
         print(_tag, "Categories (\(categoryList.count)): \(categoryList.map{$0.name})")
         presentBottomSheet(categoryList: categoryList)
     }
+    
+    @IBAction func showDefaultCards(_ sender: UIButton) {
+        coordinator.navigateToDefaultsCards()
+    }
+    
     
     private func presentBottomSheet(categoryList: [Category]? = nil, languageList: [Language]? = nil) {
         showBlurEffect()

@@ -52,6 +52,7 @@
 		F9C2475B2A5614DE0031AA21 /* GetAllCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475A2A5614DE0031AA21 /* GetAllCategories.swift */; };
 		F9C2475D2A5614E60031AA21 /* GetLanguageById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */; };
 		F9C2475F2A5614EE0031AA21 /* GetCategoryById.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */; };
+		F9C5CBF72A578AA1006A177C /* PhrasalVerbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */; };
 		F9D2CAD92A5486BF008BC83F /* CardxModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CAD72A5486BF008BC83F /* CardxModel.xcdatamodeld */; };
 		F9D2CAE02A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */; };
 		F9D2CAE12A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */; };
@@ -120,6 +121,7 @@
 		F9C2475A2A5614DE0031AA21 /* GetAllCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategories.swift; sourceTree = "<group>"; };
 		F9C2475C2A5614E60031AA21 /* GetLanguageById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLanguageById.swift; sourceTree = "<group>"; };
 		F9C2475E2A5614EE0031AA21 /* GetCategoryById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryById.swift; sourceTree = "<group>"; };
+		F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasalVerbs.swift; sourceTree = "<group>"; };
 		F9D2CAD82A5486BF008BC83F /* CardxModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardxModel.xcdatamodel; sourceTree = "<group>"; };
 		F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataClass.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageEntity+CoreDataProperties.swift"; path = "Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		F9BDD4062A5367BE0077C92C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F9C5CBF02A578A73006A177C /* Extra */,
 				F9BDD4092A53680F0077C92C /* Extension */,
 				F9BDD4082A5367F50077C92C /* Widget */,
 			);
@@ -420,6 +423,38 @@
 				F9C247522A5603C80031AA21 /* ViewModel.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		F9C5CBF02A578A73006A177C /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				F9C5CBF52A578A91006A177C /* French */,
+				F9C5CBF42A578A8E006A177C /* English */,
+				F9C5CBF32A578A8A006A177C /* German */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		F9C5CBF32A578A8A006A177C /* German */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = German;
+			sourceTree = "<group>";
+		};
+		F9C5CBF42A578A8E006A177C /* English */ = {
+			isa = PBXGroup;
+			children = (
+				F9C5CBF62A578AA1006A177C /* PhrasalVerbs.swift */,
+			);
+			path = English;
+			sourceTree = "<group>";
+		};
+		F9C5CBF52A578A91006A177C /* French */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = French;
 			sourceTree = "<group>";
 		};
 		F9D2CAD22A548506008BC83F /* CoreData */ = {
@@ -558,6 +593,7 @@
 				F9BDD3E22A53671E0077C92C /* SceneDelegate.swift in Sources */,
 				F9BDD42C2A536DB00077C92C /* TestFactory.swift in Sources */,
 				F9E2D9742A53B1D000131841 /* TestViewModel.swift in Sources */,
+				F9C5CBF72A578AA1006A177C /* PhrasalVerbs.swift in Sources */,
 				F9BDD40B2A5368DD0077C92C /* Language.swift in Sources */,
 				F9C247572A56040E0031AA21 /* InsertCategory.swift in Sources */,
 				F9C2474B2A55F9300031AA21 /* SettingCoordiantor.swift in Sources */,

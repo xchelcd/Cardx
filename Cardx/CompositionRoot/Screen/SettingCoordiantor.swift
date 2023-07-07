@@ -26,4 +26,7 @@ class SettingCoordinator: Coordinator {
 
 extension SettingCoordinator: SettingScreenCoordinator {
     
+    func navigateToDefaultsCards() {
+        
+    }
 }

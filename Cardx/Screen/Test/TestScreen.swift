@@ -145,7 +145,7 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (UIScreen.main.bounds.height / 4.0) + 25.0 + 36 + 75
+        return (UIScreen.main.bounds.height / 4.0) + 25.0 //+ 36 //+ 75
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
