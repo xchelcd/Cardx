@@ -55,6 +55,7 @@ class CardItem: UIView {
         textField.placeholder = "Text to translate"
         textField.borderStyle = .roundedRect
         textField.textAlignment = .center
+        textField.inputAccessoryView = textField.setDoneButton()
         return textField
     }()
     let translation: UITextField = {
@@ -63,6 +64,7 @@ class CardItem: UIView {
         textField.placeholder = "Translation"
         textField.borderStyle = .roundedRect
         textField.textAlignment = .center
+        textField.inputAccessoryView = textField.setDoneButton()
         return textField
     }()
     let mainLayout: UIStackView = {
@@ -209,16 +211,19 @@ extension CardItem {
     @objc
     private func selectLanguage() {
         //print(_tag, "selectLanguage")
+        self.endEditing(true)
         optionsDelegate?.languageSelected()
     }
     @objc
     private func selectCategory() {
         //print(_tag, "selectCategory")
+        self.endEditing(true)
         optionsDelegate?.categorySelected()
     }
     @objc
     private func selectDifficulty() {
         //print(_tag, "selectDifficulty")
+        self.endEditing(true)
         optionsDelegate?.difficultySelected()
     }
     @objc
