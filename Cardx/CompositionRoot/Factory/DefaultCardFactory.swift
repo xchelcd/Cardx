@@ -14,7 +14,7 @@ protocol DefaultCardsFactory {
 struct DefaultCardsFactoryImp: DefaultCardsFactory {
     func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController {
         
-        let cardList = PhrasalVerbs().getPhrasalVerbs()
+        let cardList = PhrasalVerbs().getPhrasalVerbs() + OverPhrase().getOverPhrase() + Connectors().getConnectors()
         let coreDataManager = CoreDataManager.shared
         let insertCard = InsertCard(coreDataManager: coreDataManager)
         let getAllCards = GetAllCards(coreDataManager: coreDataManager)

@@ -52,7 +52,22 @@ class PhrasalVerbs {
             .init(id: UUID(), toTranslate: "Start out", translation: "Comenzar (algo)", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
             .init(id: UUID(), toTranslate: "Follow up", translation: "Darle seguimiento a algo/Dar una actualización (de algo en lo que se haya trabajado)", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
             .init(id: UUID(), toTranslate: "Catch up", translation: "Ponerse al día", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            .init(id: UUID(), toTranslate: "", translation: "", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Keep on", translation: "Continuar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Keep up", translation: "Mantenerse al día", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Keep away", translation: "Alejar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Keep in mind", translation: "Tener en cuenta", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            
+            .init(id: UUID(), toTranslate: "Put on", translation: "Ponerse algo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Take off", translation: "Quitarse algo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Pick up", translation: "Recoger algo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            //.init(id: UUID(), toTranslate: "Drop off", translation: "", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Get on", translation: "Progresar/Subir a algo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Get off", translation: "Quitar/Bajarse/Salirse/Irse", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Run after", translation: "Correr tras de alguien", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Run away", translation: "Huir/Escaparse", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Speed up", translation: "Acelerar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            .init(id: UUID(), toTranslate: "Slow down", translation: "Ir despacio", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            
         ]
     }
 }
