@@ -33,7 +33,8 @@ struct DefaultCardsFactoryImp: DefaultCardsFactory {
         )
         
         let controller = DefaultCardsScreen(cardList: cardList, cardviewModel: cardViewModel)
-        
+        controller.setupToolbar(title: "Default cards")
+        controller.view.accessibilityIdentifier = "view_deault_cards"
         return controller
     }
 }

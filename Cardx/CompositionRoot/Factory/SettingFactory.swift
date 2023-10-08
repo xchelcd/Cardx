@@ -39,6 +39,7 @@ struct SettingFactoryImp: SettingFactory {
         
         let controller = SettingsScreen(coordinator: coordinator, settingViewmodel: settingViewModel)
         controller.setupToolbar(title: "Settings")
+        controller.view.accessibilityIdentifier = "view_settings"
         return controller
     }
     

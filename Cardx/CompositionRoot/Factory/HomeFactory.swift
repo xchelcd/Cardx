@@ -20,8 +20,9 @@ protocol HomeFactory {
 struct HomeFactoryImp: HomeFactory {
     
     func makeModule(coordinator: HomeCoordinator) -> UIViewController {
-        let viewController = HomeScreen(coordinator: coordinator)
-        return viewController
+        let controller = HomeScreen(coordinator: coordinator)
+        controller.view.accessibilityIdentifier = "view_menu"
+        return controller
     }
     
     func makeTestModule(navController: UINavigationController) -> Coordinator {

@@ -39,6 +39,7 @@ class SettingsScreen: UIViewController {
                 print(self._tag, "Language is null")
                 return
             }
+            self.displayMessage(self.view, message: "Language added: \(language)")
             self.settingViewmodel.addNewLanguage(language: .init(id: UUID(), name: language))
         }
     }
@@ -49,6 +50,7 @@ class SettingsScreen: UIViewController {
                 print(self._tag, "Category is null")
                 return
             }
+            self.displayMessage(self.view, message: "Category added: \(category)")
             self.settingViewmodel.addNewCategory(category: .init(id: UUID(), name: category))
         }
     }

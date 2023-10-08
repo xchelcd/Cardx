@@ -50,7 +50,7 @@ struct AddCardFactoryImp: AddCardFactory {
         )
         
         let controller = AddCardScreen(coordinator: coordinator, cardViewModel: cardViewModel, settingViewModel: settingViewModel)
-        
+        controller.setupToolbar(title: "Add")
         return controller
     }
 }
