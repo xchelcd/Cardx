@@ -16,11 +16,15 @@ extension LanguageEntity {
         return NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
     }
 
-    @NSManaged public var id: Int16
+    @NSManaged public var id: Int16 // entity.id should be a uuid instead int
     @NSManaged public var name: String?
 
 }
 
 extension LanguageEntity : Identifiable {
 
+    // MARK: - change the int by uuid
+    func toDomain() -> Language {
+        .init(id: UUID(), name: name ?? "")
+    }
 }

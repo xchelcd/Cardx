@@ -16,11 +16,16 @@ extension CategoryEntity {
         return NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
     }
 
-    @NSManaged public var id: Int16
+    @NSManaged public var id: Int16 // entity.id should be a uuid instead int
     @NSManaged public var name: String?
 
 }
 
 extension CategoryEntity : Identifiable {
-
+    
+    // MARK: - change the int by uuid
+    func toDomain() -> Category {
+        //Category(id: UUID(), name: name ?? "")
+        Category(id: UUID(), name: name ?? "")
+    }
 }

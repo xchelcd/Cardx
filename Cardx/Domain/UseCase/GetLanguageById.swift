@@ -14,8 +14,9 @@ class GetLanguageById {
         self.coreDataManager = coreDataManager
     }
     
+    // MARK: - change the int by uuid
     func invoke(id: UUID) -> Language? {
-        let language = coreDataManager.getLanguageById()
+        let language = coreDataManager.getLanguageById(id: 0)
         return language
     }
 }

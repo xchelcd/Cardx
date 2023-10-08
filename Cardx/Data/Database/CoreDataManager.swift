@@ -68,8 +68,8 @@ extension CoreDataManager {
         let cardList: [Card] = list.map { entity in    
             let difficultySelected = Difficulty(id: CardDifficultyId(rawValue: Int(entity.difficultySelected))!, name: CardDifficulty(rawValue: CardDifficulty.allCases[Int(entity.difficultySelected)].rawValue)!)
             let difficulty = Difficulty(id: CardDifficultyId(rawValue: Int(entity.difficulty))!, name: CardDifficulty(rawValue: CardDifficulty.allCases[Int(entity.difficulty)].rawValue)!)
-            let language = Language(id: entity.id!, name: "German")
-            let category = Category(id: entity.categoryId!, name: "German")
+            let language = Language(id: entity.id!, name: "ToDo")
+            let category = Category(id: entity.categoryId!, name: "ToDo")
             
             return Card(id: entity.id!, toTranslate: entity.toTranslate!, translation: entity.translation!, language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category)
         }
@@ -120,8 +120,19 @@ extension CoreDataManager {
         print(_tag, "CategoryInserted: \(category.name)")
     }
     
-    func getCategoryById() -> Category? {
-        return nil
+    // MARK: - change the int by uuid
+    // id should be uuid type
+    func getCategoryById(id: Int) -> Category? {
+        let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
+        var list = [CategoryEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            print(_tag, "items: \(list.count)")
+        } catch let error {
+            print(_tag, error)
+        }
+        
+        return list.filter { $0.id == id }.map { $0.toDomain() }.first
     }
     
     func getAllCategories() -> [Category] {
@@ -152,8 +163,18 @@ extension CoreDataManager {
         print(_tag, "LanguageInserted: \(language.name)")
     }
     
-    func getLanguageById() -> Language? {
-        return nil
+    // MARK: - change the int by uuid
+    func getLanguageById(id: Int) -> Language? {
+        let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
+        var list = [LanguageEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            print(_tag, "items: \(list.count)")
+        } catch let error {
+            print(_tag, error)
+        }
+        
+        return list.filter { $0.id == id }.map { $0.toDomain() }.first
     }
     
     func getAllLanguages() -> [Language] {
