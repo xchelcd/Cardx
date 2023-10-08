@@ -171,10 +171,20 @@ class CardItem: UIView {
         return button
     }()
     
+    let idLabel: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .lightGray
+        label.textAlignment = .center
+        return label
+    }()
+    
     private var card: Card? = nil
     private var optionsDelegate: CardItemOptionsDelegate? = nil
     private var difficultyDelegate: CardItemDifficultyDelegate? = nil
-    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil) {
+    var index: Int
+    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil, index: Int? = nil) {
+        self.index = index ?? 0
         super.init(frame: .zero)
         
         self.optionsDelegate = optionsDelegate
@@ -270,6 +280,8 @@ extension CardItem {
         
         guard let card = card else { return }
         
+        idLabel.text = "\(index)"
+        
         languageButton.setTitle(card.language.name, for: .normal)
         difficultyButton.setTitle(card.difficulty.name.rawValue, for: .normal)
         categoryButton.setTitle(card.category.name, for: .normal)
@@ -303,6 +315,7 @@ extension CardItem {
     private func setupView() {
         
         topView.addArrangedSubview(languageButton)
+        topView.addArrangedSubview(idLabel)
         topView.addArrangedSubview(difficultyButton)
         
         textLayout.addArrangedSubview(textToTranslate)
@@ -418,5 +431,13 @@ extension CardItem {
             textToTranslate.isHidden = isOpen
             translation.isHidden = !isOpen
         }
+    }
+}
+
+extension CardItem {
+    func updateData(card: Card, index: Int) {
+        self.card = card
+        self.index = index
+        setupCard()
     }
 }

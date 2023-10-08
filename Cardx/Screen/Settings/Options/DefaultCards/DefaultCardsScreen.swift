@@ -23,6 +23,7 @@ class DefaultCardsScreen: UIViewController {
     
     init(cardList: [Card], cardviewModel: CardViewModel) {
         self.cardList = cardList
+        print("DefaultCardScreen", "Cards[\(cardList.count)]: \(cardList.map(\.toTranslate))")
         self.cardViewModel = cardviewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,7 +54,7 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let card = cardList[indexPath.row]
-        cell.bind(card: card)
+        cell.bind(card: card, index: indexPath.row)
         return cell
     }
     

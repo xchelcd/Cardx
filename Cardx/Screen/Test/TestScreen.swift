@@ -122,7 +122,7 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let card = cardList[indexPath.row]
-        cell.bind(card: card)
+        cell.bind(card: card, index: indexPath.row)
         return cell
     }
     
