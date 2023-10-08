@@ -24,7 +24,8 @@ extension UIViewController {
                 itemAdded?(nil)
                 return
             }
-            itemAdded?(textField.text)
+            
+            itemAdded?(textField.text!.isEmpty ? nil : textField.text)
         })
         
         popUp.addAction(cancelAction)
