@@ -19,9 +19,11 @@ class DefaultCardsScreen: UIViewController {
     
     private let cardList: [Card]
     
-    init(cardList: [Card]) {
+    private let cardViewModel: CardViewModel
+    
+    init(cardList: [Card], cardviewModel: CardViewModel) {
         self.cardList = cardList
-        
+        self.cardViewModel = cardviewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,7 +58,11 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let currentCard = cardList[indexPath.item]
         let addAction = UIContextualAction(style: .normal, title: "Add") { action, view, success in
+            print("AddAction", "item selected: \(currentCard)")
+            self.cardViewModel.saveCard(card: currentCard)
+            self.displayMessage(self.view, message: "Added: \(currentCard.toTranslate)")
             success(true)
         }
         addAction.backgroundColor = .systemBlue.withAlphaComponent(0.75)
