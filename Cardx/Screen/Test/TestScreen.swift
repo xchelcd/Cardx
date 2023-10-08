@@ -62,7 +62,7 @@ class TestScreen: UIViewController {
         super.viewDidLoad()
         
         // viewModel.clearDatabase()
-        if false {
+        if true {
             // MARK: - to add
             setupCardItem()
         } else {

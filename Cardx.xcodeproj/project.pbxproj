@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F94FE26A2AD27A7400DAE196 /* UITextField+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FE2692AD27A7400DAE196 /* UITextField+Toolbar.swift */; };
 		F99EA1892A56301D000862AE /* DataBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA1872A56301D000862AE /* DataBottomSheet.swift */; };
 		F99EA18A2A56301D000862AE /* DataBottomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99EA1882A56301D000862AE /* DataBottomSheet.xib */; };
 		F99EA18C2A563ABC000862AE /* CornedRadius+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F94FE2692AD27A7400DAE196 /* UITextField+Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Toolbar.swift"; sourceTree = "<group>"; };
 		F99EA1872A56301D000862AE /* DataBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBottomSheet.swift; sourceTree = "<group>"; };
 		F99EA1882A56301D000862AE /* DataBottomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataBottomSheet.xib; sourceTree = "<group>"; };
 		F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornedRadius+UIView.swift"; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				F9BDD4122A5369C20077C92C /* NameDescribable.swift */,
 				F9BDD42F2A536FB80077C92C /* Font.swift */,
 				F9BDD4312A5371800077C92C /* Toolbar+UIViewController.swift */,
+				F94FE2692AD27A7400DAE196 /* UITextField+Toolbar.swift */,
 				F9C247482A55F8A40031AA21 /* PopUp+UIViewController.swift */,
 				F99EA18B2A563ABC000862AE /* CornedRadius+UIView.swift */,
 				F99EA18D2A563C28000862AE /* Blur+UIViewController.swift */,
@@ -644,6 +647,7 @@
 				F9BDD4302A536FB80077C92C /* Font.swift in Sources */,
 				F9D2CAF52A54A11B008BC83F /* RemoveCard.swift in Sources */,
 				F9C247532A5603C80031AA21 /* ViewModel.swift in Sources */,
+				F94FE26A2AD27A7400DAE196 /* UITextField+Toolbar.swift in Sources */,
 				F9BDD4392A5375070077C92C /* TestScreen.swift in Sources */,
 				F9D2CAE42A5487B5008BC83F /* CardEntity+CoreDataClass.swift in Sources */,
 				F9BDD41F2A536CB90077C92C /* HomeCoordinator.swift in Sources */,

@@ -17,6 +17,7 @@ class PhrasalVerbs {
     func getPhrasalVerbs() -> [Card] {
         return[
             Card(id: UUID(), toTranslate: "Break down", translation: "Descomponer", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            Card(id: UUID(), toTranslate: "Drop off", translation: "Dejar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
             .init(id: UUID(), toTranslate: "Call off", translation: "Cancelar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
             .init(id: UUID(), toTranslate: "Come across", translation: "Encontrar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
             .init(id: UUID(), toTranslate: "Carry on", translation: "Continuar", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),

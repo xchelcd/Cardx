@@ -17,13 +17,16 @@ class TestCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
+    var cardItem: CardItem? = nil
     func bind(card: Card) {
-        let cardItem = CardItem(card: card)
-        self.addSubview(cardItem)
-        NSLayoutConstraint.activate([
-            cardItem.topAnchor.constraint(equalTo: topAnchor),
-            cardItem.leadingAnchor.constraint(equalTo: leadingAnchor),
-            cardItem.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        if cardItem == nil {
+            self.cardItem = CardItem(card: card)
+            self.addSubview(cardItem!)
+            NSLayoutConstraint.activate([
+                cardItem!.topAnchor.constraint(equalTo: topAnchor),
+                cardItem!.leadingAnchor.constraint(equalTo: leadingAnchor),
+                cardItem!.trailingAnchor.constraint(equalTo: trailingAnchor)
+            ])
+        }
     }
 }

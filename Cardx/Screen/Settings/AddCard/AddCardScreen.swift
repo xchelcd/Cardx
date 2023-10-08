@@ -61,7 +61,7 @@ class AddCardScreen: UIViewController {
     private let addButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("Add", for: .normal)
-        button.addTarget(self, action: #selector(add), for: .touchUpInside)
+        button.addTarget(AddCardScreen.self, action: #selector(add), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
