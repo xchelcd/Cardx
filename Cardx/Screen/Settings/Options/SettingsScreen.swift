@@ -37,6 +37,7 @@ class SettingsScreen: UIViewController {
         self.showDefaultPopUpToAdd(title: "Add New Language", message: "Write the [Language] that you want to add", placeholder: "Language") { language in
             guard let language = language else {
                 print(self._tag, "Language is null")
+                self.displayMessage(self.view, message: "Empty field")
                 return
             }
             self.displayMessage(self.view, message: "Language added: \(language)")
@@ -48,6 +49,7 @@ class SettingsScreen: UIViewController {
         self.showDefaultPopUpToAdd(title: "Add New Category", message: "Write the [Category] that you want to add", placeholder: "Category") { category in
             guard let category = category else {
                 print(self._tag, "Category is null")
+                self.displayMessage(self.view, message: "Empty field")
                 return
             }
             self.displayMessage(self.view, message: "Category added: \(category)")
