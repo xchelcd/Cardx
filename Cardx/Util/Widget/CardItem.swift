@@ -278,7 +278,16 @@ extension CardItem {
     
     private func setupCard() {
         
-        guard let card = card else { return }
+        guard let card = card else {
+            idLabel.text = "\(index)"
+            
+            languageButton.setTitle(nil, for: .normal)
+            difficultyButton.setTitle(nil, for: .normal)
+            categoryButton.setTitle(nil, for: .normal)
+            textToTranslate.text = nil
+            translation.text = nil
+            return
+        }
         
         idLabel.text = "\(index)"
         
@@ -438,6 +447,11 @@ extension CardItem {
     func updateData(card: Card, index: Int) {
         self.card = card
         self.index = index
+        setupCard()
+    }
+    
+    func clearFields() {
+        self.card = nil
         setupCard()
     }
 }

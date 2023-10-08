@@ -92,6 +92,8 @@ extension AddCardScreen {
         let card: Card = Card(id: UUID(), toTranslate: toTranslate, translation: translation, language: Language(id: UUID(), name: languageName), difficulty: Difficulty(id: CardDifficultyId.EASY, name: difficultyName), difficultySelected: Difficulty(id: CardDifficultyId.NULL, name: difficultySelectedName), category: Category(id: UUID(), name: categoryName))
         
         cardViewModel.saveCard(card: card)
+        cardItem?.clearFields()
+        displayMessage(self.view, message: "Card added: \(card.toTranslate)")
     }
     
     private func setupCardItem() {
@@ -107,6 +109,7 @@ extension AddCardScreen {
             addButton.topAnchor.constraint(equalTo: cardItem.bottomAnchor, constant: CGFloat(15)),
             addButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: CGFloat(-15))
         ])
+        
     }
 }
 
