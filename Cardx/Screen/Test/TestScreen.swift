@@ -167,6 +167,9 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
     
     private func fetchCards() {
         cardList = viewModel.fetchAllCards()
+        if cardList.isEmpty {
+            displayMessage(self.view, message: "No cards")
+        }
         tableView.reloadData()
     }
 }
