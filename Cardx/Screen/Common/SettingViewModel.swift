@@ -27,6 +27,23 @@ class SettingViewModel: ViewModel {
         self.insertCategory = insertCategory
     }
     
+}
+
+extension SettingViewModel {
+    
+    func fetchAllCategories() -> [Category] {
+        let list = getAllCategories.invoke()
+        return list
+    }
+    
+    func fetchAllLanguages() -> [Language] {
+        let list = getAllLanguages.invoke()
+        return list
+    }
+}
+
+extension SettingViewModel {
+    
     func addNewLanguage(language: Language) {
         guard let _ = insertLanguage else {
             fatalError("Instance [insertLanguage] is null")
@@ -39,15 +56,5 @@ class SettingViewModel: ViewModel {
             fatalError("Instance [insertCategory] is null")
         }
         insertCategory?.invoke(category: category)
-    }
-    
-    func fetchAllCategories() -> [Category] {
-        let list = getAllCategories.invoke()
-        return list
-    }
-    
-    func fetchAllLanguages() -> [Language] {
-        let list = getAllLanguages.invoke()
-        return list
     }
 }

@@ -29,13 +29,18 @@ class DataBottomSheet: UIViewController {
     var pointOrigin: CGPoint?
     
     private let categoryList: [Category]?
+    private var currentCategory: Category? = nil
     private let languageList: [Language]?
+    private var currentLanguage: Language? = nil
     private let coordinator: DataBottomSheetScreenCoordinator
     
-    init(coordinator: DataBottomSheetScreenCoordinator, categoryList: [Category]? = nil, languageList: [Language]? = nil) {
+    private let viewModel: DataBottomSheetViewModel
+    
+    init(coordinator: DataBottomSheetScreenCoordinator, categoryList: [Category]? = nil, languageList: [Language]? = nil, viewModel: DataBottomSheetViewModel) {
         self.categoryList = categoryList
         self.languageList = languageList
         self.coordinator = coordinator
+        self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
         
@@ -67,7 +72,17 @@ class DataBottomSheet: UIViewController {
     }
     
     @IBAction func deleteItem(_ sender: UIButton) {
-        print(_tag, "Delete: ")
+        
+        if currentCategory == nil && currentLanguage == nil {
+            print(_tag, "Both are null")
+            return
+        }
+        
+        if let category = currentCategory {
+            viewModel.deleteCategory(category)
+        } else if let language = currentLanguage {
+            viewModel.deleteLanguage(language)
+        }
     }
     
 }
@@ -103,10 +118,12 @@ extension DataBottomSheet: UITableViewDelegate, UITableViewDataSource {
             let data = list[indexPath.row]
             print(_tag, data.name)
             updateTitleToDeleteButton(title: data.name)
+            currentCategory = data
         } else if let list = languageList {
             let data = list[indexPath.row]
             print(_tag, data.name)
             updateTitleToDeleteButton(title: data.name)
+            currentLanguage = data
         }
     }
     

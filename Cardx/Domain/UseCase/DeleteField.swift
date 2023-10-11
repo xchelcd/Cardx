@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+
+class DeleteField {
+    private let coreDataManager: CoreDataManager
+    
+    init(coreDataManager: CoreDataManager) {
+        self.coreDataManager = coreDataManager
+    }
+    
+    func invoke(_ language: Language) {
+        print("[DeleteField]")
+        
+    }
+    
+    func invoke(_ category: Category) {
+        print("[DeleteField]")
+    }
+}
