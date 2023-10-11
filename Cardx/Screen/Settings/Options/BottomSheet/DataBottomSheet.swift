@@ -28,9 +28,9 @@ class DataBottomSheet: UIViewController {
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     
-    private let categoryList: [Category]?
+    private var categoryList: [Category]?
     private var currentCategory: Category? = nil
-    private let languageList: [Language]?
+    private var languageList: [Language]?
     private var currentLanguage: Language? = nil
     private let coordinator: DataBottomSheetScreenCoordinator
     
@@ -80,9 +80,14 @@ class DataBottomSheet: UIViewController {
         
         if let category = currentCategory {
             viewModel.deleteCategory(category)
+            categoryList?.removeAll{ $0.id == category.id }
+            tableView.reloadData()
         } else if let language = currentLanguage {
             viewModel.deleteLanguage(language)
+            languageList?.removeAll{ $0.id == language.id }
+            tableView.reloadData()
         }
+        updateTitleToDeleteButton(title: "")
     }
     
 }
