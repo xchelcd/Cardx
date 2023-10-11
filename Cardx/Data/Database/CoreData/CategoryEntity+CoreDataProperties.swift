@@ -16,7 +16,7 @@ extension CategoryEntity {
         return NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
     }
 
-    @NSManaged public var id: Int16 // entity.id should be a uuid instead int
+    @NSManaged public var id: UUID // entity.id should be a uuid instead int
     @NSManaged public var name: String?
 
 }

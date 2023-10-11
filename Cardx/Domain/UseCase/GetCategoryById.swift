@@ -16,7 +16,7 @@ class GetCategoryById {
     
     // MARK: - change the int by uuid
     func invoke(id: UUID) -> Category? {
-        let category = coreDataManager.getCategoryById(id: 0)
+        let category = coreDataManager.getCategoryById(id: id)
         return category
     }
 }

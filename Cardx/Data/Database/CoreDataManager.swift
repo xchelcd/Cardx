@@ -20,6 +20,12 @@ class CoreDataManager {
     
     private init() {
         persistentContainer = NSPersistentContainer(name: "CardxModel")
+        
+        let description = NSPersistentStoreDescription()
+        description.shouldMigrateStoreAutomatically = true
+        description.shouldInferMappingModelAutomatically = true
+        persistentContainer.persistentStoreDescriptions = [description]
+        
         persistentContainer.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Unable to initialize Core Data \(error)")
@@ -122,7 +128,7 @@ extension CoreDataManager {
     
     // MARK: - change the int by uuid
     // id should be uuid type
-    func getCategoryById(id: Int) -> Category? {
+    func getCategoryById(id: UUID) -> Category? {
         let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
         var list = [CategoryEntity]()
         do {
@@ -153,6 +159,21 @@ extension CoreDataManager {
         print(_tag, "Fetched")
         return categoryList
     }
+    
+    func delete(_ category: Category) {
+        // MARK: - delete
+        let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
+        var list = [CategoryEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            //let toDelete = list.filter { $0.id == category.id }
+            //viewContext.delete(toDelete)
+            saveData()
+        } catch let error {
+            print(_tag, error)
+        }
+        // MARK: - delete
+    }
 }
 
 
@@ -164,7 +185,7 @@ extension CoreDataManager {
     }
     
     // MARK: - change the int by uuid
-    func getLanguageById(id: Int) -> Language? {
+    func getLanguageById(id: UUID) -> Language? {
         let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
         var list = [LanguageEntity]()
         do {
@@ -194,5 +215,20 @@ extension CoreDataManager {
 
         print(_tag, "Fetched")
         return categoryList
+    }
+    
+    func delete(_ language: Language) {
+        // MARK: - delete
+        let request = NSFetchRequest<CategoryEntity>(entityName: "LanguageEntity")
+        var list = [CategoryEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            //let toDelete = list.filter { $0.id == language.id }
+            //viewContext.delete(toDelete)
+            saveData()
+        } catch let error {
+            print(_tag, error)
+        }
+        // MARK: - delete
     }
 }

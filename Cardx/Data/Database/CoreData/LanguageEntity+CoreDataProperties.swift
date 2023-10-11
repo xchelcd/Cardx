@@ -16,7 +16,7 @@ extension LanguageEntity {
         return NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
     }
 
-    @NSManaged public var id: Int16 // entity.id should be a uuid instead int
+    @NSManaged public var id: UUID // entity.id should be a uuid instead int
     @NSManaged public var name: String?
 
 }

@@ -17,7 +17,7 @@ class InsertCategory {
     func invoke(category: Category) {
         let categoryEntity = CategoryEntity(context: coreDataManager.viewContext)
         
-        categoryEntity.id = Int16(0) // MARK: - change to uuid
+        categoryEntity.id = category.id
         categoryEntity.name = category.name
         
         coreDataManager.insertCategory(category: categoryEntity)
