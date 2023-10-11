@@ -153,7 +153,7 @@ extension CoreDataManager {
         }
         
         let categoryList: [Category] = list.map { entity in
-                .init(id: UUID(), name: entity.name ?? "")
+                .init(id: entity.id, name: entity.name ?? "")
         }
 
         print(_tag, "Fetched")
@@ -166,9 +166,11 @@ extension CoreDataManager {
         var list = [CategoryEntity]()
         do {
             list = try viewContext.fetch(request)
-            //let toDelete = list.filter { $0.id == category.id }
-            //viewContext.delete(toDelete)
-            saveData()
+            let item = list.filter { $0.id == category.id }.first
+            if let toDelete = item {
+                viewContext.delete(toDelete)
+                saveData()
+            }
         } catch let error {
             print(_tag, error)
         }
@@ -209,23 +211,25 @@ extension CoreDataManager {
             print(_tag, error)
         }
         
-        let categoryList: [Language] = list.map { entity in
-                .init(id: UUID(), name: entity.name ?? "-")
+        let languageList: [Language] = list.map { entity in
+                .init(id: entity.id, name: entity.name ?? "-")
         }
 
-        print(_tag, "Fetched")
-        return categoryList
+        print(_tag, "Fetched: \(languageList.map(\.id))")
+        return languageList
     }
     
     func delete(_ language: Language) {
         // MARK: - delete
-        let request = NSFetchRequest<CategoryEntity>(entityName: "LanguageEntity")
-        var list = [CategoryEntity]()
+        let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
+        var list = [LanguageEntity]()
         do {
             list = try viewContext.fetch(request)
-            //let toDelete = list.filter { $0.id == language.id }
-            //viewContext.delete(toDelete)
-            saveData()
+            let item = list.filter { $0.id == language.id }.first
+            if let toDelete = item {
+                viewContext.delete(toDelete)
+                saveData()
+            }
         } catch let error {
             print(_tag, error)
         }

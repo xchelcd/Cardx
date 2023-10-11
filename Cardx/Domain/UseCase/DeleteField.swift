@@ -17,10 +17,12 @@ class DeleteField {
     
     func invoke(_ language: Language) {
         print("[DeleteField]")
+        coreDataManager.delete(language)
         
     }
     
     func invoke(_ category: Category) {
         print("[DeleteField]")
+        coreDataManager.delete(category)
     }
 }
