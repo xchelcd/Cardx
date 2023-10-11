@@ -25,4 +25,8 @@ class AddCardCoordinator: Coordinator {
 
 extension AddCardCoordinator: AddCardScreenCoordinator {
     
+    func navigateToDefaultsCards() {
+        let coordinator = factory.makeDefaultCardsModule(navController: navController)
+        coordinator.start()
+    }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddCardScreenCoordinator {
-    
+    func navigateToDefaultsCards()
 }
 
 class AddCardScreen: UIViewController {
@@ -66,6 +66,14 @@ class AddCardScreen: UIViewController {
         return button
     }()
     
+    let viewDefaultCardsButton: UIButton = {
+        let button = UIButton(configuration: .borderedTinted())
+        button.setTitle("View Default Cards", for: .normal)
+        button.addTarget(self, action: #selector(showDefaultCards), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCardItem()
@@ -96,18 +104,27 @@ extension AddCardScreen {
         displayMessage(self.view, message: "Card added: \(card.toTranslate)")
     }
     
+    @objc private func showDefaultCards(sender: UIButton) {
+        coordinator.navigateToDefaultsCards()
+    }
+    
     private func setupCardItem() {
         let cardItem = CardItem(card: nil, optionsDelegate: self)
         self.cardItem = cardItem
         self.view.addSubview(cardItem)
         self.view.addSubview(addButton)
+        self.view.addSubview(viewDefaultCardsButton)
         NSLayoutConstraint.activate([
             cardItem.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             cardItem.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             cardItem.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             
             addButton.topAnchor.constraint(equalTo: cardItem.bottomAnchor, constant: CGFloat(15)),
-            addButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: CGFloat(-15))
+            addButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: CGFloat(-15)),
+            
+            viewDefaultCardsButton.bottomAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor, constant: -15),
+            viewDefaultCardsButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
+            viewDefaultCardsButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15)
         ])
         
     }

@@ -9,6 +9,7 @@ import UIKit
 
 protocol AddCardFactory {
     func makeModule(coordinator: AddCardCoordinator) -> UIViewController
+    func makeDefaultCardsModule(navController: UINavigationController) -> Coordinator
 }
 
 struct AddCardFactoryImp: AddCardFactory {
@@ -52,5 +53,11 @@ struct AddCardFactoryImp: AddCardFactory {
         let controller = AddCardScreen(coordinator: coordinator, cardViewModel: cardViewModel, settingViewModel: settingViewModel)
         controller.setupToolbar(title: "Add")
         return controller
+    }
+    
+    func makeDefaultCardsModule(navController: UINavigationController) -> Coordinator {
+        let factory = DefaultCardsFactoryImp()
+        let coordinator = DefaultCardsCoordinator(navController: navController, factory: factory)
+        return coordinator
     }
 }
