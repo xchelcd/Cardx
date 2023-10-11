@@ -53,6 +53,19 @@ extension CoreDataManager {
     }
     
     func deleteCard(cardId: UUID) {
+        let request = NSFetchRequest<CardEntity>(entityName: "CardEntity")
+        
+        var list = [CardEntity]()
+        do {
+            list = try viewContext.fetch(request)
+            let item = list.filter { $0.id! == cardId }.first
+            if let toDelete = item {
+                viewContext.delete(toDelete)
+                saveData()
+            }
+        } catch let error {
+            print(_tag, error)
+        }
         saveData()
     }
     
