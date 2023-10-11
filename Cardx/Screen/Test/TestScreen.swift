@@ -13,6 +13,15 @@ protocol TestScreenCoordinator {
 
 class TestScreen: UIViewController {
     
+    // MARK: - Filters start
+    let coreDataManager = CoreDataManager.shared
+    let getAllLanguages: GetAllLanguages
+    let getAllCategories: GetAllCatgories
+    
+    var languages: [Language] = []
+    var categories: [Category] = []
+    // MARK: - Filters end
+    
     private var cardItem: CardItem? = nil
     
     private let viewModel: TestViewModel
@@ -21,6 +30,10 @@ class TestScreen: UIViewController {
     init(viewModel: TestViewModel/*, coordinator: TestScreenCoordinator*/) {
         self.viewModel = viewModel
         //self.coordinator = coordinator
+        // MARK: - Filters start
+        getAllLanguages = GetAllLanguages(coreDataManager: coreDataManager)
+        getAllCategories = GetAllCatgories(coreDataManager: coreDataManager)
+        // MARK: - Filters end
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,6 +45,14 @@ class TestScreen: UIViewController {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("Add", for: .normal)
         button.addTarget(self, action: #selector(add), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let openFiltersButton: UIButton = {
+        let button = UIButton(configuration: .borderedTinted())
+        button.setTitle("Filteres", for: .normal)
+        button.addTarget(self, action: #selector(openFilters), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -63,6 +84,10 @@ class TestScreen: UIViewController {
         
         // viewModel.clearDatabase()
         if true {
+            setupFilters()
+            return
+        }
+        if false {
             // MARK: - to add
             setupCardItem()
         } else {
@@ -73,6 +98,52 @@ class TestScreen: UIViewController {
     }
 
 }
+
+// MARK: - Filters start
+
+extension TestScreen {
+    
+    private func setupFilters() {
+        initFiltersUI()
+        fetchData()
+    }
+    
+    private func showDialog() {
+        let dialog = FilterDialog()
+        //dialog.modalPresentationStyle = .custom
+        //dialog.modalPresentationStyle = .overCurrentContext
+        dialog.modalPresentationStyle = .overFullScreen
+        self.present(dialog, animated: true)
+    }
+    
+    private func fetchData() {
+        categories = getAllCategories.invoke()
+        languages = getAllLanguages.invoke()
+        
+        print(_tag, categories.map(\.name))
+        print(_tag, languages.map(\.name))
+    }
+    
+    private func initFiltersUI() {
+        self.view.addSubview(openFiltersButton)
+        
+        NSLayoutConstraint.activate([
+            openFiltersButton.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor, constant: 15),
+            openFiltersButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
+            openFiltersButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15)
+        ])
+    }
+    
+    @objc private func openFilters(button: UIButton) {
+        print(_tag, "openFilters")
+        showDialog()
+        
+    }
+    
+}
+
+// MARK: - Filters end
+
 
 // MARK: - AddCard start
 extension TestScreen {
@@ -129,6 +200,8 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
             success(true)
+            let card = self.cardList[indexPath.row]
+            self.viewModel.deleteCard(card: card)
             self.cardList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
