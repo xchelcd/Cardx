@@ -10,7 +10,7 @@ import UIKit
 class DefaultCardsCoordinator: Coordinator {
     
     var navController: UINavigationController
-    let factory: DefaultCardsFactory
+    var factory: DefaultCardsFactory
     
     init(navController: UINavigationController, factory: DefaultCardsFactory) {
         self.navController = navController
@@ -22,5 +22,13 @@ class DefaultCardsCoordinator: Coordinator {
         navController.pushViewController(controller, animated: true)
     }
     
+}
+
+extension DefaultCardsCoordinator: DefaultCardsSreenCoordiantor {
+    
+    func openFilterDialog() {
+        let coordinator = factory.makeFilterModule(navController: navController)
+        coordinator.start()
+    }
     
 }

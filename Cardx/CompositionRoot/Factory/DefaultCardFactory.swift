@@ -8,11 +8,15 @@
 import UIKit
 
 protocol DefaultCardsFactory {
-    func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController
+    mutating func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController
+    func makeFilterModule(navController: UINavigationController) -> Coordinator
 }
 
 struct DefaultCardsFactoryImp: DefaultCardsFactory {
-    func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController {
+    
+    var controller: DefaultCardsScreen? = nil
+    
+    mutating func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController {
         
         let cardList = PhrasalVerbs().getPhrasalVerbs() + OverPhrase().getOverPhrase() + Connectors().getConnectors()
         let coreDataManager = CoreDataManager.shared
@@ -32,9 +36,16 @@ struct DefaultCardsFactoryImp: DefaultCardsFactory {
             removeCard: removeCard
         )
         
-        let controller = DefaultCardsScreen(cardList: cardList, cardviewModel: cardViewModel)
-        controller.setupToolbar(title: "Default cards")
-        controller.view.accessibilityIdentifier = "view_deault_cards"
-        return controller
+        controller = DefaultCardsScreen(coordinator: coordinator, cardList: cardList, cardviewModel: cardViewModel)
+        controller?.setupToolbar(title: "Default cards")
+        controller?.view.accessibilityIdentifier = "view_deault_cards"
+        return controller!
+    }
+    
+    func makeFilterModule(navController: UINavigationController) -> Coordinator {
+        let filterFactory = FilterFactoryImp()
+        let filterCoordinator = FilterCoordinator(navController: navController, factory: filterFactory, filterToDefaultCardsCoordinator: controller!)
+        
+        return filterCoordinator
     }
 }

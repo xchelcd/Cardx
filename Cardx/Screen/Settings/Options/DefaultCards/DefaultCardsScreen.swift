@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DefaultCardsSreenCoordiantor {
-    
+    func openFilterDialog()
 }
 
 class DefaultCardsScreen: UIViewController {
@@ -17,15 +17,21 @@ class DefaultCardsScreen: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private let cardList: [Card]
+    private var cardList: [Card]
     
     private let cardViewModel: CardViewModel
     
-    init(cardList: [Card], cardviewModel: CardViewModel) {
+    let coordinator: DefaultCardsSreenCoordiantor
+    
+    init(coordinator: DefaultCardsSreenCoordiantor, cardList: [Card], cardviewModel: CardViewModel) {
+        self.coordinator = coordinator
         self.cardList = cardList
-        print("DefaultCardScreen", "Cards[\(cardList.count)]: \(cardList.map(\.toTranslate))")
         self.cardViewModel = cardviewModel
+        
         super.init(nibName: nil, bundle: nil)
+        
+        //print(_tag, "Cards[\(cardList.count)]: \(cardList.map(\.toTranslate))")
+        print(_tag, "Cards[\(cardList.count)]: \(cardList)")
     }
     
     required init?(coder: NSCoder) {
@@ -39,6 +45,7 @@ class DefaultCardsScreen: UIViewController {
 
     @IBAction func displayOptions(_ sender: UIButton) {
         print(_tag, "display options to filter the below cards")
+        coordinator.openFilterDialog()
     }
     
 }
@@ -85,5 +92,16 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(TestCell.self, forCellReuseIdentifier: tableViewIdentifier)
+    }
+}
+
+extension DefaultCardsScreen: FilterDialogCoordinator {
+    func applyFilter(categoriesFiltered: [UUID]?, languagesFiltered: [UUID]?, difficultiesFiltered: [Int]?) {
+        print(_tag, "categoriesSelected: \(categoriesFiltered)")
+        print(_tag, "languagesSelected: \(languagesFiltered)")
+        print(_tag, "difficultiesSelected: \(difficultiesFiltered)")
+        cardViewModel.cardList = cardList
+        cardList = cardViewModel.getListFiltered(categoriesFiltered: categoriesFiltered, languagesFiltered: languagesFiltered, difficultiesFiltered: difficultiesFiltered)
+        tableView.reloadData()
     }
 }

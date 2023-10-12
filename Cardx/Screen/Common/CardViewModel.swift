@@ -32,6 +32,8 @@ class CardViewModel: ViewModel {
         self.removeCard = removeCard
     }
     
+    var cardList: [Card] = []
+    
     func saveCard(card: Card) {
         insertCard.invoke(card: card)
     }
@@ -50,5 +52,27 @@ class CardViewModel: ViewModel {
     
     func deleteCard(card: Card) {
         removeCard.invoke(card: card)
+    }
+    
+    func getListFiltered(categoriesFiltered: [UUID]?, languagesFiltered: [UUID]?, difficultiesFiltered: [Int]?) -> [Card] {
+        if let list = categoriesFiltered {
+            cardList = cardList.filter { card in
+                list.contains(card.category.id)
+            }
+        }
+        
+        if let list = languagesFiltered {
+            cardList = cardList.filter { card in
+                list.contains(card.language.id)
+            }
+        }
+        
+        if let list = difficultiesFiltered {
+            cardList = cardList.filter { card in
+                list.contains(card.difficulty.id.rawValue)
+            }
+        }
+        
+        return cardList
     }
 }
