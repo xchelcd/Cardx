@@ -21,16 +21,17 @@ class CoreDataManager {
     private init() {
         persistentContainer = NSPersistentContainer(name: "CardxModel")
         
-        let description = NSPersistentStoreDescription()
-        description.shouldMigrateStoreAutomatically = true
-        description.shouldInferMappingModelAutomatically = true
-        persistentContainer.persistentStoreDescriptions = [description]
+//        let description = NSPersistentStoreDescription()
+//        description.shouldMigrateStoreAutomatically = true
+//        description.shouldInferMappingModelAutomatically = true
+//        persistentContainer.persistentStoreDescriptions = [description]
         
         persistentContainer.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Unable to initialize Core Data \(error)")
             }
         }
+        clearAllDatabase()
     }
     
     private func saveData() {
@@ -42,12 +43,19 @@ class CoreDataManager {
             print(_tag, "[Save] [\(error)]")
         }
     }
+    
+    private func clearAllDatabase() {
+        clearDatabase(entity: EntityName.CARD_ENTITY.rawValue)
+        clearDatabase(entity: EntityName.LANGUAGE_ENTITY.rawValue)
+        clearDatabase(entity: EntityName.CATEGORY_ENTITY.rawValue)
+    }
 }
 
 // MARK: - Card
 extension CoreDataManager {
     
     func insertCard(card: Card) {
+        print(_tag, "CardId: \(card)")
         saveData()
         print(_tag, "Card inserted: \(card.toString())")
     }
@@ -84,11 +92,17 @@ extension CoreDataManager {
             print(_tag, error)
         }
         
-        let cardList: [Card] = list.map { entity in    
+        let cardList: [Card] = list.map { entity in
             let difficultySelected = Difficulty(id: CardDifficultyId(rawValue: Int(entity.difficultySelected))!, name: CardDifficulty(rawValue: CardDifficulty.allCases[Int(entity.difficultySelected)].rawValue)!)
             let difficulty = Difficulty(id: CardDifficultyId(rawValue: Int(entity.difficulty))!, name: CardDifficulty(rawValue: CardDifficulty.allCases[Int(entity.difficulty)].rawValue)!)
-            let language = Language(id: entity.id!, name: "ToDo")
-            let category = Category(id: entity.categoryId!, name: "ToDo")
+            
+            let language = getLanguageById(id: entity.languageId!)
+            let category = getCategoryById(id: entity.categoryId!)
+            
+            guard let language = language, let category = category else {
+                print(_tag, "[Language] or [Category] were null")
+                fatalError("[Language] or [Category] were null")
+            }
             
             return Card(id: entity.id!, toTranslate: entity.toTranslate!, translation: entity.translation!, language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category)
         }
@@ -136,12 +150,13 @@ extension CoreDataManager {
 extension CoreDataManager {
     func insertCategory(category: CategoryEntity) {
         saveData()
-        print(_tag, "CategoryInserted: \(category.name)")
+        print(_tag, "CategoryInserted: \(category)")
     }
     
     // MARK: - change the int by uuid
     // id should be uuid type
     func getCategoryById(id: UUID) -> Category? {
+        print(_tag, "CategoryId(getCategoryById): \(id)")
         let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
         var list = [CategoryEntity]()
         do {
@@ -196,11 +211,12 @@ extension CoreDataManager {
 extension CoreDataManager {
     func insertLanguage(language: LanguageEntity) {
         saveData()
-        print(_tag, "LanguageInserted: \(language.name)")
+        print(_tag, "LanguageInserted: \(language)")
     }
     
     // MARK: - change the int by uuid
     func getLanguageById(id: UUID) -> Language? {
+        print(_tag, "LanguageId(getLanguageById): \(id)")
         let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
         var list = [LanguageEntity]()
         do {
