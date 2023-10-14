@@ -7,7 +7,18 @@
 
 import Foundation
 
-struct Language {
+struct Language: CollectionData {
+
+    var chipTitle: String {
+        get {
+            name
+        }
+    }
+    
+    func toString() -> String {
+        name
+    }
+    
     
     let id: UUID
     let name: String

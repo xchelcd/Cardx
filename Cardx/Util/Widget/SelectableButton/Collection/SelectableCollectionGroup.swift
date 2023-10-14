@@ -44,7 +44,7 @@ class SelectableCollectionGroup<D>: UICollectionView, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let title = (list[indexPath.item] as! User).toString()
+        let title = (list[indexPath.item] as! SelectableNameProtocol).toString()
         return CGSize(width: CGFloat(10 + title.count*10), height: CGFloat(45))
     }
     

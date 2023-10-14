@@ -7,7 +7,18 @@
 
 import Foundation
 
-struct Difficulty {
+struct Difficulty: CollectionData {
+    
+    var chipTitle: String {
+        get {
+            name.rawValue
+        }
+    }
+    
+    func toString() -> String {
+        name.rawValue
+    }
+    
     let id: CardDifficultyId
     let name: CardDifficulty
     

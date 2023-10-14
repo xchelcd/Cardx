@@ -7,7 +7,17 @@
 
 import Foundation
 
-struct Category {
+struct Category: CollectionData {
+    
+    var chipTitle: String {
+        get {
+            name
+        }
+    }
+    
+    func toString() -> String {
+        name
+    }
     
     let id: UUID
     let name: String

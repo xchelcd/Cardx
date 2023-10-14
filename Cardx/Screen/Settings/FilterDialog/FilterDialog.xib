@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterDialog" customModule="Cardx" customModuleProvider="target">
             <connections>
+                <outlet property="applyFilterOutlet" destination="Dz3-NQ-ZPV" id="Qfl-je-cUr"/>
                 <outlet property="mainView" destination="MAK-9p-W7P" id="xao-iq-O0S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,9 +33,18 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-Uy-cwG">
-                            <rect key="frame" x="361" y="445" width="67" height="35"/>
+                            <rect key="frame" x="373" y="448.66666666666663" width="55" height="28"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" title="Close"/>
+                            <buttonConfiguration key="configuration" style="gray">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Close">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="e5O-xf-dCj"/>
                             </connections>
@@ -42,8 +52,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="KmT-Uy-cwG" firstAttribute="centerY" secondItem="Dz3-NQ-ZPV" secondAttribute="centerY" id="Qwt-Ug-lmg"/>
                         <constraint firstItem="Dz3-NQ-ZPV" firstAttribute="centerX" secondItem="MAK-9p-W7P" secondAttribute="centerX" id="TeI-Ub-uP1"/>
-                        <constraint firstAttribute="bottom" secondItem="KmT-Uy-cwG" secondAttribute="bottom" constant="20" id="Uqi-Q3-aR8"/>
                         <constraint firstAttribute="trailing" secondItem="KmT-Uy-cwG" secondAttribute="trailing" constant="20" id="so9-lY-64r"/>
                         <constraint firstAttribute="bottom" secondItem="Dz3-NQ-ZPV" secondAttribute="bottom" constant="20" id="x2j-yn-kQ1"/>
                         <constraint firstAttribute="height" constant="500" id="ytK-Ug-sOY"/>
