@@ -79,7 +79,7 @@ class AddCardScreen: UIViewController {
         setupCardItem()
         setupPickerViews()
         
-        testCheckCardAdded()
+//        testCheckCardAdded()
     }
     
 }
@@ -89,15 +89,15 @@ extension AddCardScreen {
     @objc private func add(sender: UIButton) {
         guard let toTranslate = cardItem?.textToTranslate.text,
               let translation = cardItem?.translation.text,
-              let languageName = currentLanguage?.name,
+              let language = currentLanguage,
               let difficultyName = currentDifficulty?.name,
-              let categoryName = currentCategory?.name else {
+              let category = currentCategory else {
             print(_tag, "Some value were missing")
             return
         }
         let difficultySelectedName = CardDifficulty.NULL
         
-        let card: Card = Card(id: UUID(), toTranslate: toTranslate, translation: translation, language: Language(id: UUID(), name: languageName), difficulty: Difficulty(id: CardDifficultyId.EASY, name: difficultyName), difficultySelected: Difficulty(id: CardDifficultyId.NULL, name: difficultySelectedName), category: Category(id: UUID(), name: categoryName))
+        let card: Card = Card(id: UUID(), toTranslate: toTranslate, translation: translation, language: Language(id: language.id, name: language.name), difficulty: Difficulty(id: CardDifficultyId.EASY, name: difficultyName), difficultySelected: Difficulty(id: CardDifficultyId.NULL, name: difficultySelectedName), category: Category(id: category.id, name: category.name))
         
         cardViewModel.saveCard(card: card)
         cardItem?.clearFields()
