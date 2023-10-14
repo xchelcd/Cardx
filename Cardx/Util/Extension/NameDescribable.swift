@@ -10,6 +10,8 @@ import UIKit
 protocol NameDescribable {
     var _tag: String { get }
     static var _tag: String { get }
+    var testTag: String { get }
+    static var testTag: String { get }
 }
 
 extension NameDescribable {
@@ -19,6 +21,14 @@ extension NameDescribable {
 
     static var _tag: String {
         return "[ \(String(describing: self)) ]"
+    }
+    
+    var testTag: String {
+        return "[Test]"
+    }
+    
+    static var testTag: String {
+        return "[Test]"
     }
 }
 
