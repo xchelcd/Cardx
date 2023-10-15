@@ -7,22 +7,33 @@
 
 import Foundation
 
-class OverPhrase {
+class OverPhrase: DataManager {
     
-    private let language = Language(id: UUID(), name: "English")
+    static func getCategory() -> Category {
+        category
+    }
+    
+    static func getLanguage() -> Language {
+        language
+    }
+    
+    private static let languageId = UUID(uuidString: "A229A215-7000-4BF4-8B15-574CBEBC3E2A")!
+    private static let categoryId = UUID(uuidString: "CEF1C131-E84D-478F-BF1E-0B494AD7BE9B")!
+    
+    public static let language = Language(id: languageId, name: "English")
     private let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
     private let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
-    private let category: Category = Category(id: UUID(), name: "Over Phrases")
+    public static let category: Category = Category(id: categoryId, name: "Over Phrases")
     
     func getOverPhrase() -> [Card] {
         return[
-            Card(id: UUID(), toTranslate: "Over", translation: "Sobre/Encima", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over and above", translation: "Encima de", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over and over", translation: "Uno y otra vez", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over the top", translation: "Excesivo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over there", translation: "Por ahí", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over here", translation: "Por aquí", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
-            Card(id: UUID(), toTranslate: "Over time", translation: "Con el tiempo", language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category),
+            Card(id: UUID(), toTranslate: "Over", translation: "Sobre/Encima", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over and above", translation: "Encima de", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over and over", translation: "Uno y otra vez", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over the top", translation: "Excesivo", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over there", translation: "Por ahí", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over here", translation: "Por aquí", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
+            Card(id: UUID(), toTranslate: "Over time", translation: "Con el tiempo", language: OverPhrase.language, difficulty: difficulty, difficultySelected: difficultySelected, category: OverPhrase.category),
         ]
     }
 }
