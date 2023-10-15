@@ -15,11 +15,11 @@ class InsertLanguage {
     }
     
     func invoke(language: Language) {
-        let languageEntity = LanguageEntity(context: coreDataManager.viewContext)
+//        let languageEntity = LanguageEntity(context: coreDataManager.viewContext)
+//        
+//        languageEntity.id = language.id
+//        languageEntity.name = language.name
         
-        languageEntity.id = language.id
-        languageEntity.name = language.name
-        
-        coreDataManager.insertLanguage(language: languageEntity)
+        coreDataManager.insertLanguage(language: language)
     }
 }

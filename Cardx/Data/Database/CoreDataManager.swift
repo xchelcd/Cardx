@@ -55,9 +55,30 @@ class CoreDataManager {
 extension CoreDataManager {
     
     func insertCard(card: Card) {
-        print(_tag, "CardId: \(card)")
-        saveData()
-        print(_tag, "Card inserted: \(card.toString())")
+        do {
+            let request: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "toTranslate == %@", card.toTranslate)
+            let numberOfRecords = try viewContext.count(for: request)
+            if numberOfRecords == 0 {
+                
+                let cardEntity = CardEntity(context: viewContext)
+                
+                cardEntity.id = card.id
+                cardEntity.toTranslate = card.toTranslate
+                cardEntity.translation = card.translation
+                cardEntity.languageId = card.language.id
+                cardEntity.categoryId = card.category.id
+                cardEntity.difficulty = Int16(card.difficulty.id.rawValue)
+                cardEntity.difficultySelected = Int16(card.difficultySelected.id.rawValue)
+                
+                print(_tag, "CardId: \(card)")
+                saveData()
+                print(_tag, "Card inserted: \(card.toString())")
+            }
+        } catch {
+            print("Error saving context \(error)")
+        }
+        
     }
     
     func deleteCard(cardId: UUID) {
@@ -148,9 +169,22 @@ extension CoreDataManager {
 
 // MARK: - Category
 extension CoreDataManager {
-    func insertCategory(category: CategoryEntity) {
-        saveData()
-        print(_tag, "CategoryInserted: \(category)")
+    func insertCategory(category: Category) {
+        do {
+            let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")//: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "id == %@", category.id as CVarArg)
+            let numberOfRecords = try viewContext.count(for: request)
+            if numberOfRecords == 0 {
+                let categoryEntity = CategoryEntity(context: viewContext)
+                
+                categoryEntity.id = category.id
+                categoryEntity.name = category.name
+                saveData()
+                print(_tag, "CategoryInserted: \(category)")
+            }
+        } catch {
+            print("Error saving context \(error)")
+        }
     }
     
     // MARK: - change the int by uuid
@@ -209,9 +243,22 @@ extension CoreDataManager {
 
 // MARK: - Language
 extension CoreDataManager {
-    func insertLanguage(language: LanguageEntity) {
-        saveData()
-        print(_tag, "LanguageInserted: \(language)")
+    func insertLanguage(language: Language) {
+        do {
+            let request: NSFetchRequest<LanguageEntity> = LanguageEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "id == %@", language.id as CVarArg)
+            let numberOfRecords = try viewContext.count(for: request)
+            if numberOfRecords == 0 {
+                let languageEntity = LanguageEntity(context: viewContext)
+                
+                languageEntity.id = language.id
+                languageEntity.name = language.name
+                saveData()
+                print(_tag, "LanguageInserted: \(language)")
+            }
+        } catch {
+            print("Error saving context \(error)")
+        }
     }
     
     // MARK: - change the int by uuid

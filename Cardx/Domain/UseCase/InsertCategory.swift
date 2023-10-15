@@ -15,11 +15,11 @@ class InsertCategory {
     }
     
     func invoke(category: Category) {
-        let categoryEntity = CategoryEntity(context: coreDataManager.viewContext)
+//        let categoryEntity = CategoryEntity(context: coreDataManager.viewContext)
+//        
+//        categoryEntity.id = category.id
+//        categoryEntity.name = category.name
         
-        categoryEntity.id = category.id
-        categoryEntity.name = category.name
-        
-        coreDataManager.insertCategory(category: categoryEntity)
+        coreDataManager.insertCategory(category: category)
     }
 }
