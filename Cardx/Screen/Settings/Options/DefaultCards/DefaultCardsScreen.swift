@@ -41,6 +41,7 @@ class DefaultCardsScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupList()
     }
 
     @IBAction func displayOptions(_ sender: UIButton) {
@@ -70,6 +71,7 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
         let addAction = UIContextualAction(style: .normal, title: "Add") { action, view, success in
             print("AddAction", "item selected: \(currentCard)")
             self.cardViewModel.saveCard(card: currentCard)
+            
             self.displayMessage(self.view, message: "Added: \(currentCard.toTranslate)")
             success(true)
         }
@@ -100,8 +102,13 @@ extension DefaultCardsScreen: FilterDialogCoordinator {
         print(_tag, "categoriesSelected: \(categoriesFiltered)")
         print(_tag, "languagesSelected: \(languagesFiltered)")
         print(_tag, "difficultiesSelected: \(difficultiesFiltered)")
-        cardViewModel.cardList = cardList
         cardList = cardViewModel.getListFiltered(categoriesFiltered: categoriesFiltered, languagesFiltered: languagesFiltered, difficultiesFiltered: difficultiesFiltered)
         tableView.reloadData()
+    }
+}
+
+extension DefaultCardsScreen {
+    private func setupList() {
+        cardViewModel.cardList = cardList
     }
 }
