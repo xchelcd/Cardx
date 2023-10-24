@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestCell: UITableViewCell {
+class CardCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
