@@ -8,12 +8,12 @@
 import UIKit
 
 protocol FilterFactory {
-    func makeModule(coordinator: FilterCoordinator, filterToDefaultCardsCoordinator: FilterDialogCoordinator) -> UIViewController
+    func makeModule(coordinator: FilterCoordinator, filterToDefaultCardsCoordinator: FilterDialogCoordinator, categories: Set<Category>, languages: Set<Language>) -> UIViewController
 }
 
 struct FilterFactoryImp: FilterFactory {
     
-    func makeModule(coordinator: FilterCoordinator, filterToDefaultCardsCoordinator: FilterDialogCoordinator) -> UIViewController {
+    func makeModule(coordinator: FilterCoordinator, filterToDefaultCardsCoordinator: FilterDialogCoordinator, categories: Set<Category>, languages: Set<Language>) -> UIViewController {
         
         let coreDataManager = CoreDataManager.shared
         
@@ -35,7 +35,9 @@ struct FilterFactoryImp: FilterFactory {
             insertCategory: insertCategory
         )
         
-        let dialog = FilterDialog(coordinator: coordinator, viewModel: settingViewModel)
+        let difficulties = Difficulty.difficulties
+        
+        let dialog = FilterDialog(coordinator: coordinator, viewModel: settingViewModel, categories: categories, languages: languages, difficulties: difficulties)
         dialog.modalPresentationStyle = .overFullScreen
         dialog.view.accessibilityIdentifier = "view_filter_dialog"
         return dialog

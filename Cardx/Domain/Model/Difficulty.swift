@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Difficulty: CollectionData {
+struct Difficulty: CollectionData, Hashable {
     
     var chipTitle: String {
         get {

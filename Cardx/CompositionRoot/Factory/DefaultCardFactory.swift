@@ -9,7 +9,7 @@ import UIKit
 
 protocol DefaultCardsFactory {
     mutating func makeModule(coordinator: DefaultCardsCoordinator) -> UIViewController
-    func makeFilterModule(navController: UINavigationController) -> Coordinator
+    func makeFilterModule(navController: UINavigationController, categories: Set<Category>, languages: Set<Language>) -> Coordinator
 }
 
 struct DefaultCardsFactoryImp: DefaultCardsFactory {
@@ -42,9 +42,9 @@ struct DefaultCardsFactoryImp: DefaultCardsFactory {
         return controller!
     }
     
-    func makeFilterModule(navController: UINavigationController) -> Coordinator {
+    func makeFilterModule(navController: UINavigationController, categories: Set<Category>, languages: Set<Language>) -> Coordinator {
         let filterFactory = FilterFactoryImp()
-        let filterCoordinator = FilterCoordinator(navController: navController, factory: filterFactory, filterToDefaultCardsCoordinator: controller!)
+        let filterCoordinator = FilterCoordinator(navController: navController, factory: filterFactory, filterToDefaultCardsCoordinator: controller!, categories: categories, languages: languages)
         
         return filterCoordinator
     }

@@ -14,15 +14,20 @@ class FilterCoordinator: Coordinator {
     
     let filterToDefaultCardsCoordinator: FilterDialogCoordinator
     
+    let categories: Set<Category>
+    let languages: Set<Language>
+    
     lazy var dialog: FilterDialog = {
-        return factory.makeModule(coordinator: self, filterToDefaultCardsCoordinator: filterToDefaultCardsCoordinator) as! FilterDialog
+        return factory.makeModule(coordinator: self, filterToDefaultCardsCoordinator: filterToDefaultCardsCoordinator, categories: categories, languages: languages) as! FilterDialog
     }()
     
     
-    init(navController: UINavigationController, factory: FilterFactory, filterToDefaultCardsCoordinator: FilterDialogCoordinator) {
+    init(navController: UINavigationController, factory: FilterFactory, filterToDefaultCardsCoordinator: FilterDialogCoordinator, categories: Set<Category>, languages: Set<Language>) {
         self.navController = navController
         self.factory = factory
         self.filterToDefaultCardsCoordinator = filterToDefaultCardsCoordinator
+        self.categories = categories
+        self.languages = languages
     }
     
     func start() {

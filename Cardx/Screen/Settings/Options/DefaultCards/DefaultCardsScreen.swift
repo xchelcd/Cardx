@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DefaultCardsSreenCoordiantor {
-    func openFilterDialog()
+    func openFilterDialog(categories: Set<Category>, languages: Set<Language>)
 }
 
 class DefaultCardsScreen: UIViewController {
@@ -22,6 +22,9 @@ class DefaultCardsScreen: UIViewController {
     private let cardViewModel: CardViewModel
     
     let coordinator: DefaultCardsSreenCoordiantor
+    
+    lazy var categories = Set(cardList.map(\.category))
+    lazy var languages = Set(cardList.map(\.language))
     
     init(coordinator: DefaultCardsSreenCoordiantor, cardList: [Card], cardviewModel: CardViewModel) {
         self.coordinator = coordinator
@@ -46,7 +49,7 @@ class DefaultCardsScreen: UIViewController {
 
     @IBAction func displayOptions(_ sender: UIButton) {
         print(_tag, "display options to filter the below cards")
-        coordinator.openFilterDialog()
+        coordinator.openFilterDialog(categories: categories, languages: languages)
     }
     
 }
@@ -58,11 +61,11 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifier, for: indexPath) as? TestCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifier, for: indexPath) as? CardCell else {
             return UITableViewCell()
         }
         let card = cardList[indexPath.row]
-        cell.bind(card: card, index: indexPath.row)
+        cell.bind(card: card, indexPath: nil) // MARK: - index is nil because we dont need handle the eady, medium and hard button
         return cell
     }
     
@@ -93,15 +96,12 @@ extension DefaultCardsScreen: UITableViewDataSource, UITableViewDelegate {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(TestCell.self, forCellReuseIdentifier: tableViewIdentifier)
+        tableView.register(CardCell.self, forCellReuseIdentifier: tableViewIdentifier)
     }
 }
 
 extension DefaultCardsScreen: FilterDialogCoordinator {
     func applyFilter(categoriesFiltered: [UUID]?, languagesFiltered: [UUID]?, difficultiesFiltered: [Int]?) {
-        print(_tag, "categoriesSelected: \(categoriesFiltered)")
-        print(_tag, "languagesSelected: \(languagesFiltered)")
-        print(_tag, "difficultiesSelected: \(difficultiesFiltered)")
         cardList = cardViewModel.getListFiltered(categoriesFiltered: categoriesFiltered, languagesFiltered: languagesFiltered, difficultiesFiltered: difficultiesFiltered)
         tableView.reloadData()
     }

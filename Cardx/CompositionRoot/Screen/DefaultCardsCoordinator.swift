@@ -26,8 +26,8 @@ class DefaultCardsCoordinator: Coordinator {
 
 extension DefaultCardsCoordinator: DefaultCardsSreenCoordiantor {
     
-    func openFilterDialog() {
-        let coordinator = factory.makeFilterModule(navController: navController)
+    func openFilterDialog(categories: Set<Category>, languages: Set<Language>) {
+        let coordinator = factory.makeFilterModule(navController: navController, categories: categories, languages: languages)
         coordinator.start()
     }
     

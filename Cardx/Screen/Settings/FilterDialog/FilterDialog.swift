@@ -41,34 +41,23 @@ class FilterDialog: UIViewController {
     private let coordinator: FilterDialogCoordinator
     
     private var categoryList: [Category] = []
-    private var categoryFilterList: [Category] = []
+    private var categoryFilterList: Set<Category> = []
     
     private var languageList: [Language] = []
-    private var languageFilterList: [Language] = []
+    private var languageFilterList: Set<Language> = []
     
     private var difficultyList: [Difficulty] = Difficulty.difficulties
-    private var difficultyFilterList: [Category] = []
+    private var difficultyFilterList: Set<Difficulty> = []
     
     let viewModel: SettingViewModel
     
-    init(coordinator: FilterDialogCoordinator, viewModel: SettingViewModel) {
+    init(coordinator: FilterDialogCoordinator, viewModel: SettingViewModel, categories: Set<Category>, languages: Set<Language>, difficulties: [Difficulty]) {
         self.viewModel = viewModel
         self.coordinator = coordinator
+        categoryList = Array(categories)
+        languageList = Array(languages)
+//        difficultyList = difficulties
         super.init(nibName: nil, bundle: nil)
-        
-        categoryList = [
-            .init(id: UUID(), name: "phrasal verb"),
-            .init(id: UUID(), name: "verb"),
-            .init(id: UUID(), name: "connectors"),
-        ]//viewModel.fetchAllCategories()
-        languageList = [
-            .init(id: UUID(), name: "English"),
-            .init(id: UUID(), name: "German"),
-            .init(id: UUID(), name: "Spanish"),
-            .init(id: UUID(), name: "French"),
-        ]//viewModel.fetchAllLanguages()
-        print(_tag, "Categories: \(categoryList)")
-        print(_tag, "Languages: \(languageList)")
     }
     
     required init?(coder: NSCoder) {
@@ -89,9 +78,9 @@ class FilterDialog: UIViewController {
         // MARK: - change the categories/languages/difficulties filtered
         
         coordinator.applyFilter(
-            categoriesFiltered: nil,
-            languagesFiltered: nil,
-            difficultiesFiltered: nil
+            categoriesFiltered: categoryFilterList.map(\.id),
+            languagesFiltered: languageFilterList.map(\.id),
+            difficultiesFiltered: difficultyFilterList.map(\.id.rawValue)
         )
     }
     
@@ -151,11 +140,32 @@ extension FilterDialog : SelectableDelegate {
     
     func onSelected(data: T, selectableButton: SelectableButton) {
         print(_tag, "[\(data.toString())] - \(selectableButton.toString())")
+        switch data {
+        case is Category:
+            if selectableButton.isChecked() {
+                categoryFilterList.insert(data as! Category)
+            } else {
+                categoryFilterList.remove(data as! Category)
+            }
+        case is Language:
+            if selectableButton.isChecked() {
+                languageFilterList.insert(data as! Language)
+            } else {
+                languageFilterList.remove(data as! Language)
+            }
+        case is Difficulty:
+            if selectableButton.isChecked() {
+                difficultyFilterList.insert(data as! Difficulty)
+            } else {
+                difficultyFilterList.remove(data as! Difficulty)
+            }
+        default:
+            print(_tag, "Nothing")
+        }
     }
 }
 
 protocol CollectionData: SelectableNameProtocol {
     func toString() -> String
-    
 }
 
