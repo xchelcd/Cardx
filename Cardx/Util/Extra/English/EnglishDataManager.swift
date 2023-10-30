@@ -13,6 +13,9 @@ protocol DataManager {
 }
 
 class EnglishDataManager {
+    
+    static let languageId = UUID(uuidString: "1CCDC72D-8EEE-4ACD-A355-A2312D57B77D")!
+    
     static func getCategories() -> [Category] {
         return [PhrasalVerbs.category, Verbs.category, OverPhrase.category, Verbs.category]
     }

@@ -17,10 +17,9 @@ class Connectors: DataManager {
         language
     }
     
-    private static let languageId = UUID(uuidString: "C0FF44F2-1267-4501-A22C-FB8D1362A4A3")!
     private static let categoryId = UUID(uuidString: "174248B4-2553-4C75-BFB8-47D178694637")!
     
-    public static let language = Language(id: languageId, name: "English")
+    public static let language = Language(id: EnglishDataManager.languageId, name: "English")
     private let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
     private let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
     public static let category: Category = Category(id: categoryId, name: "Connectors")

@@ -9,10 +9,10 @@ import Foundation
 
 class PhrasalVerbs: DataManager {
     
-    private static let languageId = UUID(uuidString: "1CCDC72D-8EEE-4ACD-A355-A2312D57B77D")!
+    
     private static let categoryId = UUID(uuidString: "A3D52E77-85E3-4AEC-AAF4-81BF62F02E94")!
     
-    public static let language = Language(id: languageId, name: "English")
+    public static let language = Language(id: EnglishDataManager.languageId, name: "English")
     private let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
     private let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
     public static let category: Category = Category(id: categoryId, name: "Phrasal Verbs")

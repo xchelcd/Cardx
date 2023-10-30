@@ -17,10 +17,9 @@ class OverPhrase: DataManager {
         language
     }
     
-    private static let languageId = UUID(uuidString: "A229A215-7000-4BF4-8B15-574CBEBC3E2A")!
     private static let categoryId = UUID(uuidString: "CEF1C131-E84D-478F-BF1E-0B494AD7BE9B")!
     
-    public static let language = Language(id: languageId, name: "English")
+    public static let language = Language(id: EnglishDataManager.languageId, name: "English")
     private let difficulty = Difficulty(id: CardDifficultyId.MEDIUM, name: CardDifficulty.MEDIUM)
     private let difficultySelected = Difficulty(id: CardDifficultyId.NULL, name: CardDifficulty.NULL)
     public static let category: Category = Category(id: categoryId, name: "Over Phrases")
