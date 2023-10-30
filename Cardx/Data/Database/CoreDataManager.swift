@@ -31,7 +31,7 @@ class CoreDataManager {
                 fatalError("Unable to initialize Core Data \(error)")
             }
         }
-        clearAllDatabase()
+//        clearAllDatabase()
     }
     
     private func saveData() {
@@ -71,12 +71,11 @@ extension CoreDataManager {
                 cardEntity.difficulty = Int16(card.difficulty.id.rawValue)
                 cardEntity.difficultySelected = Int16(card.difficultySelected.id.rawValue)
                 
-                print(_tag, "CardId: \(card)")
                 saveData()
                 print(_tag, "Card inserted: \(card.toString())")
             }
         } catch {
-            print("Error saving context \(error)")
+            print(_tag, "Error saving context \(error)")
         }
         
     }
@@ -128,7 +127,7 @@ extension CoreDataManager {
             return Card(id: entity.id!, toTranslate: entity.toTranslate!, translation: entity.translation!, language: language, difficulty: difficulty, difficultySelected: difficultySelected, category: category)
         }
         //saveData()
-        print(_tag, "Fetched")
+//        print(_tag, "Fetched")
         return cardList
     }
     
@@ -162,7 +161,7 @@ extension CoreDataManager {
                 viewContext.delete(objectData)
             }
         } catch let error {
-            print("Detele all data in \(entity) error :", error)
+            print(_tag, "Detele all data in \(entity) error :", error)
         }
     }
 }
@@ -183,19 +182,19 @@ extension CoreDataManager {
                 print(_tag, "CategoryInserted: \(category)")
             }
         } catch {
-            print("Error saving context \(error)")
+            print(_tag, "Error saving context \(error)")
         }
     }
     
     // MARK: - change the int by uuid
     // id should be uuid type
     func getCategoryById(id: UUID) -> Category? {
-        print(_tag, "CategoryId(getCategoryById): \(id)")
+//        print(_tag, "CategoryId(getCategoryById): \(id)")
         let request = NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
         var list = [CategoryEntity]()
         do {
             list = try viewContext.fetch(request)
-            print(_tag, "items: \(list.count)")
+//            print(_tag, "items: \(list.count)")
         } catch let error {
             print(_tag, error)
         }
@@ -218,7 +217,7 @@ extension CoreDataManager {
                 .init(id: entity.id, name: entity.name ?? "")
         }
 
-        print(_tag, "Fetched")
+//        print(_tag, "Fetched")
         return categoryList
     }
     
@@ -257,18 +256,18 @@ extension CoreDataManager {
                 print(_tag, "LanguageInserted: \(language)")
             }
         } catch {
-            print("Error saving context \(error)")
+            print(_tag, "Error saving context \(error)")
         }
     }
     
     // MARK: - change the int by uuid
     func getLanguageById(id: UUID) -> Language? {
-        print(_tag, "LanguageId(getLanguageById): \(id)")
+//        print(_tag, "LanguageId(getLanguageById): \(id)")
         let request = NSFetchRequest<LanguageEntity>(entityName: "LanguageEntity")
         var list = [LanguageEntity]()
         do {
             list = try viewContext.fetch(request)
-            print(_tag, "items: \(list.count)")
+//            print(_tag, "items: \(list.count)")
         } catch let error {
             print(_tag, error)
         }
