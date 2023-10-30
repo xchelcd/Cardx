@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+class DisplayCardViewModel: ViewModel {
+    
+    private let fetchCards: GetAllCards
+    
+    init(fetchCards: GetAllCards) {
+        self.fetchCards = fetchCards
+    }
+    
+    func getAllCards() -> [Card] {
+        fetchCards.invoke()
+    }
+    
+    func updatePosition(card: Card) {
+        
+    }
+}

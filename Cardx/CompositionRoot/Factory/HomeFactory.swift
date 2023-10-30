@@ -15,6 +15,7 @@ protocol HomeFactory {
     
     func makeAddCardModule(navController: UINavigationController) -> Coordinator
     //func makeDisplayCardModule(navController: UINavigationController) -> Coordinator
+    func makeDisplayCardsModule(navController: UINavigationController) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
@@ -44,9 +45,10 @@ struct HomeFactoryImp: HomeFactory {
         return coordinator
     }
     
-    //func makeDisplayCardModule(navController: UINavigationController) -> Coordinator {
-    //    let displayCardFactory = DisplayCardFactory()
-    //    let displayCardCoordiantor = DisplayCardCoordinator(navController: navController, factory: displayCardFactory)
-    //    return displayCardCoordiantor
-    //}
+    func makeDisplayCardsModule(navController: UINavigationController) -> Coordinator {
+        let factory = DisplayCardsFactoryImp()
+        let coordinator = DisplayCardsCoordinator(navController: navController, factory: factory)
+        
+        return coordinator
+    }
 }

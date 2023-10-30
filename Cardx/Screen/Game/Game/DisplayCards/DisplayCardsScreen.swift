@@ -36,6 +36,7 @@ class DisplayCardsScreen: UIViewController {
         cardList = viewModel.getAllCards()
         
         super.init(nibName: nil, bundle: nil)
+        print(_tag, "data: \(cardList.map(\.translation))")
     }
     
     required init?(coder: NSCoder) {
@@ -48,6 +49,27 @@ class DisplayCardsScreen: UIViewController {
             self.displayMessage(self.view, message: "No Cards")
         }
         setupTable()
+        
+        // MARK: - algoritmo para cambiar la posición en una lista
+        // MARK: - otra forma podría ser eliminar la carta y volverla a insertar en la base de datos -> **********
+        for i in 0...cardList.count - 1 {
+            var cardUpdated = cardList[i]
+            cardUpdated.position = i
+            cardList[i] = cardUpdated
+        }
+        print(_tag, cardList.map{"\($0.toString1())"})
+        
+        for i in 0...cardList.count - 1 {
+            var cardUpdated = cardList[i]
+            if i - 1 == -1 {
+                cardUpdated.position = cardList.count - 1
+            } else {
+                cardUpdated.position = i - 1
+            }
+            
+            cardList[i] = cardUpdated
+        }
+        print(_tag, cardList.map{"\($0.toString1())"})
     }
 
 }
@@ -63,7 +85,7 @@ extension DisplayCardsScreen: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let card = cardList[indexPath.row]
-        cell.bind(difficultyDelegate: self, card: card, index: indexPath.row)
+        cell.bind(difficultyDelegate: self, card: card, indexPath: indexPath)
         return cell
     }
     
@@ -71,14 +93,10 @@ extension DisplayCardsScreen: UITableViewDelegate, UITableViewDataSource {
         return (UIScreen.main.bounds.height / 4.0) + 25.0 //+ 36 //+ 75
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        cardList.moveFirstToLastIndex()
-    }
-    
     private func setupTable() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
         self.view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -87,39 +105,72 @@ extension DisplayCardsScreen: UITableViewDelegate, UITableViewDataSource {
             tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
+        tableView.reloadData()
     }
 }
 
 extension DisplayCardsScreen: CardItemDifficultyDelegate {
-    
     func difficultySelected(difficulty: CardDifficultyId) {
-        let cardDifficultyId = difficulty.rawValue
-        let carddifficultySelected = CardDifficulty.allCases[difficulty.rawValue]
+        print(_tag, "Deprecated")
+    }
+    
+    
+    func difficultySelected(difficulty: CardDifficultyId, indexPath: IndexPath?) {
+//        let cardDifficultyId = difficulty.rawValue
+//        let carddifficultySelected = CardDifficulty.allCases[difficulty.rawValue]
         
-        print(_tag, "difficulty: \(carddifficultySelected)")
+//        print(_tag, "difficulty: \(carddifficultySelected)")
         
         switch difficulty {
         case .NULL:
-            reSortList()
+            reSortList(indexPath: indexPath)
             break
         case .TRY_AGAING:
-            reSortList()
+            reSortList(indexPath: indexPath)
             break
         case .EASY:
-            reSortList()
+            reSortList(indexPath: indexPath)
             break
         case .MEDIUM:
-            reSortList()
+            reSortList(indexPath: indexPath)
             break
         case .HARD:
-            reSortList()
+            reSortList(indexPath: indexPath)
             break
         }
     }
     
-    private func reSortList() {
-        cardList.moveFirstToLastIndex()
+    private func reSortList(indexPath: IndexPath?) {
+        guard let indexPath = indexPath else {
+            print(_tag, "No indexPath")
+            return
+        }
+        
+        let index = indexPath.row
+        let elementSelected = cardList[index]
+        
+        print(_tag, "data: \(cardList.map(\.toTranslate))")
+        
+        removeData(indexPath: indexPath)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            self.insertData(element: elementSelected)
+            
+        }
+    }
+    
+    private func removeData(indexPath: IndexPath) {
+        cardList.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .bottom)
+    }
+    
+    private func insertData(element: Card) {
+        cardList.append(element)
+        let newIndexPath = IndexPath(row: cardList.count - 1, section: 0)
+        tableView.insertRows(at: [newIndexPath], with: .top)
+        
         tableView.reloadData()
+        print(self._tag, "data: \(cardList.map(\.toTranslate))")
     }
     
 }

@@ -43,4 +43,9 @@ extension HomeCoordinator: HomeScreenCoordinator {
         let coordinator = homeFactory.makeTestModule(navController: navController)
         coordinator.start()
     }
+    
+    func navigateToDisplayCards() {
+        let coordinator = homeFactory.makeDisplayCardsModule(navController: navController)
+        coordinator.start()
+    }
 }
