@@ -26,6 +26,7 @@ class AddCardScreen: UIViewController {
     private var currentDifficulty: Difficulty? = nil
     private let difficultyPicker: UIPickerView = {
         let picker = UIPickerView()
+        picker.backgroundColor = .systemBackground
         picker.tag = 3
         return picker
     }()
@@ -34,6 +35,7 @@ class AddCardScreen: UIViewController {
     private var currentLanguage: Language? = nil
     private let languagePicker: UIPickerView = {
         let picker = UIPickerView()
+        picker.backgroundColor = .systemBackground
         picker.tag = 1
         return picker
     }()
@@ -42,6 +44,7 @@ class AddCardScreen: UIViewController {
     private var currentCategory: Category? = nil
     private let categoryPicker: UIPickerView = {
         let picker = UIPickerView()
+        picker.backgroundColor = .systemBackground
         picker.tag = 2
         return picker
     }()
@@ -58,7 +61,7 @@ class AddCardScreen: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let addButton: UIButton = {
+    private lazy var addButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("Add", for: .normal)
         button.addTarget(self, action: #selector(add), for: .touchUpInside)
@@ -66,13 +69,15 @@ class AddCardScreen: UIViewController {
         return button
     }()
     
-    let viewDefaultCardsButton: UIButton = {
+    private lazy var viewDefaultCardsButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("View Default Cards", for: .normal)
         button.addTarget(self, action: #selector(showDefaultCards), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    private var newCard: CardItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +97,9 @@ extension AddCardScreen {
               let language = currentLanguage,
               let difficultyName = currentDifficulty?.name,
               let category = currentCategory else {
-            print(_tag, "Some value were missing")
+            let message = "Some value were missing"
+            displayMessage(self.view, message: message)
+            print(_tag, message)
             return
         }
         let difficultySelectedName = CardDifficulty.NULL
@@ -101,6 +108,7 @@ extension AddCardScreen {
         
         cardViewModel.saveCard(card: card)
         cardItem?.clearFields()
+        showNewCard(card: card)
         displayMessage(self.view, message: "Card added: \(card.toTranslate)")
     }
     
@@ -109,7 +117,7 @@ extension AddCardScreen {
     }
     
     private func setupCardItem() {
-        let cardItem = CardItem(card: nil, optionsDelegate: self)
+        let cardItem = CardItem(card: nil, optionsDelegate: self, indexPath: nil)
         self.cardItem = cardItem
         self.view.addSubview(cardItem)
         self.view.addSubview(addButton)
@@ -173,6 +181,7 @@ extension AddCardScreen: CardItemOptionsDelegate {
         difficultyPicker.removeFromSuperview()
         categoryPicker.removeFromSuperview()
         languagePicker.removeFromSuperview()
+        
     }
 }
 
@@ -247,5 +256,20 @@ extension AddCardScreen {
         let cards = cardViewModel.fetchAllCards().map{"\($0.toTranslate)(\($0.translation))"}
         print(_tag, "total cards: \(cards.count)")
         print(_tag, "values: \(cards)")
+    }
+    
+    private func showNewCard(card: Card) {
+        if let newCard = self.newCard {
+            newCard.updateData(card: card)
+        } else {
+            newCard = CardItem(card: card, indexPath: nil)
+            self.view.addSubview(self.newCard!)
+            NSLayoutConstraint.activate([
+                newCard!.topAnchor.constraint(equalTo: self.addButton.bottomAnchor),
+                newCard!.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                newCard!.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            ])
+        }
+        
     }
 }
