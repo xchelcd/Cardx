@@ -15,8 +15,13 @@ struct Card {
     let difficulty: Difficulty
     let difficultySelected: Difficulty // by customer
     let category: Category
+    var position: Int = 0
     
     func toString()  -> String {
-        return ".\(id) - \(language.name) - \(toTranslate) = \(translation)"
+        return "\(position).\(id) - \(language.name) - \(toTranslate) = \(translation)"
+    }
+    
+    func toString1()  -> String {
+        return "\(position). - \(toTranslate) = \(translation)"
     }
 }

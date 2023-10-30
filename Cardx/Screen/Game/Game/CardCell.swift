@@ -18,9 +18,31 @@ class CardCell: UITableViewCell {
     }
     
     var cardItem: CardItem? = nil
-    func bind(card: Card, index: Int) {
+//    func bind(difficultyDelegate: CardItemDifficultyDelegate, card: Card, index: Int) {
+//        if cardItem == nil {
+//            self.cardItem = CardItem(
+//                card: card,
+//                difficultyDelegate: difficultyDelegate,
+//                index: index
+//            )
+//            self.addSubview(cardItem!)
+//            NSLayoutConstraint.activate([
+//                cardItem!.topAnchor.constraint(equalTo: topAnchor),
+//                cardItem!.leadingAnchor.constraint(equalTo: leadingAnchor),
+//                cardItem!.trailingAnchor.constraint(equalTo: trailingAnchor)
+//            ])
+//        } else {
+//            self.cardItem?.updateData(card: card, index: index)
+//        }
+//    }
+    
+    func bind(difficultyDelegate: CardItemDifficultyDelegate, card: Card, indexPath: IndexPath) {
         if cardItem == nil {
-            self.cardItem = CardItem(card: card, index: index)
+            self.cardItem = CardItem(
+                card: card,
+                difficultyDelegate: difficultyDelegate,
+                indexPath: indexPath
+            )
             self.addSubview(cardItem!)
             NSLayoutConstraint.activate([
                 cardItem!.topAnchor.constraint(equalTo: topAnchor),
@@ -28,7 +50,24 @@ class CardCell: UITableViewCell {
                 cardItem!.trailingAnchor.constraint(equalTo: trailingAnchor)
             ])
         } else {
-            self.cardItem?.updateData(card: card, index: index)
+            self.cardItem?.updateData(card: card, indexPath: indexPath)
+        }
+    }
+    
+    func bind(card: Card, indexPath: IndexPath?) {
+        if cardItem == nil {
+            self.cardItem = CardItem(
+                card: card,
+                indexPath: indexPath
+            )
+            self.addSubview(cardItem!)
+            NSLayoutConstraint.activate([
+                cardItem!.topAnchor.constraint(equalTo: topAnchor),
+                cardItem!.leadingAnchor.constraint(equalTo: leadingAnchor),
+                cardItem!.trailingAnchor.constraint(equalTo: trailingAnchor)
+            ])
+        } else {
+            self.cardItem?.updateData(card: card, indexPath: indexPath)
         }
     }
 }

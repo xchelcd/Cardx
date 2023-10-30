@@ -14,8 +14,9 @@ protocol CardItemOptionsDelegate {
 }
 
 protocol CardItemDifficultyDelegate {
-    func flip()
-    func difficultySelected(difficultyIndex: Int)
+    // func flip()
+    func difficultySelected(difficulty: CardDifficultyId, indexPath: IndexPath?)
+    func difficultySelected(difficulty: CardDifficultyId)
 }
 
 class CardItem: UIView {
@@ -172,19 +173,44 @@ class CardItem: UIView {
     }()
     
     let idLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
         label.textAlignment = .center
+        label.isHidden = true
         return label
     }()
     
-    private var card: Card? = nil
+    private var card: Card? = nil {
+        didSet {
+            //            print(_tag, "The new value is: \(card?.toString() ?? "Card is nil")")
+        }
+    }
     private var optionsDelegate: CardItemOptionsDelegate? = nil
     private var difficultyDelegate: CardItemDifficultyDelegate? = nil
     var index: Int
-    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil, index: Int? = nil) {
-        self.index = index ?? 0
+    var indexPath: IndexPath?
+    //    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil, index: Int? = nil) {
+    //        self.index = index ?? 0
+    //        super.init(frame: .zero)
+    //
+    //        self.optionsDelegate = optionsDelegate
+    //        self.difficultyDelegate = difficultyDelegate
+    //
+    //        setupCardViewWithDelegates(optionsDelegate: optionsDelegate, difficultyDelegate: difficultyDelegate)
+    //
+    //        self.translatesAutoresizingMaskIntoConstraints = false
+    //
+    //        setupView()
+    //
+    //        guard let card = card else { return }
+    //        self.card = card
+    //        setupCard()
+    //    }
+    
+    init(card: Card?, optionsDelegate: CardItemOptionsDelegate? = nil, difficultyDelegate: CardItemDifficultyDelegate? = nil, indexPath: IndexPath?) {
+        self.indexPath = indexPath
+        self.index = indexPath?.row ?? 0
         super.init(frame: .zero)
         
         self.optionsDelegate = optionsDelegate
@@ -244,22 +270,22 @@ extension CardItem {
     @objc
     private func selectTryAgain() {
         //print(_tag, "selectTryAgain")
-        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.TRY_AGAING.rawValue)
+        difficultyDelegate?.difficultySelected(difficulty: CardDifficultyId.TRY_AGAING, indexPath: indexPath)
     }
     @objc
     private func selectHard() {
         //print(_tag, "selectHard")
-        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.HARD.rawValue)
+        difficultyDelegate?.difficultySelected(difficulty: CardDifficultyId.HARD, indexPath: indexPath)
     }
     @objc
     private func selectMedium(sender: UIButton) {
-        print(_tag, "selectMedium")
-        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.MEDIUM.rawValue)
+        // print(_tag, "selectMedium")
+        difficultyDelegate?.difficultySelected(difficulty: CardDifficultyId.MEDIUM, indexPath: indexPath)
     }
     @objc
     private func selectEasy() {
         //print(_tag, "selectEasy")
-        difficultyDelegate?.difficultySelected(difficultyIndex: CardDifficultyId.EASY.rawValue)
+        difficultyDelegate?.difficultySelected(difficulty: CardDifficultyId.EASY, indexPath: indexPath)
     }
 }
 
@@ -272,7 +298,7 @@ extension CardItem {
     private func toFlip(isOpen: Bool) {
         let animation: UIView.AnimationOptions = isOpen ? .transitionFlipFromLeft : .transitionFlipFromRight
         UIView.transition(with: cardView, duration: 0.3, options: animation, animations: nil, completion: nil)
-
+        
         setVisibility(isOpen: isOpen)
     }
     
@@ -281,9 +307,9 @@ extension CardItem {
         guard let card = card else {
             idLabel.text = "\(index)"
             
-            languageButton.setTitle(nil, for: .normal)
-            difficultyButton.setTitle(nil, for: .normal)
-            categoryButton.setTitle(nil, for: .normal)
+            languageButton.setTitle("Language", for: .normal)
+            categoryButton.setTitle("Category", for: .normal)
+            difficultyButton.setTitle("Difficulty", for: .normal)
             textToTranslate.text = nil
             translation.text = nil
             return
@@ -294,8 +320,29 @@ extension CardItem {
         languageButton.setTitle(card.language.name, for: .normal)
         difficultyButton.setTitle(card.difficulty.name.rawValue, for: .normal)
         categoryButton.setTitle(card.category.name, for: .normal)
-        textToTranslate.text = card.toTranslate
-        translation.text = card.translation
+        
+        
+        guard let index = indexPath?.row else {
+            textToTranslate.text = card.toTranslate
+            translation.text = card.translation
+            return
+        }
+        if index == 0 {
+            textToTranslate.text = card.toTranslate
+            translation.text = card.translation
+            flipButton.isEnabled = true
+            enableDifficultyButtons(isEnable: true)
+        } else {
+            enableDifficultyButtons(isEnable: false)
+        }
+        
+    }
+    
+    private func enableDifficultyButtons(isEnable: Bool) {
+        tryAgainButton.isEnabled = isEnable
+        easyButton.isEnabled = isEnable
+        mediumButton.isEnabled = isEnable
+        hardButton.isEnabled = isEnable
     }
     
     private func setVisibility(isOpen: Bool) {
@@ -424,11 +471,13 @@ extension CardItem {
         }
         
         if let _ = difficultyDelegate {
-            translation.isHidden = isOpen
-            textToTranslate.isHidden = !isOpen
+            translation.isHidden = !isOpen
+            textToTranslate.isHidden = isOpen
             languageButton.isEnabled = false
             categoryButton.isEnabled = false
             difficultyButton.isEnabled = false
+            textToTranslate.isEnabled = false
+            translation.isEnabled = false
             
             difficultyLayout.isHidden = isOpen
             flipButton.isHidden = isOpen
@@ -450,8 +499,25 @@ extension CardItem {
         setupCard()
     }
     
+    func updateData(card: Card, indexPath: IndexPath?) {
+        self.card = card
+        self.index = if indexPath == nil {
+            0
+        } else {
+            indexPath!.item
+        }
+        self.indexPath = indexPath
+        setupCard()
+    }
+    
+    func updateData(card: Card) {
+        self.card = card
+        setupCard()
+    }
+    
     func clearFields() {
         self.card = nil
         setupCard()
+        textToTranslate.becomeFirstResponder()
     }
 }
