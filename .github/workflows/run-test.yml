@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: check out project
         uses: actions/checkout@v4
-      - name: Show current xcode version
-        run xcodebuild -version
+      #- name: Show current xcode version
+      #  run xcodebuild -version
       - name: Build Cardx
         run: swift build -v
       - name: Run Cardx tests
@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Check out project
         uses: actions/checkout@v4
-      - name: Show current version of Xcode
-        run: xcodebuild -version
+      #- name: Show current version of Xcode
+      #  run: xcodebuild -version
       - name: Run Cardx tests
         run: xcodebuild build -project
