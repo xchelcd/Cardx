@@ -17,7 +17,7 @@ jobs:
       #- name: Show current xcode version
       #  run xcodebuild -version
       - name: Build Cardx
-        run: xcodebuild -project "Cardx.xcodeproj" -scheme Cardx -destination 'generic/platform=iOS'
+        run: xcodebuild -project "Cardx.xcodeproj" -scheme Cardx -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
         #run: xcodebuild build
         
   test:
