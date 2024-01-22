@@ -12,7 +12,10 @@
     * Add "example" attribute to Card object
     * Add defaults cards for most common languages (English, German and French)
  
-    * Make a picker with two options: langauges and categories, to filter the cards to displays
-    * Add the cards that the user wants
+    support multiple translation for same toTranslate (check how to implement it)
+    
+    * notificaciones diarias para aprender
+    * settingsView add schedule notifications: notification will display the toTranslate and its translation
+    
  
  */
