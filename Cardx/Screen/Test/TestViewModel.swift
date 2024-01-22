@@ -13,12 +13,14 @@ class TestViewModel {
     private let getAllCards: GetAllCards
     private let getAllCardsByLanguage: GetAllCardsByLanguage
     private let clearDB: ClearDatabase
+    private let removeCard: RemoveCard
     
-    init(insertCard: InsertCard, getAllCards: GetAllCards, getAllCardsByLanguage: GetAllCardsByLanguage, clearDB: ClearDatabase) {
+    init(insertCard: InsertCard, getAllCards: GetAllCards, getAllCardsByLanguage: GetAllCardsByLanguage, clearDB: ClearDatabase, removeCard: RemoveCard) {
         self.insertCard = insertCard
         self.getAllCards = getAllCards
         self.getAllCardsByLanguage = getAllCardsByLanguage
         self.clearDB = clearDB
+        self.removeCard = removeCard
     }
     
     func saveCard(card: Card) {
@@ -31,5 +33,9 @@ class TestViewModel {
     
     func clearDatabase() {
         clearDB.invoke()
+    }
+    
+    func deleteCard(card: Card) {
+        removeCard.invoke(card: card)
     }
 }

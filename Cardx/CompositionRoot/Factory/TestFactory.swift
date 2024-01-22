@@ -22,15 +22,19 @@ struct TestFactoryImp: TestFactory {
         let getAllCards = GetAllCards(coreDataManager: coreDataManager)
         let getAllCardsByLanguage = GetAllCardsByLanguage(coreDataManager: coreDataManager)
         let clearDB = ClearDatabase(coreDataManager: coreDataManager)
+        let removeCard = RemoveCard(coreDataManager: coreDataManager)
         
         let viewModel = TestViewModel(
             insertCard: insertCard,
             getAllCards: getAllCards,
             getAllCardsByLanguage: getAllCardsByLanguage,
-            clearDB: clearDB
+            clearDB: clearDB,
+            removeCard: removeCard
         )
         
         let controller = TestScreen(viewModel: viewModel)
+        controller.setupToolbar(title: "Test")
+        controller.view.accessibilityIdentifier = "view_test"
         return controller
     }
 }

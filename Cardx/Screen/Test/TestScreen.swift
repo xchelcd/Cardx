@@ -41,7 +41,7 @@ class TestScreen: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let addButton: UIButton = {
+    private lazy var addButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("Add", for: .normal)
         button.addTarget(self, action: #selector(add), for: .touchUpInside)
@@ -49,7 +49,7 @@ class TestScreen: UIViewController {
         return button
     }()
     
-    private let openFiltersButton: UIButton = {
+    private lazy var openFiltersButton: UIButton = {
         let button = UIButton(configuration: .borderedTinted())
         button.setTitle("Filteres", for: .normal)
         button.addTarget(self, action: #selector(openFilters), for: .touchUpInside)
@@ -59,32 +59,81 @@ class TestScreen: UIViewController {
     
     private let identifier = "testCell"
     /*
-    private var cardList: [Card] = [
-        .init(id: UUID(), toTranslate: "Die Frau", translation: "La mujer", language: .init(id: UUID(), name: "German"), difficulty: .init(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "Extra")),
-        .init(id: UUID(), toTranslate: "Hallo", translation: "Hola", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Wie geht ist dir", translation: "Cómo estás?", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Auf Wiedersehen", translation: "Adiós", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "Wollen", translation: "Querer", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
-        .init(id: UUID(), toTranslate: "das Wasser", translation: "Agua", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
-        
-    ]
-    */
+     private var cardList: [Card] = [
+     .init(id: UUID(), toTranslate: "Die Frau", translation: "La mujer", language: .init(id: UUID(), name: "German"), difficulty: .init(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "Extra")),
+     .init(id: UUID(), toTranslate: "Hallo", translation: "Hola", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+     .init(id: UUID(), toTranslate: "Wie geht ist dir", translation: "Cómo estás?", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+     .init(id: UUID(), toTranslate: "Auf Wiedersehen", translation: "Adiós", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+     .init(id: UUID(), toTranslate: "Wollen", translation: "Querer", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+     .init(id: UUID(), toTranslate: "das Wasser", translation: "Agua", language: .init(id: UUID(), name: "German"), difficulty: Difficulty(id: CardDifficultyId.EASY, name: CardDifficulty.EASY), difficultySelected: .init(id: CardDifficultyId.NULL, name: CardDifficulty.NULL), category: .init(id: UUID(), name: "All")),
+     
+     ]
+     */
     private var cardList: [Card] = []
     
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TestCell.self, forCellReuseIdentifier: "testCell")
+        tableView.register(CardCell.self, forCellReuseIdentifier: "testCell")
         tableView.separatorStyle = .none
         return tableView
     }()
+    
+    private lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let padding = 12.0
+        layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        let minSpaceV = 12.0
+        let minSpaceH = 12.0
+        layout.minimumLineSpacing = minSpaceV
+        layout.minimumInteritemSpacing = minSpaceH
+        
+        
+        let window = UIApplication.shared.windows.first
+        let t: CGFloat = window?.safeAreaInsets.top ?? 0.0
+        let b: CGFloat = window?.safeAreaInsets.bottom ?? 0.0
+        let safeArea = t + b
 
+        let hScreen = window?.frame.height ?? 0.0
+        let wScreen = window?.frame.width ?? 0.0
+        
+        let cHeight = (hScreen - safeArea) / 2
+        let cWidth = wScreen / 2
+        
+        let h = cHeight - (3.25 * minSpaceV)
+        let w = cWidth - (2 * minSpaceH)
+        
+        
+        
+        layout.itemSize = CGSize(width: w, height: h)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isScrollEnabled = false
+//        collectionView.backgroundColor = .lightGray
+        collectionView.bounces = false
+        collectionView.register(OptionsCell.self, forCellWithReuseIdentifier: "options_identifier")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        return collectionView
+    }()
+    
+    private let options: [String] = [
+        "Option One",
+        "Option Two",
+        "Option Three",
+        "Option Four",
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // viewModel.clearDatabase()
-        if true {
+        if false {
             setupFilters()
+            return
+        } else {
+            setGridLayout()
             return
         }
         if false {
@@ -96,8 +145,81 @@ class TestScreen: UIViewController {
             fetchCards()
         }
     }
-
+    
 }
+// MARK: - Grid view
+extension TestScreen: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        options.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "options_identifier", for: indexPath) as? OptionsCell else {
+            return UICollectionViewCell()
+        }
+        let option = options[indexPath.row]
+        cell.bind(option: option)
+        
+        return cell
+    }
+    
+    
+    private func setGridLayout() {
+        self.view.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
+    }
+}
+class OptionsCell: UICollectionViewCell {
+    
+    private lazy var button: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.label, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var view: CardView = {
+        let view = CardView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+   
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        addViews()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        addViews()
+    }
+    
+    private func addViews() {
+        view.addSubview(button)
+        self.addSubview(view)
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: self.topAnchor),
+            view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    func bind(option: String) {
+        button.setTitle(option, for: .normal)
+    }
+}
+// MARK: - Grid view
 
 // MARK: - Filters start
 
@@ -109,11 +231,11 @@ extension TestScreen {
     }
     
     private func showDialog() {
-        let dialog = FilterDialog()
+        //        let dialog = FilterDialog()
         //dialog.modalPresentationStyle = .custom
         //dialog.modalPresentationStyle = .overCurrentContext
-        dialog.modalPresentationStyle = .overFullScreen
-        self.present(dialog, animated: true)
+        //        dialog.modalPresentationStyle = .overFullScreen
+        //        self.present(dialog, animated: true)
     }
     
     private func fetchData() {
@@ -166,7 +288,7 @@ extension TestScreen {
     }
     
     private func setupCardItem() {
-        let cardItem = CardItem(card: nil)
+        let cardItem = CardItem(card: nil, indexPath: nil)
         self.cardItem = cardItem
         self.view.addSubview(cardItem)
         self.view.addSubview(addButton)
@@ -189,11 +311,11 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? TestCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? CardCell else {
             return UITableViewCell()
         }
         let card = cardList[indexPath.row]
-        cell.bind(card: card, index: indexPath.row)
+        cell.bind(card: card, indexPath: indexPath)
         return cell
     }
     
@@ -244,6 +366,7 @@ extension TestScreen: UITableViewDataSource, UITableViewDelegate {
             displayMessage(self.view, message: "No cards")
         }
         tableView.reloadData()
+        
     }
 }
 // MARK: - display cards end
