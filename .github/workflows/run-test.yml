@@ -8,13 +8,26 @@ on:
 
 jobs:
   build:
-
+    name: Cardx build
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build Cardx
-      run: swift build -v
-    - name: Run Cardx tests
-      run: swift test -v
-
+      - name: check out project
+        uses: actions/checkout@v4
+      - name: Show current xcode version
+        run xcodebuild -version
+      - name: Build Cardx
+        run: swift build -v
+      - name: Run Cardx tests
+        run: swift test -v
+        
+  test:
+    name: Cardx build
+    runs-on: macos-latest
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+      - name: Show current version of Xcode
+        run: xcodebuild -version
+      - name: Run Cardx tests
+        run: xcodebuild build -project
