@@ -2,9 +2,9 @@ name: UI & Unit Test
 
 on:
   push:
-    branches: [ "master", "dev" ]
+    branches: [ "master", "dev", "github-actions" ]
   pull_request:
-    branches: [ "master", "dev" ]
+    branches: [ "master", "dev"]
 
 jobs:
   build:
@@ -18,16 +18,16 @@ jobs:
       #  run xcodebuild -version
       - name: Build Cardx
         run: swift build -v
-      - name: Run Cardx tests
-        run: swift test -v
         
   test:
-    name: Cardx build
+    name: Cardx build & Test
     runs-on: macos-latest
     steps:
       - name: Check out project
         uses: actions/checkout@v4
       #- name: Show current version of Xcode
       #  run: xcodebuild -version
+      - name: Build Cardx
+        run: swift build -v
       - name: Run Cardx tests
-        run: xcodebuild build -project
+        run: swift test -v
