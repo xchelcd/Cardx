@@ -24,22 +24,51 @@ final class CardxUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        app.launch()
-        
-        print("App", app.debugDescription)
-        
-        let testButton = app.buttons["Test"]
-        testButton.tap()
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
     func testMainViewHasFourButtons() throws {
         app.launch()
         let buttons = app.buttons
         
         XCTAssertEqual(buttons.count, 4)
+    }
+    
+    func testGoToSettingsScreen() throws {
+        app.launch()
+        
+        let settingsScreen = app.otherElements["view_settings"]
+        let settingsButton = app.buttons["Settings"]
+        
+        settingsButton.tap()
+        
+        XCTAssert(settingsScreen.waitForExistence(timeout: 5)) // Did settings screen launch?
+        XCTAssertEqual(app.buttons.count, 6) // Has the required buttons?
+    }
+    
+    func testGoToAddScreen() throws {
+        app.launch()
+        
+        let addScreen = app.otherElements["view_add"]
+        let addButton = app.buttons["Add"]
+        
+        addButton.tap()
+        
+        XCTAssert(addScreen.waitForExistence(timeout: 5))
+    }
+    
+    func testGoBackFromAnyView() throws {
+        app.launch()
+        
+        let mainScreen = app.otherElements["view_menu"]
+        
+        let testScreen = app.otherElements["view_test"]
+        let testButton = app.buttons["Test"]
+        
+        let homeScreenBackButton = app.navigationBars["Test"].buttons["Back"] /// "Test" it the title of the navigationBar - "Back" is the name by default of back button in navController
+        
+        testButton.tap()
+        XCTAssert(testScreen.waitForExistence(timeout: 5))
+        
+        homeScreenBackButton.tap()
+        XCTAssert(mainScreen.waitForExistence(timeout: 5))
     }
     
     func testAddButtonGoesToAddScreen() throws {
