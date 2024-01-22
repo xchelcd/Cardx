@@ -1,5 +1,4 @@
 name: UI & Unit Test
-name: Swift
 
 on:
   push:
