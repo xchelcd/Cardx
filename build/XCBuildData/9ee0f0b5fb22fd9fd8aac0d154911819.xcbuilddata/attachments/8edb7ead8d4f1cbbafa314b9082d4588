@@ -1,0 +1,460 @@
+{
+  "" : {
+    "const-values" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master.swiftconstvalues",
+    "dependencies" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master.d",
+    "diagnostics" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master.dia",
+    "emit-module-dependencies" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master-emit-module.dia",
+    "swift-dependencies" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Cardx-master.swiftdeps"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/AppCoordinator/AppCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/AppCoordinator/Coordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Coordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Coordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Coordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/AddCardFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/AppFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/BottomSheetFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/DefaultCardFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/DisplayCardsFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/FilterFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/HomeFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/SettingFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Factory/TestFactory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestFactory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestFactory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestFactory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/AddCardCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/BottomSheetCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/DefaultCardsCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/DisplayCardsCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/FilterCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/HomeCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/SettingCoordiantor.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingCoordiantor.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingCoordiantor.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingCoordiantor.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/Screen/TestCoordinator.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestCoordinator.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestCoordinator.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestCoordinator.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/System/AppDelegate.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/System/SceneDelegate.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SceneDelegate.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/CardEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataClass.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataClass.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/CardEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataProperties.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardEntity+CoreDataProperties.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/CategoryEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataClass.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataClass.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/CategoryEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataProperties.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CategoryEntity+CoreDataProperties.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/LanguageEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataClass.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataClass.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreData/LanguageEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataProperties.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/LanguageEntity+CoreDataProperties.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CoreDataManager.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CoreDataManager.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CoreDataManager.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/Model/Card.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Card.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Card.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Card.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/Model/Category.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Category.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Category.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Category.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/Model/Difficulty.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Difficulty.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Difficulty.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Difficulty.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/Model/Language.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Language.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Language.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Language.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/ClearDatabase.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ClearDatabase.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ClearDatabase.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ClearDatabase.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/DeleteField.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DeleteField.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DeleteField.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DeleteField.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetAllCards.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCards.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCards.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCards.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetAllCardsByLanguage.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCardsByLanguage.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCardsByLanguage.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCardsByLanguage.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetAllCategories.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCategories.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCategories.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllCategories.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetAllLanguages.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllLanguages.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllLanguages.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetAllLanguages.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetCategoryById.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetCategoryById.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetCategoryById.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetCategoryById.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/GetLanguageById.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetLanguageById.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetLanguageById.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GetLanguageById.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/InsertCard.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCard.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCard.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCard.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/InsertCategory.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCategory.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCategory.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertCategory.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/InsertLanguage.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertLanguage.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertLanguage.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/InsertLanguage.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/RemoveCard.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/RemoveCard.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/RemoveCard.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/RemoveCard.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Domain/UseCase/UpdateCard.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UpdateCard.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UpdateCard.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UpdateCard.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Common/CardViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Common/DataBottomSheetViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheetViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheetViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheetViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Common/DisplayCardViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Common/SettingViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Common/ViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/ViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Game/Game/CardCell.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardCell.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardCell.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardCell.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Game/Game/DisplayCards/DisplayCardsScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DisplayCardsScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Game/Game/Menu/MenuGameScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/MenuGameScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/MenuGameScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/MenuGameScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Home/HomeScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/HomeScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/AddCard/AddCardScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/AddCardScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/FilterDialog/FilterDialog.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterDialog.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterDialog.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/FilterDialog.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/BottomSheet/BottomSheetCell.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCell.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCell.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/BottomSheetCell.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/BottomSheet/DataBottomSheet.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheet.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheet.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DataBottomSheet.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/DefaultCards/DefaultCardsScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/DefaultCardsScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/SettingsScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingsScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingsScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SettingsScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Test/Bottomsheet/Company/CompanyBottomSheet.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CompanyBottomSheet.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CompanyBottomSheet.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CompanyBottomSheet.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Test/TestScreen.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestScreen.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestScreen.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestScreen.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Test/TestViewModel.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestViewModel.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestViewModel.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/TestViewModel.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/Array.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Array.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Array.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Array.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/Blur+UIViewController.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Blur+UIViewController.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Blur+UIViewController.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Blur+UIViewController.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/CornedRadius+UIView.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CornedRadius+UIView.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CornedRadius+UIView.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CornedRadius+UIView.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/Font.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Font.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Font.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Font.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/NameDescribable.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/NameDescribable.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/NameDescribable.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/NameDescribable.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/PopUp+UIViewController.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PopUp+UIViewController.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PopUp+UIViewController.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PopUp+UIViewController.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/String.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/String.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/String.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/String.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/Toolbar+UIViewController.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Toolbar+UIViewController.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Toolbar+UIViewController.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Toolbar+UIViewController.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/UITextField+Toolbar.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UITextField+Toolbar.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UITextField+Toolbar.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UITextField+Toolbar.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extension/UIViewController+Message.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UIViewController+Message.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UIViewController+Message.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/UIViewController+Message.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/English/Connectors.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Connectors.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Connectors.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Connectors.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/English/EnglishDataManager.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/EnglishDataManager.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/EnglishDataManager.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/EnglishDataManager.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/English/OverPhrase.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/OverPhrase.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/OverPhrase.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/OverPhrase.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/English/PhrasalVerbs.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PhrasalVerbs.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PhrasalVerbs.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/PhrasalVerbs.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/English/Verbs.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Verbs.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Verbs.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Verbs.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/German/GermanDataManager.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GermanDataManager.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GermanDataManager.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/GermanDataManager.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Extra/Todo.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Todo.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Todo.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/Todo.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/CardItem.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardItem.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardItem.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardItem.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/CardView.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardView.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardView.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/CardView.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Collection/SelectableCollectionCellGroup.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionCellGroup.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionCellGroup.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionCellGroup.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Collection/SelectableCollectionGroup.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionGroup.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionGroup.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableCollectionGroup.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Protocol/SelectableDelegate.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableDelegate.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableDelegate.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableDelegate.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Protocol/SelectableNameProtocol.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableNameProtocol.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableNameProtocol.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableNameProtocol.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/SelectableButton.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableButton.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableButton.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableButton.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Table/SelectableTableCellGroup.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableCellGroup.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableCellGroup.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableCellGroup.o"
+  },
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Table/SelectableTableGroup.swift" : {
+    "index-unit-output-path" : "/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableGroup.o",
+    "llvm-bc" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableGroup.bc",
+    "object" : "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/Objects-normal/arm64/SelectableTableGroup.o"
+  }
+}
