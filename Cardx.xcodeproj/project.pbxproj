@@ -1213,7 +1213,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cardx/Cardx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 763R98S2FV;
+				DEVELOPMENT_TEAM = T628CFUBY9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cardx/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Cardx;
@@ -1228,7 +1228,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.idaxmx.Cardx-Languages";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idaxmx.Cardx-Languages-personal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1248,7 +1248,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cardx/Cardx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 763R98S2FV;
+				DEVELOPMENT_TEAM = T628CFUBY9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cardx/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Cardx;
@@ -1263,7 +1263,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.idaxmx.Cardx-Languages";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idaxmx.Cardx-Languages-personal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
