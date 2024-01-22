@@ -26,7 +26,8 @@ jobs:
     steps:
       - name: Check out project
         uses: actions/checkout@v4
-        with: swift-version: "5.9.2"
+        with:
+          swift-version: "5.9.2"
       #- name: Show current version of Xcode
       #  run: xcodebuild -version
       #- name: Build Cardx
