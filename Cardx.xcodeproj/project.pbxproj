@@ -33,6 +33,7 @@
 		F965D7F32AEF587200AC5228 /* MenuGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965D7F12AEF587200AC5228 /* MenuGameScreen.swift */; };
 		F965D7F42AEF587200AC5228 /* MenuGameScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F965D7F22AEF587200AC5228 /* MenuGameScreen.xib */; };
 		F97EB4E22B5DEE5C00C9A153 /* CardxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97EB4E12B5DEE5C00C9A153 /* CardxTests.swift */; };
+		F97EB4E92B5DF31B00C9A153 /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97EB4E82B5DF31B00C9A153 /* .gitignore.swift */; };
 		F98052D32ADA476B002522F5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98052D22ADA476B002522F5 /* String.swift */; };
 		F984CC1C2ADE0E7700AE2824 /* GermanDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984CC1B2ADE0E7700AE2824 /* GermanDataManager.swift */; };
 		F984CC1E2ADE109500AE2824 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984CC1D2ADE109500AE2824 /* Array.swift */; };
@@ -162,6 +163,7 @@
 		F965D7F22AEF587200AC5228 /* MenuGameScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuGameScreen.xib; sourceTree = "<group>"; };
 		F97EB4DF2B5DEE5C00C9A153 /* CardxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97EB4E12B5DEE5C00C9A153 /* CardxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardxTests.swift; sourceTree = "<group>"; };
+		F97EB4E82B5DF31B00C9A153 /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
 		F98052D22ADA476B002522F5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F984CC1B2ADE0E7700AE2824 /* GermanDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanDataManager.swift; sourceTree = "<group>"; };
 		F984CC1D2ADE109500AE2824 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 		F9BDD3D32A53671E0077C92C = {
 			isa = PBXGroup;
 			children = (
+				F97EB4E82B5DF31B00C9A153 /* .gitignore.swift */,
 				F9D2CADA2A5487B5008BC83F /* LanguageEntity+CoreDataClass.swift */,
 				F9D2CADB2A5487B5008BC83F /* LanguageEntity+CoreDataProperties.swift */,
 				F9D2CADC2A5487B5008BC83F /* CategoryEntity+CoreDataClass.swift */,
@@ -1002,6 +1005,7 @@
 				F9C5CBFD2A57AA9D006A177C /* BottomSheetCoordinator.swift in Sources */,
 				F93994EF2AE3744F00B40775 /* DisplayCardsScreen.swift in Sources */,
 				F9C247492A55F8A40031AA21 /* PopUp+UIViewController.swift in Sources */,
+				F97EB4E92B5DF31B00C9A153 /* .gitignore.swift in Sources */,
 				F95EE4A52AD5F00300CF9ECE /* DataBottomSheetViewModel.swift in Sources */,
 				F99EA18C2A563ABC000862AE /* CornedRadius+UIView.swift in Sources */,
 			);
