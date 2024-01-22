@@ -29,5 +29,8 @@ jobs:
       #  run: xcodebuild -version
       #- name: Build Cardx
       #  run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
-      - name: Run Cardx tests
-        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "Cardx" -destination "platform=iOS Simulator,name=iPhone 14 Pro Max,OS=latest"
+      - name: Run Cardx UI-Tests
+        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxUITest" -destination "platform=iOS Simulator,name=iPhone 14 Pro Max,OS=latest"
+      - name: Run Cardx Unit-Tests
+        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxTest" -destination "platform=iOS Simulator,name=iPhone 14 Pro Max,OS=latest"
+    

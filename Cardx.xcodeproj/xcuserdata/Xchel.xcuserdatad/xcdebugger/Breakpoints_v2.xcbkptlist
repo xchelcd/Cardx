@@ -34,6 +34,38 @@
             endingLineNumber = "309"
             landmarkName = "delete(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "128F0C03-D86C-422D-AE75-D753CC6B08D7 - 23751e1c57b6cb65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.delete(Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "309"
+                  endingLineNumber = "309"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+               <Location
+                  uuid = "128F0C03-D86C-422D-AE75-D753CC6B08D7 - 23751e1c57b6cb65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.delete(Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "309"
+                  endingLineNumber = "309"
+                  offsetFromSymbolStart = "1068">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
