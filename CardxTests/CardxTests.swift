@@ -18,7 +18,7 @@ final class CardxTests: XCTestCase {
     }
 
     func testExample() throws {
-        
+        XCTAssertEqual(2+2, 4)
     }
 
     func testPerformanceExample() throws {
