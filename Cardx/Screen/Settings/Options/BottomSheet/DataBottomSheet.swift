@@ -159,7 +159,7 @@ extension DataBottomSheet {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
 
-        topView.roundCorners(corners: [.topRight, .topLeft], radius: 25)
+        topView.roundCorners(topLeft: 25, topRight: 25, bottomLeft: 5, bottomRight: 5)
         tableView.layer.cornerRadius = 5
         tableViewLayout.layer.cornerRadius = 5
     }
