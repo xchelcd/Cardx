@@ -17,7 +17,7 @@ jobs:
       #- name: Show current xcode version
       #  run xcodebuild -version
       - name: Build Cardx
-        run: swift build -v
+        run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
         
   test:
     name: Cardx build & Test
@@ -28,6 +28,6 @@ jobs:
       #- name: Show current version of Xcode
       #  run: xcodebuild -version
       - name: Build Cardx
-        run: swift build -v
+        run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
       - name: Run Cardx tests
-        run: swift test -v
+        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "Cardx" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
