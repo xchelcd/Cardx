@@ -20,5 +20,301 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "128F0C03-D86C-422D-AE75-D753CC6B08D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cardx/Data/Database/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "delete(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53816760-0856-47F8-994E-08DC4240ECEE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cardx/Data/Database/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "saveData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53816760-0856-47F8-994E-08DC4240ECEE - a12ab2219d31ae1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.saveData() -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "53816760-0856-47F8-994E-08DC4240ECEE - a12ab2219d31aefa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.saveData() -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F923BC14-2EBD-4147-9F79-9A42CD67C4FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cardx/Data/Database/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "clearDatabase(entity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cardx/Data/Database/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "insertCategory(category:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "1872">
+               </Location>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "1900">
+               </Location>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "2044">
+               </Location>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "2072">
+               </Location>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "1352">
+               </Location>
+               <Location
+                  uuid = "1886AF3A-2FFC-4DBE-8BEE-776FCF3BDFA8 - 50f7206fb1838ac5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertCategory(category: Cardx.Category) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "1380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cardx/Data/Database/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "insertLanguage(language:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1808">
+               </Location>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1952">
+               </Location>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1260">
+               </Location>
+               <Location
+                  uuid = "12A8A451-06A4-4E24-9EFE-CEC2A819AC36 - 9a3ddce603865511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cardx.CoreDataManager.insertLanguage(language: Cardx.Language) -&gt; ()"
+                  moduleName = "Cardx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Data/Database/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "259"
+                  endingLineNumber = "259"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -16,6 +16,6 @@ class GetAllCards {
     
     func invoke() -> [Card] {
         let cardList = coreDataManager.getAllCards()
-        return cardList
+        return cardList.sorted { $0.position < $1.position }
     }
 }

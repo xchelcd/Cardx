@@ -40,6 +40,17 @@
                ReferencedContainer = "container:Cardx.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F97EB4DE2B5DEE5C00C9A153"
+               BuildableName = "CardxTests.xctest"
+               BlueprintName = "CardxTests"
+               ReferencedContainer = "container:Cardx.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -62,6 +73,13 @@
             ReferencedContainer = "container:Cardx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "deepl_key"
+            value = "9b6e9aa2-0521-1035-5114-c346db2ca3b3:fx"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
