@@ -16,8 +16,8 @@ jobs:
         uses: actions/checkout@v4
       #- name: Show current xcode version
       #  run xcodebuild -version
-      - name: Build Cardx
-        run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
+      - name: Build Cardx 2
+        run: xcodebuild -project "Cardx.xcodeproj" -scheme Cardx -destination 'generic/platform=iOS'
         #run: xcodebuild build
         
   test:
