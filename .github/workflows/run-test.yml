@@ -30,7 +30,7 @@ jobs:
       #- name: Build Cardx
       #  run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
       - name: Run Cardx UI-Tests
-        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxUITests" -destination "platform=iOS Simulator,name=Any iOS Simulator Device"
+        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxUITests" -destination "platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device"
       - name: Run Cardx Unit-Tests
-        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxTests" -destination "platform=iOS Simulator,name=Any iOS Simulator Device"
+        run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme "CardxTests" -destination "platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device"
     
