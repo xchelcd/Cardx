@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)"
 options: "1cfb4bc7d198a313b8c778e6362c55210c1c2f7418a41acbee601fc7c2e33e9f"
-build_start_time: [1705891322, 804197000]
-build_end_time: [1705891329, 828494000]
+build_start_time: [1705894180, 974288000]
+build_end_time: [1705894185, 962621000]
 inputs:
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/AppCoordinator/AppCoordinator.swift": [1688417806, 837834917]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/CompositionRoot/AppCoordinator/Coordinator.swift": [1688417806, 830800209]
@@ -57,7 +57,7 @@ inputs:
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Game/Game/DisplayCards/DisplayCardsScreen.swift": [1698635453, 640524597]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Game/Game/Menu/MenuGameScreen.swift": [1705885797, 893476865]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Home/HomeScreen.swift": [1698635457, 448015746]
-  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/AddCard/AddCardScreen.swift": [1698635611, 710718692]
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/AddCard/AddCardScreen.swift": [1705893172, 702444779]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/FilterDialog/FilterDialog.swift": [1698635230, 722891977]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/BottomSheet/BottomSheetCell.swift": [1688604756, 403197254]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Screen/Settings/Options/BottomSheet/DataBottomSheet.swift": [1705884295, 724664556]
@@ -92,4 +92,4 @@ inputs:
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/SelectableButton.swift": [1697422357, 325974558]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Table/SelectableTableCellGroup.swift": [1672627189, 215652813]
   "/Users/Xchel/X/ios/anki/Cardx/Cardx/Cardx/Util/Widget/SelectableButton/Table/SelectableTableGroup.swift": [1672626965, 876047527]
-  "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/DerivedSources/GeneratedAssetSymbols.swift": [1705891284, 55245820]
+  "/Users/Xchel/X/ios/anki/Cardx/Cardx/build/Cardx.build/Release-iphoneos/Cardx.build/DerivedSources/GeneratedAssetSymbols.swift": [1705894179, 308870977]
