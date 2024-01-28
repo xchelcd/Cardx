@@ -21,7 +21,7 @@ jobs:
         #run: xcodebuild build
         
   ui-test:
-    name: Cardx build & Test
+    name: UITest
     runs-on: macos-latest
     steps:
       - name: Check out project
@@ -36,7 +36,7 @@ jobs:
         run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme CardxUITests -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
 
   unit-test:
-    name: Cardx build & Test
+    name: UnitsTest
     runs-on: macos-latest
     steps:
       - name: Check out project
