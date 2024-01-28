@@ -20,7 +20,7 @@ jobs:
         run: xcodebuild -project "Cardx.xcodeproj" -scheme Cardx -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
         #run: xcodebuild build
         
-  test:
+  ui-test:
     name: Cardx build & Test
     runs-on: macos-latest
     steps:
@@ -34,6 +34,16 @@ jobs:
       #  run: xcodebuild -project "Cardx.xcodeproj" -scheme "Cardx" -destination "generic/platform=iOS"
       - name: Run Cardx UI-Testing
         run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme CardxUITests -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
+
+  unit-test:
+    name: Cardx build & Test
+    runs-on: macos-latest
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+        with:
+          swift-version: "5.9.2"
       - name: Run Cardx Unit-Testing
         run: xcodebuild clean test -project "Cardx.xcodeproj" -scheme CardxTests -destination 'platform=iOS Simulator,name=iPhone 13 Pro Max'
+        
 
